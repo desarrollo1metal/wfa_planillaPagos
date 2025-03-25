@@ -1,0 +1,279 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>
+    </SchemaVersion>
+    <ProjectGuid>{A98A9512-4EF2-489D-A6B3-40A59E26F0F6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Util</RootNamespace>
+    <AssemblyName>Util</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>Windows</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Util.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Util.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Data.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.Utils.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraEditors.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="DevExpress.XtraGrid.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EPPlus">
+      <HintPath>..\wfa_planillaPagos\EPPlus.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.3.7.0\lib\net462\ExcelDataReader.dll</HintPath>
+    </Reference>
+    <Reference Include="ExcelDataReader.DataSet, Version=3.7.0.0, Culture=neutral, PublicKeyToken=93517dbe6a4012fa, processorArchitecture=MSIL">
+      <HintPath>..\packages\ExcelDataReader.DataSet.3.7.0\lib\net462\ExcelDataReader.DataSet.dll</HintPath>
+    </Reference>
+    <Reference Include="SendServer">
+      <HintPath>..\wfa_planillaPagos\SendServer.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Data">
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.IO.Compression" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Annotation\annAtributo.vb" />
+    <Compile Include="Annotation\annEntidad.vb" />
+    <Compile Include="Annotation\annForm.vb" />
+    <Compile Include="classComun\classComun.vb" />
+    <Compile Include="classComun\classReporte.vb" />
+    <Compile Include="classComun\Simple3Des.vb" />
+    <Compile Include="Conexion\sqlConexion.vb" />
+    <Compile Include="entidadComun\entComun.vb" />
+    <Compile Include="entidadComun\entComunDetalle.vb" />
+    <Compile Include="entidadComun\entComunSAP.vb" />
+    <Compile Include="entidadComun\entConn.vb" />
+    <Compile Include="entidadComun\entLog.vb" />
+    <Compile Include="formComun\Distribucion_Prs.designer.vb">
+      <DependentUpon>Distribucion_Prs.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formComun\Distribucion_Prs.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formComun\frmBuscar.Designer.vb">
+      <DependentUpon>frmBuscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formComun\frmBuscar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formComun\frmComp.Designer.vb">
+      <DependentUpon>frmComp.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formComun\frmComp.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formComun\frmComun.Designer.vb">
+      <DependentUpon>frmComun.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formComun\frmComun.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formComun\frmParamReporte.Designer.vb">
+      <DependentUpon>frmParamReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formComun\frmParamReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="formComun\frmReporte.Designer.vb">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+    </Compile>
+    <Compile Include="formComun\frmReporte.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ModuleGlobalDatos.vb" />
+    <Compile Include="ModuleGlobalForm.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="SQLComun\ModuleSQLComun.vb" />
+    <Compile Include="SQLComun\sqlMenu.vb" />
+    <Compile Include="usr_control\prueba.Designer.vb">
+      <DependentUpon>prueba.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usr_control\prueba.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usr_control\uctBotonMenu.Designer.vb">
+      <DependentUpon>uctBotonMenu.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usr_control\uctBotonMenu.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usr_control\uct_gridConBusqueda.Designer.vb">
+      <DependentUpon>uct_gridConBusqueda.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usr_control\uct_gridConBusqueda.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="usr_control\uct_lstSeleccion.Designer.vb">
+      <DependentUpon>uct_lstSeleccion.vb</DependentUpon>
+    </Compile>
+    <Compile Include="usr_control\uct_lstSeleccion.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="formComun\Distribucion_Prs.resx">
+      <DependentUpon>Distribucion_Prs.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formComun\frmBuscar.resx">
+      <DependentUpon>frmBuscar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formComun\frmComp.resx">
+      <DependentUpon>frmComp.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formComun\frmComun.resx">
+      <DependentUpon>frmComun.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formComun\frmParamReporte.resx">
+      <DependentUpon>frmParamReporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="formComun\frmReporte.resx">
+      <DependentUpon>frmReporte.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usr_control\prueba.resx">
+      <DependentUpon>prueba.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usr_control\uctBotonMenu.resx">
+      <DependentUpon>uctBotonMenu.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usr_control\uct_gridConBusqueda.resx">
+      <DependentUpon>uct_gridConBusqueda.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="usr_control\uct_lstSeleccion.resx">
+      <DependentUpon>uct_lstSeleccion.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\folder1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\folder2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Button_INCREASE.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btn_enfasis.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="SAPbobsCOM">
+      <Guid>{FC8030BE-F5D2-4B8E-8F92-44228FE30100}</Guid>
+      <VersionMajor>10</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

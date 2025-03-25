@@ -1,0 +1,9 @@
+<DBServ>SVRPRB001</DBServ>
+<DBUser>sa</DBUser>
+<DBPass>Passw0rd</DBPass>
+<SAPComp>SBO_INDUZINC</SAPComp>
+<SAPUser>produc01</SAPUser>
+<SAPPass>258418</SAPPass>
+<IPServ>192.168.1.7</IPServ>
+<SvrUsr>SVRPRB001\ajara</SvrUsr>
+<SvrPwd>$P4ssw0rd!</SvrPwd>

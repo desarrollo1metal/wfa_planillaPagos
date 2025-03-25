@@ -1,0 +1,381 @@
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.pdb
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.xml
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Interop.SAPbobsCOM.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.ResolveComReference.cache
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmBuscar.resources
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComun.resources
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmReporte.resources
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.Resources.resources
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uct_gridConBusqueda.resources
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.GenerateResource.Cache
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll.licenses
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.xml
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.pdb
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\Util.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\Util.pdb
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\Util.xml
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.xml
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.xml
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.xml
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.xml
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Data.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Data.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Data.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Data.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Utils.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Utils.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Utils.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Utils.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Interop.SAPbobsCOM.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.vbproj.ResolveComReference.cache
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.frmBuscar.resources
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.frmComun.resources
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.frmReporte.resources
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.Resources.resources
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.uct_gridConBusqueda.resources
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.vbproj.GenerateResource.Cache
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.dll.licenses
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.dll
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.xml
+C:\Users\kreyes\Desktop\wfa_planillaPagos\Util\obj\Release\Util.pdb
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.xml
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.xml
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.xml
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.xml
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Data.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Data.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Data.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Data.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Utils.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Utils.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Utils.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Utils.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraEditors.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraEditors.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraEditors.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraEditors.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraGrid.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraGrid.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraGrid.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraGrid.v14.2.resources.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComp.resources
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmParamReporte.resources
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\SendServer.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.Data.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\EPPlus.dll
+D:\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uctBotonMenu.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.pdb
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.xml
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\EPPlus.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\SendServer.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.Data.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.xml
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.xml
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.xml
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.xml
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Data.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Data.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Data.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Data.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Utils.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Utils.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Utils.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Utils.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraEditors.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraEditors.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraEditors.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraEditors.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraGrid.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraGrid.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraGrid.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraGrid.v14.2.resources.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Interop.SAPbobsCOM.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.ResolveComReference.cache
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmBuscar.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComp.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComun.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmParamReporte.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmReporte.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.Resources.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uctBotonMenu.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uct_gridConBusqueda.resources
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.GenerateResource.Cache
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll.licenses
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.xml
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.pdb
+\\192.168.1.45\Desarrollos\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.prueba.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.pdb
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.xml
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\EPPlus.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\SendServer.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.Data.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.xml
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.xml
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.xml
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.xml
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Data.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Data.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Data.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Data.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Utils.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Utils.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Utils.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Utils.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraEditors.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraGrid.v14.2.resources.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbprojResolveAssemblyReference.cache
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Interop.SAPbobsCOM.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.ResolveComReference.cache
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmBuscar.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComp.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComun.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmParamReporte.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmReporte.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.Resources.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.prueba.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uctBotonMenu.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uct_gridConBusqueda.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uct_lstSeleccion.resources
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.GenerateResource.Cache
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll.licenses
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.xml
+C:\Users\epalomino.METALINDUSTRIAS\Desktop\Planilla de Pagos Recibidos 20170926\Planilla de Pagos Recibidos\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.pdb
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.pdb
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\EPPlus.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\SendServer.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.Data.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Printing.v14.2.Core.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Sparkline.v14.2.Core.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraPrinting.v14.2.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraLayout.v14.2.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.RichEdit.v14.2.Core.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraBars.v14.2.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraTreeList.v14.2.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Office.v14.2.Core.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Printing.v14.2.Core.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Sparkline.v14.2.Core.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraPrinting.v14.2.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraLayout.v14.2.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.RichEdit.v14.2.Core.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraBars.v14.2.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraTreeList.v14.2.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Office.v14.2.Core.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Data.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Data.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Data.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Data.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Utils.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Utils.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Utils.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Utils.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraEditors.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraEditors.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraEditors.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraEditors.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraGrid.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraGrid.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraGrid.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraGrid.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Printing.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Printing.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Printing.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Printing.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraLayout.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraLayout.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraLayout.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraLayout.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraBars.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraBars.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraBars.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraBars.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Office.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Office.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Office.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Office.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.AssemblyReference.cache
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Interop.SAPbobsCOM.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.ResolveComReference.cache
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.FrmDistribucion_Prs.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmBuscar.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComp.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComun.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmParamReporte.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmReporte.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.Resources.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.prueba.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uctBotonMenu.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uct_gridConBusqueda.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uct_lstSeleccion.resources
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.GenerateResource.cache
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll.licenses
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.CoreCompileInputs.cache
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.CopyComplete
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.xml
+D:\DESARROLLOS_GMI\DESARROLLOS_GMI\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.pdb
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.pdb
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\Util.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\EPPlus.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\SendServer.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.Data.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\System.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Printing.v14.2.Core.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Sparkline.v14.2.Core.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraPrinting.v14.2.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraLayout.v14.2.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.RichEdit.v14.2.Core.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraBars.v14.2.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraTreeList.v14.2.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Office.v14.2.Core.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Data.v14.2.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Utils.v14.2.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraEditors.v14.2.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraGrid.v14.2.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Printing.v14.2.Core.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Sparkline.v14.2.Core.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraPrinting.v14.2.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraLayout.v14.2.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.RichEdit.v14.2.Core.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraBars.v14.2.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.XtraTreeList.v14.2.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\DevExpress.Office.v14.2.Core.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Data.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Data.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Data.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Data.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Utils.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Utils.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Utils.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Utils.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraEditors.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraEditors.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraEditors.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraEditors.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraGrid.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraGrid.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraGrid.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraGrid.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Printing.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Printing.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Printing.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Printing.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Sparkline.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraPrinting.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraLayout.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraLayout.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraLayout.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraLayout.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.RichEdit.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraBars.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraBars.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraBars.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraBars.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.XtraTreeList.v14.2.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\de\DevExpress.Office.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\es\DevExpress.Office.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ja\DevExpress.Office.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\bin\Release\ru\DevExpress.Office.v14.2.Core.resources.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.AssemblyReference.cache
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Interop.SAPbobsCOM.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.ResolveComReference.cache
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.FrmDistribucion_Prs.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmBuscar.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComp.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmComun.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmParamReporte.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.frmReporte.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.Resources.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.prueba.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uctBotonMenu.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uct_gridConBusqueda.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.uct_lstSeleccion.resources
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.GenerateResource.cache
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll.licenses
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.CoreCompileInputs.cache
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.vbproj.CopyComplete
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.dll
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.xml
+D:\DESARROLLOS_GMI\PRUEBAS_NO TOCAR\wfa_planillaPagos\wfa_planillaPagos\Util\obj\Release\Util.pdb

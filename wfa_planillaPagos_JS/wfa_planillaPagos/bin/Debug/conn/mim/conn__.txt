@@ -1,0 +1,9 @@
+<DBServ>VENUS</DBServ>
+<DBUser>sa</DBUser>
+<DBPass>B1Admin</DBPass>
+<SAPComp>SBO_ComercialMendoza</SAPComp>
+<SAPUser>admini05</SAPUser>
+<SAPPass>2010</SAPPass>
+<IPServ>192.168.1.2</IPServ>
+<SvrUsr>METALINDUSTRIAS\administrador</SvrUsr>
+<SvrPwd>GMImendoza.</SvrPwd>

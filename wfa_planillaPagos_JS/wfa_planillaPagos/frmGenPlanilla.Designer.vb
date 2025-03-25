@@ -1,0 +1,614 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+Partial Class frmGenPlanilla
+    Inherits Util.frmComun
+
+    'Form reemplaza a Dispose para limpiar la lista de componentes.
+    <System.Diagnostics.DebuggerNonUserCode()> _
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Requerido por el Diseñador de Windows Forms
+    Private components As System.ComponentModel.IContainer
+
+    'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
+    'Se puede modificar usando el Diseñador de Windows Forms.  
+    'No lo modifique con el editor de código.
+    <System.Diagnostics.DebuggerStepThrough()> _
+    Private Sub InitializeComponent()
+        Me.ugcPlanilla = New Util.uct_gridConBusqueda()
+        Me.ugcECBanco = New Util.uct_gridConBusqueda()
+        Me.btnGenPlanilla = New System.Windows.Forms.Button()
+        Me.btnCancelar = New System.Windows.Forms.Button()
+        Me.ugcECClientes = New Util.uct_gridConBusqueda()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.ulsClientes = New Util.uct_lstSeleccion()
+        Me.Label2 = New System.Windows.Forms.Label()
+        Me.cboCtasBanco = New System.Windows.Forms.ComboBox()
+        Me.btnBuscarClts = New System.Windows.Forms.Button()
+        Me.btnBuscarEC = New System.Windows.Forms.Button()
+        Me.btnAdcRegistro = New System.Windows.Forms.Button()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.txtNroPla = New DevExpress.XtraEditors.TextEdit()
+        Me.Label4 = New System.Windows.Forms.Label()
+        Me.Label5 = New System.Windows.Forms.Label()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.DateEdit1 = New DevExpress.XtraEditors.DateEdit()
+        Me.DateEdit2 = New DevExpress.XtraEditors.DateEdit()
+        Me.DateEdit3 = New DevExpress.XtraEditors.DateEdit()
+        Me.Label8 = New System.Windows.Forms.Label()
+        Me.cboEstado = New System.Windows.Forms.ComboBox()
+        Me.txtComent = New DevExpress.XtraEditors.TextEdit()
+        Me.Label7 = New System.Windows.Forms.Label()
+        Me.cboTipoPla = New System.Windows.Forms.ComboBox()
+        Me.Label9 = New System.Windows.Forms.Label()
+        Me.btnExportar = New System.Windows.Forms.Button()
+        Me.Label10 = New System.Windows.Forms.Label()
+        Me.cmbPosBanco = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.DateEdit4 = New DevExpress.XtraEditors.DateEdit()
+        Me.Button1 = New System.Windows.Forms.Button()
+        Me.agregar2 = New System.Windows.Forms.Button()
+        CType(Me.txtNroPla.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit1.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit2.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit2.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit3.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit3.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.txtComent.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit4.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DateEdit4.Properties, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'ugcPlanilla
+        '
+        Me.ugcPlanilla.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ugcPlanilla.BackColor = System.Drawing.Color.White
+        Me.ugcPlanilla.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ugcPlanilla.buscarPor = Nothing
+        Me.ugcPlanilla.ColAlternaColor = "lineaNumAsg"
+        Me.ugcPlanilla.ColElm = "lineaNumAsg"
+        Me.ugcPlanilla.conFiltro = False
+        Me.ugcPlanilla.conMenu = True
+        Me.ugcPlanilla.DataSource = Nothing
+        Me.ugcPlanilla.Location = New System.Drawing.Point(15, 397)
+        Me.ugcPlanilla.Margin = New System.Windows.Forms.Padding(4)
+        Me.ugcPlanilla.Name = "ugcPlanilla"
+        Me.ugcPlanilla.ObjDetalle = Nothing
+        Me.ugcPlanilla.PermitirOrden = False
+        Me.ugcPlanilla.Size = New System.Drawing.Size(1305, 311)
+        Me.ugcPlanilla.TabIndex = 2
+        Me.ugcPlanilla.Tabla = "gmi_plaPagosDetalle"
+        Me.ugcPlanilla.TablaId = "id"
+        Me.ugcPlanilla.TablaId2 = Nothing
+        Me.ugcPlanilla.Tag = "gmi_plaPagosDetalle"
+        Me.ugcPlanilla.valorBusq = Nothing
+        '
+        'ugcECBanco
+        '
+        Me.ugcECBanco.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ugcECBanco.AutoScroll = True
+        Me.ugcECBanco.BackColor = System.Drawing.Color.White
+        Me.ugcECBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ugcECBanco.buscarPor = "Fecha"
+        Me.ugcECBanco.ColAlternaColor = ""
+        Me.ugcECBanco.ColElm = Nothing
+        Me.ugcECBanco.conFiltro = True
+        Me.ugcECBanco.conMenu = False
+        Me.ugcECBanco.DataSource = Nothing
+        Me.ugcECBanco.Location = New System.Drawing.Point(696, 78)
+        Me.ugcECBanco.Margin = New System.Windows.Forms.Padding(4)
+        Me.ugcECBanco.Name = "ugcECBanco"
+        Me.ugcECBanco.ObjDetalle = Nothing
+        Me.ugcECBanco.PermitirOrden = True
+        Me.ugcECBanco.Size = New System.Drawing.Size(624, 275)
+        Me.ugcECBanco.TabIndex = 1
+        Me.ugcECBanco.Tabla = Nothing
+        Me.ugcECBanco.TablaId = "id"
+        Me.ugcECBanco.TablaId2 = Nothing
+        Me.ugcECBanco.Tag = "ECBanco"
+        Me.ugcECBanco.valorBusq = Nothing
+        '
+        'btnGenPlanilla
+        '
+        Me.btnGenPlanilla.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnGenPlanilla.Location = New System.Drawing.Point(15, 714)
+        Me.btnGenPlanilla.Name = "btnGenPlanilla"
+        Me.btnGenPlanilla.Size = New System.Drawing.Size(172, 23)
+        Me.btnGenPlanilla.TabIndex = 3
+        Me.btnGenPlanilla.Tag = "1"
+        Me.btnGenPlanilla.Text = "Añadir"
+        Me.btnGenPlanilla.UseVisualStyleBackColor = True
+        '
+        'btnCancelar
+        '
+        Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnCancelar.Location = New System.Drawing.Point(190, 714)
+        Me.btnCancelar.Name = "btnCancelar"
+        Me.btnCancelar.Size = New System.Drawing.Size(168, 23)
+        Me.btnCancelar.TabIndex = 4
+        Me.btnCancelar.Tag = "Cancel"
+        Me.btnCancelar.Text = "Cancelar"
+        Me.btnCancelar.UseVisualStyleBackColor = True
+        '
+        'ugcECClientes
+        '
+        Me.ugcECClientes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ugcECClientes.BackColor = System.Drawing.Color.White
+        Me.ugcECClientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
+        Me.ugcECClientes.buscarPor = ""
+        Me.ugcECClientes.ColAlternaColor = ""
+        Me.ugcECClientes.ColElm = Nothing
+        Me.ugcECClientes.conFiltro = True
+        Me.ugcECClientes.conMenu = False
+        Me.ugcECClientes.DataSource = Nothing
+        Me.ugcECClientes.Location = New System.Drawing.Point(12, 78)
+        Me.ugcECClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.ugcECClientes.Name = "ugcECClientes"
+        Me.ugcECClientes.ObjDetalle = Nothing
+        Me.ugcECClientes.PermitirOrden = True
+        Me.ugcECClientes.Size = New System.Drawing.Size(678, 275)
+        Me.ugcECClientes.TabIndex = 0
+        Me.ugcECClientes.Tabla = "gmi_plaPagosDetalle"
+        Me.ugcECClientes.TablaId = "Id_Doc"
+        Me.ugcECClientes.TablaId2 = "Line_ID"
+        Me.ugcECClientes.Tag = "ECClientes"
+        Me.ugcECClientes.valorBusq = Nothing
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(20, 52)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(118, 13)
+        Me.Label1.TabIndex = 5
+        Me.Label1.Text = "Documentos por cobrar"
+        '
+        'ulsClientes
+        '
+        Me.ulsClientes.BackColor = System.Drawing.Color.White
+        Me.ulsClientes.CampoTxt = "CardName"
+        Me.ulsClientes.campoVal = "CardCode"
+        Me.ulsClientes.Location = New System.Drawing.Point(155, 49)
+        Me.ulsClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.ulsClientes.mostrarCampo = "CardCode"
+        Me.ulsClientes.Name = "ulsClientes"
+        Me.ulsClientes.Size = New System.Drawing.Size(182, 26)
+        Me.ulsClientes.TabIndex = 6
+        Me.ulsClientes.Tabla = "OCRD"
+        Me.ulsClientes.Tag = "ulsClientes"
+        Me.ulsClientes.Texto = ""
+        Me.ulsClientes.Value = Nothing
+        '
+        'Label2
+        '
+        Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label2.AutoSize = True
+        Me.Label2.Location = New System.Drawing.Point(665, 35)
+        Me.Label2.Name = "Label2"
+        Me.Label2.Size = New System.Drawing.Size(126, 13)
+        Me.Label2.TabIndex = 7
+        Me.Label2.Text = "Estado de Cuenta Banco"
+        '
+        'cboCtasBanco
+        '
+        Me.cboCtasBanco.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cboCtasBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboCtasBanco.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboCtasBanco.FormattingEnabled = True
+        Me.cboCtasBanco.Location = New System.Drawing.Point(668, 51)
+        Me.cboCtasBanco.Name = "cboCtasBanco"
+        Me.cboCtasBanco.Size = New System.Drawing.Size(346, 19)
+        Me.cboCtasBanco.TabIndex = 8
+        Me.cboCtasBanco.Tag = "CtasBanco"
+        '
+        'btnBuscarClts
+        '
+        Me.btnBuscarClts.Location = New System.Drawing.Point(398, 49)
+        Me.btnBuscarClts.Name = "btnBuscarClts"
+        Me.btnBuscarClts.Size = New System.Drawing.Size(155, 23)
+        Me.btnBuscarClts.TabIndex = 9
+        Me.btnBuscarClts.Tag = "sub_cargarUGCClientes"
+        Me.btnBuscarClts.Text = "Buscar"
+        Me.btnBuscarClts.UseVisualStyleBackColor = True
+        '
+        'btnBuscarEC
+        '
+        Me.btnBuscarEC.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.btnBuscarEC.Location = New System.Drawing.Point(1168, 52)
+        Me.btnBuscarEC.Name = "btnBuscarEC"
+        Me.btnBuscarEC.Size = New System.Drawing.Size(155, 23)
+        Me.btnBuscarEC.TabIndex = 10
+        Me.btnBuscarEC.Tag = "sub_cargarUGCEstadoCuenta"
+        Me.btnBuscarEC.Text = "Buscar"
+        Me.btnBuscarEC.UseVisualStyleBackColor = True
+        '
+        'btnAdcRegistro
+        '
+        Me.btnAdcRegistro.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnAdcRegistro.Location = New System.Drawing.Point(1212, 359)
+        Me.btnAdcRegistro.Name = "btnAdcRegistro"
+        Me.btnAdcRegistro.Size = New System.Drawing.Size(110, 31)
+        Me.btnAdcRegistro.TabIndex = 11
+        Me.btnAdcRegistro.Tag = "sub_adicionarRegistro"
+        Me.btnAdcRegistro.Text = "Adicionar Registro"
+        Me.btnAdcRegistro.UseVisualStyleBackColor = True
+        '
+        'Label3
+        '
+        Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(17, 356)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.TabIndex = 12
+        Me.Label3.Text = "Nro. de Planilla"
+        '
+        'txtNroPla
+        '
+        Me.txtNroPla.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtNroPla.Enabled = False
+        Me.txtNroPla.Location = New System.Drawing.Point(20, 372)
+        Me.txtNroPla.Name = "txtNroPla"
+        Me.txtNroPla.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
+        Me.txtNroPla.Properties.Appearance.Options.UseFont = True
+        Me.txtNroPla.Size = New System.Drawing.Size(118, 18)
+        Me.txtNroPla.TabIndex = 13
+        Me.txtNroPla.Tag = "id"
+        '
+        'Label4
+        '
+        Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label4.AutoSize = True
+        Me.Label4.Location = New System.Drawing.Point(141, 356)
+        Me.Label4.Name = "Label4"
+        Me.Label4.Size = New System.Drawing.Size(82, 13)
+        Me.Label4.TabIndex = 14
+        Me.Label4.Text = "Fecha Creacion"
+        '
+        'Label5
+        '
+        Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label5.AutoSize = True
+        Me.Label5.Location = New System.Drawing.Point(247, 356)
+        Me.Label5.Name = "Label5"
+        Me.Label5.Size = New System.Drawing.Size(103, 13)
+        Me.Label5.TabIndex = 15
+        Me.Label5.Text = "Fecha Actualizacion"
+        '
+        'Label6
+        '
+        Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label6.AutoSize = True
+        Me.Label6.Location = New System.Drawing.Point(356, 356)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(79, 13)
+        Me.Label6.TabIndex = 16
+        Me.Label6.Text = "Fecha Proceso"
+        '
+        'DateEdit1
+        '
+        Me.DateEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.DateEdit1.EditValue = Nothing
+        Me.DateEdit1.Enabled = False
+        Me.DateEdit1.Location = New System.Drawing.Point(144, 372)
+        Me.DateEdit1.Name = "DateEdit1"
+        Me.DateEdit1.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
+        Me.DateEdit1.Properties.Appearance.Options.UseFont = True
+        Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit1.Size = New System.Drawing.Size(100, 18)
+        Me.DateEdit1.TabIndex = 18
+        Me.DateEdit1.Tag = "FechaCrea"
+        '
+        'DateEdit2
+        '
+        Me.DateEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.DateEdit2.EditValue = Nothing
+        Me.DateEdit2.Enabled = False
+        Me.DateEdit2.Location = New System.Drawing.Point(250, 372)
+        Me.DateEdit2.Name = "DateEdit2"
+        Me.DateEdit2.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
+        Me.DateEdit2.Properties.Appearance.Options.UseFont = True
+        Me.DateEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit2.Size = New System.Drawing.Size(100, 18)
+        Me.DateEdit2.TabIndex = 19
+        Me.DateEdit2.Tag = "FechaAct"
+        '
+        'DateEdit3
+        '
+        Me.DateEdit3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.DateEdit3.EditValue = Nothing
+        Me.DateEdit3.Enabled = False
+        Me.DateEdit3.Location = New System.Drawing.Point(356, 372)
+        Me.DateEdit3.Name = "DateEdit3"
+        Me.DateEdit3.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
+        Me.DateEdit3.Properties.Appearance.Options.UseFont = True
+        Me.DateEdit3.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit3.Size = New System.Drawing.Size(100, 18)
+        Me.DateEdit3.TabIndex = 20
+        Me.DateEdit3.Tag = "FechaPrcs"
+        '
+        'Label8
+        '
+        Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label8.AutoSize = True
+        Me.Label8.Location = New System.Drawing.Point(464, 356)
+        Me.Label8.Name = "Label8"
+        Me.Label8.Size = New System.Drawing.Size(40, 13)
+        Me.Label8.TabIndex = 21
+        Me.Label8.Text = "Estado"
+        '
+        'cboEstado
+        '
+        Me.cboEstado.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.cboEstado.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboEstado.Enabled = False
+        Me.cboEstado.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboEstado.FormattingEnabled = True
+        Me.cboEstado.Location = New System.Drawing.Point(462, 372)
+        Me.cboEstado.Name = "cboEstado"
+        Me.cboEstado.Size = New System.Drawing.Size(121, 19)
+        Me.cboEstado.TabIndex = 22
+        Me.cboEstado.Tag = "estado"
+        '
+        'txtComent
+        '
+        Me.txtComent.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.txtComent.Location = New System.Drawing.Point(696, 372)
+        Me.txtComent.Name = "txtComent"
+        Me.txtComent.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
+        Me.txtComent.Properties.Appearance.Options.UseFont = True
+        Me.txtComent.Size = New System.Drawing.Size(383, 18)
+        Me.txtComent.TabIndex = 56
+        Me.txtComent.Tag = "comentario"
+        '
+        'Label7
+        '
+        Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label7.AutoSize = True
+        Me.Label7.Location = New System.Drawing.Point(693, 356)
+        Me.Label7.Name = "Label7"
+        Me.Label7.Size = New System.Drawing.Size(60, 13)
+        Me.Label7.TabIndex = 57
+        Me.Label7.Text = "Comentario"
+        '
+        'cboTipoPla
+        '
+        Me.cboTipoPla.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.cboTipoPla.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cboTipoPla.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.cboTipoPla.FormattingEnabled = True
+        Me.cboTipoPla.Location = New System.Drawing.Point(1085, 372)
+        Me.cboTipoPla.Name = "cboTipoPla"
+        Me.cboTipoPla.Size = New System.Drawing.Size(121, 19)
+        Me.cboTipoPla.TabIndex = 58
+        Me.cboTipoPla.Tag = "tipoPla"
+        '
+        'Label9
+        '
+        Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label9.AutoSize = True
+        Me.Label9.Location = New System.Drawing.Point(1082, 356)
+        Me.Label9.Name = "Label9"
+        Me.Label9.Size = New System.Drawing.Size(79, 13)
+        Me.Label9.TabIndex = 59
+        Me.Label9.Text = "Tipo de Planilla"
+        '
+        'btnExportar
+        '
+        Me.btnExportar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.btnExportar.Location = New System.Drawing.Point(360, 401)
+        Me.btnExportar.Name = "btnExportar"
+        Me.btnExportar.Size = New System.Drawing.Size(172, 23)
+        Me.btnExportar.TabIndex = 60
+        Me.btnExportar.Tag = "sub_ExportarExcel"
+        Me.btnExportar.Text = "Exportar"
+        Me.btnExportar.UseVisualStyleBackColor = True
+        '
+        'Label10
+        '
+        Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label10.AutoSize = True
+        Me.Label10.Location = New System.Drawing.Point(1017, 35)
+        Me.Label10.Name = "Label10"
+        Me.Label10.Size = New System.Drawing.Size(102, 13)
+        Me.Label10.TabIndex = 61
+        Me.Label10.Text = "Número de Posición"
+        '
+        'cmbPosBanco
+        '
+        Me.cmbPosBanco.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cmbPosBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
+        Me.cmbPosBanco.FormattingEnabled = True
+        Me.cmbPosBanco.Location = New System.Drawing.Point(1020, 49)
+        Me.cmbPosBanco.Name = "cmbPosBanco"
+        Me.cmbPosBanco.Size = New System.Drawing.Size(142, 21)
+        Me.cmbPosBanco.TabIndex = 62
+        Me.cmbPosBanco.Tag = "PosBanco"
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(589, 357)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(65, 13)
+        Me.Label11.TabIndex = 16
+        Me.Label11.Text = "Fecha Pago"
+        '
+        'DateEdit4
+        '
+        Me.DateEdit4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.DateEdit4.EditValue = Nothing
+        Me.DateEdit4.Location = New System.Drawing.Point(589, 373)
+        Me.DateEdit4.Name = "DateEdit4"
+        Me.DateEdit4.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
+        Me.DateEdit4.Properties.Appearance.Options.UseFont = True
+        Me.DateEdit4.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit4.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
+        Me.DateEdit4.Size = New System.Drawing.Size(100, 18)
+        Me.DateEdit4.TabIndex = 20
+        Me.DateEdit4.Tag = "FechaDocumento"
+        '
+        'Button1
+        '
+        Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Button1.Location = New System.Drawing.Point(1168, 24)
+        Me.Button1.Name = "Button1"
+        Me.Button1.Size = New System.Drawing.Size(152, 24)
+        Me.Button1.TabIndex = 63
+        Me.Button1.Tag = "sub_ExportarExcelDespositoCz"
+        Me.Button1.Text = "Exportar Deposito"
+        Me.Button1.UseVisualStyleBackColor = True
+        '
+        'agregar2
+        '
+        Me.agregar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.agregar2.Location = New System.Drawing.Point(1224, 83)
+        Me.agregar2.Name = "agregar2"
+        Me.agregar2.Size = New System.Drawing.Size(90, 23)
+        Me.agregar2.TabIndex = 65
+        Me.agregar2.Tag = "distribuir"
+        Me.agregar2.Text = "Distribuir Pr"
+        Me.agregar2.UseVisualStyleBackColor = True
+        '
+        'frmGenPlanilla
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoScroll = True
+        Me.BackColor = System.Drawing.Color.White
+        Me.ClientSize = New System.Drawing.Size(1351, 741)
+        Me.Controls.Add(Me.agregar2)
+        Me.Controls.Add(Me.Button1)
+        Me.Controls.Add(Me.cmbPosBanco)
+        Me.Controls.Add(Me.Label10)
+        Me.Controls.Add(Me.btnExportar)
+        Me.Controls.Add(Me.Label9)
+        Me.Controls.Add(Me.cboTipoPla)
+        Me.Controls.Add(Me.Label7)
+        Me.Controls.Add(Me.txtComent)
+        Me.Controls.Add(Me.cboEstado)
+        Me.Controls.Add(Me.Label8)
+        Me.Controls.Add(Me.DateEdit4)
+        Me.Controls.Add(Me.DateEdit3)
+        Me.Controls.Add(Me.DateEdit2)
+        Me.Controls.Add(Me.Label11)
+        Me.Controls.Add(Me.DateEdit1)
+        Me.Controls.Add(Me.Label6)
+        Me.Controls.Add(Me.Label5)
+        Me.Controls.Add(Me.Label4)
+        Me.Controls.Add(Me.txtNroPla)
+        Me.Controls.Add(Me.Label3)
+        Me.Controls.Add(Me.btnAdcRegistro)
+        Me.Controls.Add(Me.btnBuscarEC)
+        Me.Controls.Add(Me.btnBuscarClts)
+        Me.Controls.Add(Me.cboCtasBanco)
+        Me.Controls.Add(Me.Label2)
+        Me.Controls.Add(Me.ulsClientes)
+        Me.Controls.Add(Me.Label1)
+        Me.Controls.Add(Me.ugcECClientes)
+        Me.Controls.Add(Me.btnCancelar)
+        Me.Controls.Add(Me.btnGenPlanilla)
+        Me.Controls.Add(Me.ugcPlanilla)
+        Me.Controls.Add(Me.ugcECBanco)
+        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Name = "frmGenPlanilla"
+        Me.Tag = "entPlanilla"
+        Me.Text = "Generar Planilla"
+        Me.WindowState = System.Windows.Forms.FormWindowState.Maximized
+        Me.Controls.SetChildIndex(Me.ugcECBanco, 0)
+        Me.Controls.SetChildIndex(Me.ugcPlanilla, 0)
+        Me.Controls.SetChildIndex(Me.btnGenPlanilla, 0)
+        Me.Controls.SetChildIndex(Me.btnCancelar, 0)
+        Me.Controls.SetChildIndex(Me.ugcECClientes, 0)
+        Me.Controls.SetChildIndex(Me.Label1, 0)
+        Me.Controls.SetChildIndex(Me.ulsClientes, 0)
+        Me.Controls.SetChildIndex(Me.Label2, 0)
+        Me.Controls.SetChildIndex(Me.cboCtasBanco, 0)
+        Me.Controls.SetChildIndex(Me.btnBuscarClts, 0)
+        Me.Controls.SetChildIndex(Me.btnBuscarEC, 0)
+        Me.Controls.SetChildIndex(Me.btnAdcRegistro, 0)
+        Me.Controls.SetChildIndex(Me.Label3, 0)
+        Me.Controls.SetChildIndex(Me.txtNroPla, 0)
+        Me.Controls.SetChildIndex(Me.Label4, 0)
+        Me.Controls.SetChildIndex(Me.Label5, 0)
+        Me.Controls.SetChildIndex(Me.Label6, 0)
+        Me.Controls.SetChildIndex(Me.DateEdit1, 0)
+        Me.Controls.SetChildIndex(Me.Label11, 0)
+        Me.Controls.SetChildIndex(Me.DateEdit2, 0)
+        Me.Controls.SetChildIndex(Me.DateEdit3, 0)
+        Me.Controls.SetChildIndex(Me.DateEdit4, 0)
+        Me.Controls.SetChildIndex(Me.Label8, 0)
+        Me.Controls.SetChildIndex(Me.cboEstado, 0)
+        Me.Controls.SetChildIndex(Me.txtComent, 0)
+        Me.Controls.SetChildIndex(Me.Label7, 0)
+        Me.Controls.SetChildIndex(Me.cboTipoPla, 0)
+        Me.Controls.SetChildIndex(Me.Label9, 0)
+        Me.Controls.SetChildIndex(Me.btnExportar, 0)
+        Me.Controls.SetChildIndex(Me.Label10, 0)
+        Me.Controls.SetChildIndex(Me.cmbPosBanco, 0)
+        Me.Controls.SetChildIndex(Me.Button1, 0)
+        Me.Controls.SetChildIndex(Me.agregar2, 0)
+        CType(Me.txtNroPla.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit1.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit1.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit2.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit2.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit3.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit3.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.txtComent.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit4.Properties.CalendarTimeProperties, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DateEdit4.Properties, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+    Friend WithEvents ugcECBanco As Util.uct_gridConBusqueda
+    Friend WithEvents ugcPlanilla As Util.uct_gridConBusqueda
+    Friend WithEvents btnGenPlanilla As System.Windows.Forms.Button
+    Friend WithEvents btnCancelar As System.Windows.Forms.Button
+    Friend WithEvents ugcECClientes As Util.uct_gridConBusqueda
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents ulsClientes As Util.uct_lstSeleccion
+    Friend WithEvents Label2 As System.Windows.Forms.Label
+    Friend WithEvents cboCtasBanco As System.Windows.Forms.ComboBox
+    Friend WithEvents btnBuscarClts As System.Windows.Forms.Button
+    Friend WithEvents btnBuscarEC As System.Windows.Forms.Button
+    Friend WithEvents btnAdcRegistro As System.Windows.Forms.Button
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents txtNroPla As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents Label4 As System.Windows.Forms.Label
+    Friend WithEvents Label5 As System.Windows.Forms.Label
+    Friend WithEvents Label6 As System.Windows.Forms.Label
+    Friend WithEvents DateEdit1 As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents DateEdit2 As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents DateEdit3 As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents Label8 As System.Windows.Forms.Label
+    Friend WithEvents cboEstado As System.Windows.Forms.ComboBox
+    Friend WithEvents txtComent As DevExpress.XtraEditors.TextEdit
+    Friend WithEvents Label7 As System.Windows.Forms.Label
+    Friend WithEvents cboTipoPla As System.Windows.Forms.ComboBox
+    Friend WithEvents Label9 As System.Windows.Forms.Label
+    Friend WithEvents btnExportar As System.Windows.Forms.Button
+    Friend WithEvents Label10 As System.Windows.Forms.Label
+    Friend WithEvents cmbPosBanco As System.Windows.Forms.ComboBox
+    Friend WithEvents Label11 As System.Windows.Forms.Label
+    Friend WithEvents DateEdit4 As DevExpress.XtraEditors.DateEdit
+    Friend WithEvents Button1 As System.Windows.Forms.Button
+    Friend WithEvents agregar2 As System.Windows.Forms.Button
+End Class
