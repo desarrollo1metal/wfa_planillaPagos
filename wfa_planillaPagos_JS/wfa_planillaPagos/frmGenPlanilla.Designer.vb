@@ -79,12 +79,12 @@ Partial Class frmGenPlanilla
         Me.ugcPlanilla.conFiltro = False
         Me.ugcPlanilla.conMenu = True
         Me.ugcPlanilla.DataSource = Nothing
-        Me.ugcPlanilla.Location = New System.Drawing.Point(15, 397)
-        Me.ugcPlanilla.Margin = New System.Windows.Forms.Padding(4)
+        Me.ugcPlanilla.Location = New System.Drawing.Point(20, 489)
+        Me.ugcPlanilla.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.ugcPlanilla.Name = "ugcPlanilla"
         Me.ugcPlanilla.ObjDetalle = Nothing
         Me.ugcPlanilla.PermitirOrden = False
-        Me.ugcPlanilla.Size = New System.Drawing.Size(1305, 311)
+        Me.ugcPlanilla.Size = New System.Drawing.Size(1739, 382)
         Me.ugcPlanilla.TabIndex = 2
         Me.ugcPlanilla.Tabla = "gmi_plaPagosDetalle"
         Me.ugcPlanilla.TablaId = "id"
@@ -106,12 +106,12 @@ Partial Class frmGenPlanilla
         Me.ugcECBanco.conFiltro = True
         Me.ugcECBanco.conMenu = False
         Me.ugcECBanco.DataSource = Nothing
-        Me.ugcECBanco.Location = New System.Drawing.Point(696, 78)
-        Me.ugcECBanco.Margin = New System.Windows.Forms.Padding(4)
+        Me.ugcECBanco.Location = New System.Drawing.Point(928, 96)
+        Me.ugcECBanco.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.ugcECBanco.Name = "ugcECBanco"
         Me.ugcECBanco.ObjDetalle = Nothing
         Me.ugcECBanco.PermitirOrden = True
-        Me.ugcECBanco.Size = New System.Drawing.Size(624, 275)
+        Me.ugcECBanco.Size = New System.Drawing.Size(831, 338)
         Me.ugcECBanco.TabIndex = 1
         Me.ugcECBanco.Tabla = Nothing
         Me.ugcECBanco.TablaId = "id"
@@ -122,9 +122,10 @@ Partial Class frmGenPlanilla
         'btnGenPlanilla
         '
         Me.btnGenPlanilla.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnGenPlanilla.Location = New System.Drawing.Point(15, 714)
+        Me.btnGenPlanilla.Location = New System.Drawing.Point(20, 879)
+        Me.btnGenPlanilla.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnGenPlanilla.Name = "btnGenPlanilla"
-        Me.btnGenPlanilla.Size = New System.Drawing.Size(172, 23)
+        Me.btnGenPlanilla.Size = New System.Drawing.Size(229, 28)
         Me.btnGenPlanilla.TabIndex = 3
         Me.btnGenPlanilla.Tag = "1"
         Me.btnGenPlanilla.Text = "Añadir"
@@ -133,9 +134,10 @@ Partial Class frmGenPlanilla
         'btnCancelar
         '
         Me.btnCancelar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelar.Location = New System.Drawing.Point(190, 714)
+        Me.btnCancelar.Location = New System.Drawing.Point(253, 879)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(168, 23)
+        Me.btnCancelar.Size = New System.Drawing.Size(224, 28)
         Me.btnCancelar.TabIndex = 4
         Me.btnCancelar.Tag = "Cancel"
         Me.btnCancelar.Text = "Cancelar"
@@ -153,12 +155,12 @@ Partial Class frmGenPlanilla
         Me.ugcECClientes.conFiltro = True
         Me.ugcECClientes.conMenu = False
         Me.ugcECClientes.DataSource = Nothing
-        Me.ugcECClientes.Location = New System.Drawing.Point(12, 78)
-        Me.ugcECClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.ugcECClientes.Location = New System.Drawing.Point(16, 96)
+        Me.ugcECClientes.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.ugcECClientes.Name = "ugcECClientes"
         Me.ugcECClientes.ObjDetalle = Nothing
         Me.ugcECClientes.PermitirOrden = True
-        Me.ugcECClientes.Size = New System.Drawing.Size(678, 275)
+        Me.ugcECClientes.Size = New System.Drawing.Size(903, 338)
         Me.ugcECClientes.TabIndex = 0
         Me.ugcECClientes.Tabla = "gmi_plaPagosDetalle"
         Me.ugcECClientes.TablaId = "Id_Doc"
@@ -169,9 +171,10 @@ Partial Class frmGenPlanilla
         'Label1
         '
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(20, 52)
+        Me.Label1.Location = New System.Drawing.Point(27, 64)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(118, 13)
+        Me.Label1.Size = New System.Drawing.Size(157, 17)
         Me.Label1.TabIndex = 5
         Me.Label1.Text = "Documentos por cobrar"
         '
@@ -180,11 +183,11 @@ Partial Class frmGenPlanilla
         Me.ulsClientes.BackColor = System.Drawing.Color.White
         Me.ulsClientes.CampoTxt = "CardName"
         Me.ulsClientes.campoVal = "CardCode"
-        Me.ulsClientes.Location = New System.Drawing.Point(155, 49)
-        Me.ulsClientes.Margin = New System.Windows.Forms.Padding(4)
+        Me.ulsClientes.Location = New System.Drawing.Point(207, 60)
+        Me.ulsClientes.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.ulsClientes.mostrarCampo = "CardCode"
         Me.ulsClientes.Name = "ulsClientes"
-        Me.ulsClientes.Size = New System.Drawing.Size(182, 26)
+        Me.ulsClientes.Size = New System.Drawing.Size(243, 32)
         Me.ulsClientes.TabIndex = 6
         Me.ulsClientes.Tabla = "OCRD"
         Me.ulsClientes.Tag = "ulsClientes"
@@ -195,9 +198,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(665, 35)
+        Me.Label2.Location = New System.Drawing.Point(887, 43)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(126, 13)
+        Me.Label2.Size = New System.Drawing.Size(165, 17)
         Me.Label2.TabIndex = 7
         Me.Label2.Text = "Estado de Cuenta Banco"
         '
@@ -207,17 +211,19 @@ Partial Class frmGenPlanilla
         Me.cboCtasBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboCtasBanco.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboCtasBanco.FormattingEnabled = True
-        Me.cboCtasBanco.Location = New System.Drawing.Point(668, 51)
+        Me.cboCtasBanco.Location = New System.Drawing.Point(891, 63)
+        Me.cboCtasBanco.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboCtasBanco.Name = "cboCtasBanco"
-        Me.cboCtasBanco.Size = New System.Drawing.Size(346, 19)
+        Me.cboCtasBanco.Size = New System.Drawing.Size(460, 21)
         Me.cboCtasBanco.TabIndex = 8
         Me.cboCtasBanco.Tag = "CtasBanco"
         '
         'btnBuscarClts
         '
-        Me.btnBuscarClts.Location = New System.Drawing.Point(398, 49)
+        Me.btnBuscarClts.Location = New System.Drawing.Point(531, 60)
+        Me.btnBuscarClts.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscarClts.Name = "btnBuscarClts"
-        Me.btnBuscarClts.Size = New System.Drawing.Size(155, 23)
+        Me.btnBuscarClts.Size = New System.Drawing.Size(207, 28)
         Me.btnBuscarClts.TabIndex = 9
         Me.btnBuscarClts.Tag = "sub_cargarUGCClientes"
         Me.btnBuscarClts.Text = "Buscar"
@@ -226,9 +232,10 @@ Partial Class frmGenPlanilla
         'btnBuscarEC
         '
         Me.btnBuscarEC.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnBuscarEC.Location = New System.Drawing.Point(1168, 52)
+        Me.btnBuscarEC.Location = New System.Drawing.Point(1557, 64)
+        Me.btnBuscarEC.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscarEC.Name = "btnBuscarEC"
-        Me.btnBuscarEC.Size = New System.Drawing.Size(155, 23)
+        Me.btnBuscarEC.Size = New System.Drawing.Size(207, 28)
         Me.btnBuscarEC.TabIndex = 10
         Me.btnBuscarEC.Tag = "sub_cargarUGCEstadoCuenta"
         Me.btnBuscarEC.Text = "Buscar"
@@ -237,9 +244,10 @@ Partial Class frmGenPlanilla
         'btnAdcRegistro
         '
         Me.btnAdcRegistro.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnAdcRegistro.Location = New System.Drawing.Point(1212, 359)
+        Me.btnAdcRegistro.Location = New System.Drawing.Point(1616, 442)
+        Me.btnAdcRegistro.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnAdcRegistro.Name = "btnAdcRegistro"
-        Me.btnAdcRegistro.Size = New System.Drawing.Size(110, 31)
+        Me.btnAdcRegistro.Size = New System.Drawing.Size(147, 38)
         Me.btnAdcRegistro.TabIndex = 11
         Me.btnAdcRegistro.Tag = "sub_adicionarRegistro"
         Me.btnAdcRegistro.Text = "Adicionar Registro"
@@ -249,9 +257,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 356)
+        Me.Label3.Location = New System.Drawing.Point(23, 438)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(78, 13)
+        Me.Label3.Size = New System.Drawing.Size(104, 17)
         Me.Label3.TabIndex = 12
         Me.Label3.Text = "Nro. de Planilla"
         '
@@ -259,11 +268,12 @@ Partial Class frmGenPlanilla
         '
         Me.txtNroPla.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.txtNroPla.Enabled = False
-        Me.txtNroPla.Location = New System.Drawing.Point(20, 372)
+        Me.txtNroPla.Location = New System.Drawing.Point(27, 458)
+        Me.txtNroPla.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtNroPla.Name = "txtNroPla"
         Me.txtNroPla.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.txtNroPla.Properties.Appearance.Options.UseFont = True
-        Me.txtNroPla.Size = New System.Drawing.Size(118, 18)
+        Me.txtNroPla.Size = New System.Drawing.Size(157, 20)
         Me.txtNroPla.TabIndex = 13
         Me.txtNroPla.Tag = "id"
         '
@@ -271,9 +281,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label4.AutoSize = True
-        Me.Label4.Location = New System.Drawing.Point(141, 356)
+        Me.Label4.Location = New System.Drawing.Point(188, 438)
+        Me.Label4.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label4.Name = "Label4"
-        Me.Label4.Size = New System.Drawing.Size(82, 13)
+        Me.Label4.Size = New System.Drawing.Size(107, 17)
         Me.Label4.TabIndex = 14
         Me.Label4.Text = "Fecha Creacion"
         '
@@ -281,9 +292,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label5.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(247, 356)
+        Me.Label5.Location = New System.Drawing.Point(329, 438)
+        Me.Label5.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label5.Name = "Label5"
-        Me.Label5.Size = New System.Drawing.Size(103, 13)
+        Me.Label5.Size = New System.Drawing.Size(134, 17)
         Me.Label5.TabIndex = 15
         Me.Label5.Text = "Fecha Actualizacion"
         '
@@ -291,9 +303,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label6.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label6.AutoSize = True
-        Me.Label6.Location = New System.Drawing.Point(356, 356)
+        Me.Label6.Location = New System.Drawing.Point(475, 438)
+        Me.Label6.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(79, 13)
+        Me.Label6.Size = New System.Drawing.Size(103, 17)
         Me.Label6.TabIndex = 16
         Me.Label6.Text = "Fecha Proceso"
         '
@@ -302,13 +315,14 @@ Partial Class frmGenPlanilla
         Me.DateEdit1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DateEdit1.EditValue = Nothing
         Me.DateEdit1.Enabled = False
-        Me.DateEdit1.Location = New System.Drawing.Point(144, 372)
+        Me.DateEdit1.Location = New System.Drawing.Point(192, 458)
+        Me.DateEdit1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateEdit1.Name = "DateEdit1"
         Me.DateEdit1.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.DateEdit1.Properties.Appearance.Options.UseFont = True
         Me.DateEdit1.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEdit1.Size = New System.Drawing.Size(100, 18)
+        Me.DateEdit1.Size = New System.Drawing.Size(133, 20)
         Me.DateEdit1.TabIndex = 18
         Me.DateEdit1.Tag = "FechaCrea"
         '
@@ -317,13 +331,14 @@ Partial Class frmGenPlanilla
         Me.DateEdit2.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DateEdit2.EditValue = Nothing
         Me.DateEdit2.Enabled = False
-        Me.DateEdit2.Location = New System.Drawing.Point(250, 372)
+        Me.DateEdit2.Location = New System.Drawing.Point(333, 458)
+        Me.DateEdit2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateEdit2.Name = "DateEdit2"
         Me.DateEdit2.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.DateEdit2.Properties.Appearance.Options.UseFont = True
         Me.DateEdit2.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEdit2.Size = New System.Drawing.Size(100, 18)
+        Me.DateEdit2.Size = New System.Drawing.Size(133, 20)
         Me.DateEdit2.TabIndex = 19
         Me.DateEdit2.Tag = "FechaAct"
         '
@@ -332,13 +347,14 @@ Partial Class frmGenPlanilla
         Me.DateEdit3.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DateEdit3.EditValue = Nothing
         Me.DateEdit3.Enabled = False
-        Me.DateEdit3.Location = New System.Drawing.Point(356, 372)
+        Me.DateEdit3.Location = New System.Drawing.Point(475, 458)
+        Me.DateEdit3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateEdit3.Name = "DateEdit3"
         Me.DateEdit3.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.DateEdit3.Properties.Appearance.Options.UseFont = True
         Me.DateEdit3.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateEdit3.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEdit3.Size = New System.Drawing.Size(100, 18)
+        Me.DateEdit3.Size = New System.Drawing.Size(133, 20)
         Me.DateEdit3.TabIndex = 20
         Me.DateEdit3.Tag = "FechaPrcs"
         '
@@ -346,9 +362,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label8.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label8.AutoSize = True
-        Me.Label8.Location = New System.Drawing.Point(464, 356)
+        Me.Label8.Location = New System.Drawing.Point(619, 438)
+        Me.Label8.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label8.Name = "Label8"
-        Me.Label8.Size = New System.Drawing.Size(40, 13)
+        Me.Label8.Size = New System.Drawing.Size(52, 17)
         Me.Label8.TabIndex = 21
         Me.Label8.Text = "Estado"
         '
@@ -359,20 +376,22 @@ Partial Class frmGenPlanilla
         Me.cboEstado.Enabled = False
         Me.cboEstado.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboEstado.FormattingEnabled = True
-        Me.cboEstado.Location = New System.Drawing.Point(462, 372)
+        Me.cboEstado.Location = New System.Drawing.Point(616, 458)
+        Me.cboEstado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboEstado.Name = "cboEstado"
-        Me.cboEstado.Size = New System.Drawing.Size(121, 19)
+        Me.cboEstado.Size = New System.Drawing.Size(160, 21)
         Me.cboEstado.TabIndex = 22
         Me.cboEstado.Tag = "estado"
         '
         'txtComent
         '
         Me.txtComent.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.txtComent.Location = New System.Drawing.Point(696, 372)
+        Me.txtComent.Location = New System.Drawing.Point(928, 458)
+        Me.txtComent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtComent.Name = "txtComent"
         Me.txtComent.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.txtComent.Properties.Appearance.Options.UseFont = True
-        Me.txtComent.Size = New System.Drawing.Size(383, 18)
+        Me.txtComent.Size = New System.Drawing.Size(511, 20)
         Me.txtComent.TabIndex = 56
         Me.txtComent.Tag = "comentario"
         '
@@ -380,9 +399,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label7.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(693, 356)
+        Me.Label7.Location = New System.Drawing.Point(924, 438)
+        Me.Label7.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label7.Name = "Label7"
-        Me.Label7.Size = New System.Drawing.Size(60, 13)
+        Me.Label7.Size = New System.Drawing.Size(80, 17)
         Me.Label7.TabIndex = 57
         Me.Label7.Text = "Comentario"
         '
@@ -392,9 +412,10 @@ Partial Class frmGenPlanilla
         Me.cboTipoPla.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboTipoPla.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboTipoPla.FormattingEnabled = True
-        Me.cboTipoPla.Location = New System.Drawing.Point(1085, 372)
+        Me.cboTipoPla.Location = New System.Drawing.Point(1447, 458)
+        Me.cboTipoPla.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboTipoPla.Name = "cboTipoPla"
-        Me.cboTipoPla.Size = New System.Drawing.Size(121, 19)
+        Me.cboTipoPla.Size = New System.Drawing.Size(160, 21)
         Me.cboTipoPla.TabIndex = 58
         Me.cboTipoPla.Tag = "tipoPla"
         '
@@ -402,18 +423,20 @@ Partial Class frmGenPlanilla
         '
         Me.Label9.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label9.AutoSize = True
-        Me.Label9.Location = New System.Drawing.Point(1082, 356)
+        Me.Label9.Location = New System.Drawing.Point(1443, 438)
+        Me.Label9.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label9.Name = "Label9"
-        Me.Label9.Size = New System.Drawing.Size(79, 13)
+        Me.Label9.Size = New System.Drawing.Size(105, 17)
         Me.Label9.TabIndex = 59
         Me.Label9.Text = "Tipo de Planilla"
         '
         'btnExportar
         '
         Me.btnExportar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnExportar.Location = New System.Drawing.Point(360, 401)
+        Me.btnExportar.Location = New System.Drawing.Point(480, 494)
+        Me.btnExportar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnExportar.Name = "btnExportar"
-        Me.btnExportar.Size = New System.Drawing.Size(172, 23)
+        Me.btnExportar.Size = New System.Drawing.Size(229, 28)
         Me.btnExportar.TabIndex = 60
         Me.btnExportar.Tag = "sub_ExportarExcel"
         Me.btnExportar.Text = "Exportar"
@@ -423,9 +446,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label10.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label10.AutoSize = True
-        Me.Label10.Location = New System.Drawing.Point(1017, 35)
+        Me.Label10.Location = New System.Drawing.Point(1356, 43)
+        Me.Label10.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label10.Name = "Label10"
-        Me.Label10.Size = New System.Drawing.Size(102, 13)
+        Me.Label10.Size = New System.Drawing.Size(135, 17)
         Me.Label10.TabIndex = 61
         Me.Label10.Text = "Número de Posición"
         '
@@ -434,9 +458,10 @@ Partial Class frmGenPlanilla
         Me.cmbPosBanco.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.cmbPosBanco.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cmbPosBanco.FormattingEnabled = True
-        Me.cmbPosBanco.Location = New System.Drawing.Point(1020, 49)
+        Me.cmbPosBanco.Location = New System.Drawing.Point(1360, 60)
+        Me.cmbPosBanco.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cmbPosBanco.Name = "cmbPosBanco"
-        Me.cmbPosBanco.Size = New System.Drawing.Size(142, 21)
+        Me.cmbPosBanco.Size = New System.Drawing.Size(188, 24)
         Me.cmbPosBanco.TabIndex = 62
         Me.cmbPosBanco.Tag = "PosBanco"
         '
@@ -444,9 +469,10 @@ Partial Class frmGenPlanilla
         '
         Me.Label11.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(589, 357)
+        Me.Label11.Location = New System.Drawing.Point(785, 439)
+        Me.Label11.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(65, 13)
+        Me.Label11.Size = New System.Drawing.Size(84, 17)
         Me.Label11.TabIndex = 16
         Me.Label11.Text = "Fecha Pago"
         '
@@ -454,22 +480,24 @@ Partial Class frmGenPlanilla
         '
         Me.DateEdit4.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
         Me.DateEdit4.EditValue = Nothing
-        Me.DateEdit4.Location = New System.Drawing.Point(589, 373)
+        Me.DateEdit4.Location = New System.Drawing.Point(785, 459)
+        Me.DateEdit4.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.DateEdit4.Name = "DateEdit4"
         Me.DateEdit4.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.DateEdit4.Properties.Appearance.Options.UseFont = True
         Me.DateEdit4.Properties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
         Me.DateEdit4.Properties.CalendarTimeProperties.Buttons.AddRange(New DevExpress.XtraEditors.Controls.EditorButton() {New DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)})
-        Me.DateEdit4.Size = New System.Drawing.Size(100, 18)
+        Me.DateEdit4.Size = New System.Drawing.Size(133, 20)
         Me.DateEdit4.TabIndex = 20
         Me.DateEdit4.Tag = "FechaDocumento"
         '
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(1168, 24)
+        Me.Button1.Location = New System.Drawing.Point(1557, 30)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(152, 24)
+        Me.Button1.Size = New System.Drawing.Size(203, 30)
         Me.Button1.TabIndex = 63
         Me.Button1.Tag = "sub_ExportarExcelDespositoCz"
         Me.Button1.Text = "Exportar Deposito"
@@ -478,9 +506,10 @@ Partial Class frmGenPlanilla
         'agregar2
         '
         Me.agregar2.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.agregar2.Location = New System.Drawing.Point(1224, 83)
+        Me.agregar2.Location = New System.Drawing.Point(1632, 102)
+        Me.agregar2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.agregar2.Name = "agregar2"
-        Me.agregar2.Size = New System.Drawing.Size(90, 23)
+        Me.agregar2.Size = New System.Drawing.Size(120, 28)
         Me.agregar2.TabIndex = 65
         Me.agregar2.Tag = "distribuir"
         Me.agregar2.Text = "Distribuir Pr"
@@ -488,11 +517,11 @@ Partial Class frmGenPlanilla
         '
         'frmGenPlanilla
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.AutoScroll = True
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1351, 741)
+        Me.ClientSize = New System.Drawing.Size(1801, 912)
         Me.Controls.Add(Me.agregar2)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.cmbPosBanco)
@@ -526,7 +555,7 @@ Partial Class frmGenPlanilla
         Me.Controls.Add(Me.btnGenPlanilla)
         Me.Controls.Add(Me.ugcPlanilla)
         Me.Controls.Add(Me.ugcECBanco)
-        Me.Margin = New System.Windows.Forms.Padding(4)
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Name = "frmGenPlanilla"
         Me.Tag = "entPlanilla"
         Me.Text = "Generar Planilla"

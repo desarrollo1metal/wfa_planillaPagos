@@ -4,6 +4,4 @@
 
 as
 
-select TOP 1 ISNULL( AcctCode,'') AS AcctCode
-from OACT
-where AcctName LIKE  '%GANANCIA DIFERENCIA%'
+select '776001' AS 'AcctCode'
