@@ -820,13 +820,11 @@ C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_AccesoDa
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.dll
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.xml
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.pdb
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraEditors.v14.2.dll
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraEditors.v14.2.xml
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\Interop.SAPbobsCOM.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\cl_AccesoDatos.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\cl_AccesoDatos.pdb
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\cl_AccesoDatos.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\Util.dll
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraEditors.v14.2.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.Utils.v14.2.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraGrid.v14.2.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\ExcelDataReader.dll
@@ -844,6 +842,7 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.Office.v14.2.Core.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\Util.pdb
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\Util.xml
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraEditors.v14.2.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.Utils.v14.2.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraGrid.v14.2.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\ExcelDataReader.pdb
@@ -908,6 +907,7 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\es\DevExpr
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\ja\DevExpress.Office.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\ru\DevExpress.Office.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.vbproj.AssemblyReference.cache
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\Interop.SAPbobsCOM.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.vbproj.ResolveComReference.cache
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.Resources.resources
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.vbproj.GenerateResource.cache

@@ -145,10 +145,11 @@ Public Class classProcesarPlanilla
 
             'validación de que todos los documentos en la plantilla deben tener su tipo de cambio financiero.
             'ini
+            Dim fila As Integer = 1
             For Each lo_planillaDetTem As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
 
                 Dim columnNamet3 As String
-                Dim Tcfinancierot3 As String
+                Dim Tcfinancierot3 As Double
                 'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
                 Dim dt_Tcfinanciero As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verEstadoTipoCambioFinanciero '" & lo_planillaDetTem.FechaPago.ToString("yyyyMMdd") & "'")
 
@@ -159,7 +160,7 @@ Public Class classProcesarPlanilla
                         For Each column As DataColumn In dt_Tcfinanciero.Columns
                             ' Leer el valor de cada celda
                             columnNamet3 = column.ColumnName
-                            Tcfinancierot3 = row(column)
+                            Tcfinancierot3 = Convert.ToDouble(row(column))
 
                         Next
                     Next
@@ -169,10 +170,15 @@ Public Class classProcesarPlanilla
 
                 If Tcfinancierot3 = 1 Then
 
+                    Dim li_confirm As Integer = MessageBox.Show(" Se debe ingresar el TC Financiero de la fecha del pago " & lo_planillaDetTem.FechaPago.ToString("yyyy-MM-dd") & " , la fila numero " & fila.ToString() & " , Documento " & lo_planillaDetTem.Referencia, "Mensaje de Error", MessageBoxButtons.OK)
 
+                    lo_SBOCompany.Disconnect()
 
+                    Exit Sub
 
                 End If
+
+                fila += 1
 
             Next
             'fin
@@ -180,6 +186,9 @@ Public Class classProcesarPlanilla
 
             ' Crear una lista auxiliar para almacenar las líneas modificadas
             Dim listaModificada As New List(Of entPlanilla_Lineas)
+            'jsolis
+            Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer))
+
 
             ' Se recorre el detalle de la planilla
             For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
@@ -248,6 +257,17 @@ Public Class classProcesarPlanilla
 
                         End If
 
+                        'correcto 
+
+                        Dim lo_planilla_PagosR_idT As String = lo_planilla.PagosR.id
+                        Dim lo_planilla_PagosR_idECT As Integer = lo_planilla.PagosR.idEC
+                        Dim lo_planilla_PagosR_lineaNumAsgT As Integer = lo_planilla.PagosR.lineaNumAsg
+                        Dim lo_planilla_PagosR_DocEntrySAPT As Integer = lo_planilla.PagosR.DocEntrySAP
+
+                        ' Agregar una tupla con los tres valores a la lista.
+                        listaCampos.Add(Tuple.Create(lo_planilla_PagosR_idT, lo_planilla_PagosR_idECT, lo_planilla_PagosR_lineaNumAsgT, lo_planilla_PagosR_DocEntrySAPT))
+
+
                         ' Se incrementa el valor del progressBar
                         sub_incrementarProgressBar(lo_progressBar)
                         li_contProgreso = li_contProgreso + 1
@@ -309,10 +329,6 @@ Public Class classProcesarPlanilla
             Next
 
             'prueba JSOLIS
-
-
-
-
 
             ' Se verifica si existe un proceso de UNO a MUCHOS o de MUCHOS a UNO por ejecutar
             If lo_lstPlaDet.Count > 0 Then
@@ -396,45 +412,8 @@ Public Class classProcesarPlanilla
             ' Se desconecta la compañia 
             lo_SBOCompany.Disconnect()
 
-
-
-
-            ' Se actualiza el objeto de la planilla
-            lo_planilla.Estado = "C"
-            lo_planilla.FechaPrcs = Now.Date
-            ls_resPla = lo_planilla.str_actualizar()
-
-
-            'JSOLIS ya se tiene él 
-
-            ' Se verifica el resultado de la actualizacion
-            If ls_resPla.Trim <> "" Then
-
-                ' Se muestra un mensaje que indique que no se actualizó los números SAP en el detalle de la planilla
-                sub_mostrarMensaje("Ocurrió un error al actualizar el Estado y los Pagos Recibidos asociados a la planilla.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
-
-                ' Se resetea el progressBar
-                sub_resetProgressBar(lo_progressBar)
-
-                ' Se finaliza el metodo
-                Exit Sub
-
-            End If
-
-            ' Se cambia el valor del estado del combo
-            sub_asignarEstadoObjeto(lo_planilla.Estado)
-
-            ' Se actualiza los numeros SAP en la tabla de detalle
-            ls_resPla = entPlanilla.str_actualizarNrosSAPPlaDet(lo_planilla.id)
-
-            ' Se verifica si se actualizó los números SAP de manera correcta
-            If ls_resPla.Trim <> "" Then
-
-                ' Se muestra un mensaje que indique que no se actualizó los números SAP en el detalle de la planilla
-                sub_mostrarMensaje("No se actualizó los números SAP de los Pagos Recibidos creados en el detalle de la planilla.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
-
-            End If
-
+            '******************************************************************************************************************************************************************************************************
+            'INI MOVER , PROBAR MOVIENDO ACA 27032025 0939
 
             ''----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             'abrir conexion
@@ -521,13 +500,16 @@ Public Class classProcesarPlanilla
             '    Console.WriteLine("Cantidad: " & linea.DocEntrySAP)
             'Next
 
+            'ls_resPla = lo_planilla.str_actualizar()
+            'lo_planilla.PagosR.sub_limpiar()
 
-            For Each linea As entPlanilla_Lineas In listaModificada
-
-
+            Dim i As Integer
+            i = 0
+            'ini version2
+            For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
 
                 Dim TcPagoSAP As Decimal
-                TcPagoSAP = dbl_obtTipoCambio("USD", CDate(linea.FechaPago).ToString("yyyyMMdd"))
+                TcPagoSAP = dbl_obtTipoCambio("USD", CDate(lo_planillaDet.FechaPago).ToString("yyyyMMdd"))
                 'TcPagoSAP = TcPagoSAPt
 
                 ''para la 2da vuelta, se cae aca.
@@ -535,7 +517,7 @@ Public Class classProcesarPlanilla
                 '''
                 Dim Tcfinanciero As Double
                 Dim respo2 As String = String.Empty
-                respo2 = "exec gmi_sp_verEstadoTipoCambioFinanciero '" & linea.FechaPago.ToString("yyyyMMdd") & "'"
+                respo2 = "exec gmi_sp_verEstadoTipoCambioFinanciero '" & lo_planillaDet.FechaPago.ToString("yyyyMMdd") & "'"
                 'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
                 Dim dt_Tcfinanciero As DataTable = dtb_ejecutarSQL_doquery(respo2)
 
@@ -555,9 +537,9 @@ Public Class classProcesarPlanilla
                 End If
 
 
-                If linea.asientoajustoT = "Y" Then
+                If lo_planillaDet.asientoajustoT = "Y" Then
 
-                    li_resultado = int_ajustecrearAsientoTC_sin_pr(linea, lo_SBOCompany2, linea.DocEntrySAP, Tcfinanciero, TcPagoSAP, cuentaGanancia, cuentaPerdida, asiento_result, montoreconciliaciont)
+                    li_resultado = int_ajustecrearAsientoTC_sin_pr(lo_planillaDet, lo_SBOCompany2, lo_planilla, lo_planillaDet.DocEntrySAP, Tcfinanciero, TcPagoSAP, cuentaGanancia, cuentaPerdida, asiento_result, montoreconciliaciont)
 
                     If li_resultado = -2 Then
 
@@ -568,17 +550,39 @@ Public Class classProcesarPlanilla
 
                     If li_resultado = 0 Then
 
+                        'For Each item In listaCampos
+
+                        Dim item = listaCampos(i)
+
+                        lo_planilla.PagosR.id = item.Item1
+                        lo_planilla.PagosR.idEC = item.Item2
+                        lo_planilla.PagosR.lineaNumAsg = item.Item3
+                        lo_planilla.PagosR.DocEntrySAP = item.Item4
+
+
+                        'MessageBox.Show("Valor 1: " & item.Item1 & vbCrLf &
+                        '    "Valor 2: " & item.Item2 & vbCrLf &
+                        '    "Valor 3: " & item.Item3)
+
+
+                        'lo_planilla.PagosR.
+
+                        lo_planilla.PagosR.sub_anadir()
+
+                        'Next
+                        'lo_planillaDet.
                         'actualizar los campos necesarios para guardar los docEntryTransId del asiento creado.
 
 
                     End If
 
-
-
                 End If
 
+                i = i + 1
 
             Next
+
+            'ini version2
 
 
             If li_resultado = 0 Then
@@ -596,6 +600,48 @@ Public Class classProcesarPlanilla
             ''actualizar respuesta en la tabla que corresponda
 
             ''----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+            'FIN MOVER , PROBAR MOVIENDO ACA 27032025 0939
+            '******************************************************************************************************************************************************************************************************
+
+
+            ' Se actualiza el objeto de la planilla
+            lo_planilla.Estado = "C"
+            lo_planilla.FechaPrcs = Now.Date
+            ls_resPla = lo_planilla.str_actualizar()
+
+
+            'JSOLIS ya se tiene él 
+
+            ' Se verifica el resultado de la actualizacion
+            If ls_resPla.Trim <> "" Then
+
+                ' Se muestra un mensaje que indique que no se actualizó los números SAP en el detalle de la planilla
+                sub_mostrarMensaje("Ocurrió un error al actualizar el Estado y los Pagos Recibidos asociados a la planilla.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
+
+                ' Se resetea el progressBar
+                sub_resetProgressBar(lo_progressBar)
+
+                ' Se finaliza el metodo
+                Exit Sub
+
+            End If
+
+            ' Se cambia el valor del estado del combo
+            sub_asignarEstadoObjeto(lo_planilla.Estado)
+
+            ' Se actualiza los numeros SAP en la tabla de detalle
+            ls_resPla = entPlanilla.str_actualizarNrosSAPPlaDet(lo_planilla.id)
+
+            ' Se verifica si se actualizó los números SAP de manera correcta
+            If ls_resPla.Trim <> "" Then
+
+                ' Se muestra un mensaje que indique que no se actualizó los números SAP en el detalle de la planilla
+                sub_mostrarMensaje("No se actualizó los números SAP de los Pagos Recibidos creados en el detalle de la planilla.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
+
+            End If
+
 
 
 
@@ -1174,11 +1220,11 @@ Public Class classProcesarPlanilla
                     'agregado
                     'TransId Asiento 
                     po_planilla.PagosR.LineaTran = asiento_result
-                    po_planilla.PagosR.DocEntryTr = ls_docEntry
+                    po_planilla.PagosR.DocEntryTr = 0
                     po_planilla.PagosR.MontoReconciliacion = montoreconciliaciont
 
-                    ' Se añade el detalle
-                    po_planilla.PagosR.sub_anadir()
+                    ''' Se añade el detalle
+                    'po_planilla.PagosR.sub_anadir()
 
                 End If
 
@@ -1489,8 +1535,8 @@ Public Class classProcesarPlanilla
                     po_planilla.PagosR.DocEntryTr = ls_docEntry
                     po_planilla.PagosR.MontoReconciliacion = montoreconciliaciont
 
-                    ' Se añade el detalle
-                    po_planilla.PagosR.sub_anadir()
+                    '' Se añade el detalle
+                    'po_planilla.PagosR.sub_anadir()
 
                 End If
 
@@ -2186,8 +2232,6 @@ Public Class classProcesarPlanilla
             ' Se recorre los pagos recibidos generados en la planilla
             For Each lo_pagoR As entPlanilla_PagosR In po_planilla.PagosR.lstObjs
 
-
-
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
                 ' Se declara un objeto de Payment de SAP Business One
                 Dim lo_payment As Payments
@@ -2218,7 +2262,7 @@ Public Class classProcesarPlanilla
                 Dim cuentaGanancia As String
 
 
-                Dim TransId_PR_db As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verTransId_PagoRecibido '" & Convert.ToString(lo_pagoR.DocEntryTr) & "'")
+                Dim TransId_PR_db As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verTransId_PagoRecibido '" & Convert.ToString(lo_pagoR.DocEntrySAP) & "'")
 
                 If TransId_PR_db IsNot Nothing Then
                     ' Recorrer las filas del DataTable
@@ -2246,36 +2290,23 @@ Public Class classProcesarPlanilla
                 ' Agregar primera línea de transacción
                 openTrans.InternalReconciliationOpenTransRows.Add()
                 openTrans.InternalReconciliationOpenTransRows.Item(0).Selected = BoYesNoEnum.tYES
-                'openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = li_resultado ' ID del documento
                 openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = TransId_PR ' ID del documento
-
-                'If lo_pagoR.MontoReconciliacion > 0 Then
                 openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = 1 ' Línea del documento
-                    'Else
-                    '    openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = 2 ' Línea del documento
-                    'End If
-
-                    'openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = 1 ' Línea del documento
-                    'openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = 2 ' Línea del documento
-                    'monto en positivo solo cuando es PR a favor, cuando es negativo, tambien debe ir negativo aca o de perdida.
-                    Dim V1 As Double
+                Dim V1 As Double
                 V1 = System.Math.Round(lo_pagoR.MontoReconciliacion, 2)
                 openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = System.Math.Round(lo_pagoR.MontoReconciliacion, 2)  ' Monto a reconciliar
+
 
                 'ASIENTO
                 ' Agregar segunda línea de transacción1
                 openTrans.InternalReconciliationOpenTransRows.Add()
                 openTrans.InternalReconciliationOpenTransRows.Item(1).Selected = BoYesNoEnum.tYES
-                openTrans.InternalReconciliationOpenTransRows.Item(1).TransId = lo_pagoR.LineaTran ' ID del otro documento
-                'openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 1
+                openTrans.InternalReconciliationOpenTransRows.Item(1).TransId = lo_pagoR.DocEntryTr ' ID del otro documento
+                openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0 ' Línea del documento
+                ' deberia ser siempre 0, porque es la primera pregunta, TransRowId
+                'End If
 
-                'If lo_pagoR.MontoReconciliacion > 0 Then
-                '    openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0 ' Línea del documento
-                'Else
-                openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 1 ' Línea del documento
-                    'End If
-
-                    openTrans.InternalReconciliationOpenTransRows.Item(1).ReconcileAmount = System.Math.Abs(System.Math.Round(lo_pagoR.MontoReconciliacion, 2))
+                openTrans.InternalReconciliationOpenTransRows.Item(1).ReconcileAmount = System.Math.Abs(System.Math.Round(lo_pagoR.MontoReconciliacion, 2))
 
                 ' Ejecutar la reconciliación
                 Try
@@ -2517,6 +2548,7 @@ Public Class classProcesarPlanilla
 
     Private Function int_ajustecrearAsientoTC_sin_pr(ByVal po_planillaDet As entPlanilla_Lineas,
                                         ByVal po_SBOCompany As SAPbobsCOM.Company,
+                                        ByVal po_planilla As entPlanilla,
                                         ps_docEntryPago As String,
                                         tcFinanciero As Decimal,
                                         tcFechaPago As Decimal,
@@ -2572,9 +2604,6 @@ Public Class classProcesarPlanilla
             End If
 
             '' FIN
-
-
-
 
             ' Se declara un objeto de tipo asiento contable de sap business one
             Dim lo_jrnlEntry As SAPbobsCOM.JournalEntries
@@ -2659,6 +2688,13 @@ Public Class classProcesarPlanilla
                                 'va servir para para la reconciliación
                                 asiento = po_SBOCompany.GetNewObjectKey()
                                 valor2_transIdAsiento = asiento
+
+                                po_planilla.PagosR.DocEntryTr = asiento
+                                po_planilla.PagosR.MontoReconciliacion = montoReconciliacionPr
+                                po_planilla.PagosR.LineaTran = 0
+
+                                'po_planilla.PagosR.sub_anadir()
+
                             End If
 
                         End If
@@ -2693,6 +2729,13 @@ Public Class classProcesarPlanilla
                                 'va servir para para la reconciliación
                                 asiento = po_SBOCompany.GetNewObjectKey()
                                 valor2_transIdAsiento = asiento
+
+
+                                po_planilla.PagosR.DocEntryTr = asiento
+                                po_planilla.PagosR.MontoReconciliacion = montoReconciliacionPr
+                                po_planilla.PagosR.LineaTran = 0
+
+                                'po_planilla.PagosR.sub_anadir()
 
                             End If
 
