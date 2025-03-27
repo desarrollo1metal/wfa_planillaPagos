@@ -2128,11 +2128,12 @@ Public Class classProcesarPlanilla
             ' Se verifica el estado: Si la planilla esta abierta ("O"), se cambia el estado del objeto a Cancelado
             If ps_estado = "O" Then
 
-                ' Se muestra un mensaje de confirmacion
-                li_confirm = MessageBox.Show("Al cancelar una planilla abierta, el estado de la misma cambiará a Cancelado. Luego de ello, no podrá realizar modificaciones. ¿Esta seguro que desea cancelar la planilla?", "caption", MessageBoxButtons.YesNoCancel)
+                '' Se muestra un mensaje de confirmacion
+                'li_confirm = MessageBox.Show("Al cancelar una planilla abierta, el estado de la misma cambiará a Cancelado. Luego de ello, no podrá realizar modificaciones. ¿Esta seguro que desea cancelar la planilla?", "caption", MessageBoxButtons.YesNoCancel)
+                li_confirm = MessageBox.Show("Para realizar la reconciliación la planilla debe estar cerrada", "Informativo", MessageBoxButtons.OK)
 
                 ' Se verifica el resultado del mensaje de confirmacion
-                If Not li_confirm = DialogResult.Yes Then
+                If Not li_confirm = DialogResult.OK Then
                     Exit Sub
                 End If
 
@@ -2252,8 +2253,6 @@ Public Class classProcesarPlanilla
                 TransId_PR = 0
 
 
-
-
                 'TransId_PR = dte_obtTransIdPagoRecibido(lo_pagoR.DocEntryTr)
                 'lo_pagoR.DocEntryTr = TransId_PR
 
@@ -2284,6 +2283,32 @@ Public Class classProcesarPlanilla
 
                 'fin
 
+                ''INI Obtener el numero de fila,del asiento del PR
+                'TransId_PR
+
+                'Dim TransId_PR_db As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verTransId_PagoRecibido '" & Convert.ToString(lo_pagoR.DocEntrySAP) & "'")
+
+                'If TransId_PR_db IsNot Nothing Then
+                '    ' Recorrer las filas del DataTable
+                '    For Each row As DataRow In TransId_PR_db.Rows
+                '        ' Recorrer las columnas de cada fila
+                '        For Each column As DataColumn In TransId_PR_db.Columns
+                '            ' Leer el valor de cada celda
+                '            columnName = column.ColumnName
+                '            TransId_PR = Convert.ToInt32(row(column))
+                '            'valor = cellValue.ToString()
+
+
+                '        Next
+                '    Next
+                'Else
+                '    ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+                'End If
+
+
+                ''FIN Obtener el numero de fila ,del asiento del PR
+
+
 
                 ' Se inicializa el objeto
                 'PAGOS RECIBIDO ' 
@@ -2292,20 +2317,15 @@ Public Class classProcesarPlanilla
                 openTrans.InternalReconciliationOpenTransRows.Item(0).Selected = BoYesNoEnum.tYES
                 openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = TransId_PR ' ID del documento
                 openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = 1 ' Línea del documento
-                Dim V1 As Double
-                V1 = System.Math.Round(lo_pagoR.MontoReconciliacion, 2)
                 openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = System.Math.Round(lo_pagoR.MontoReconciliacion, 2)  ' Monto a reconciliar
-
 
                 'ASIENTO
                 ' Agregar segunda línea de transacción1
+                ' openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0,deberia ser siempre 0, porque es la primera pregunta, TransRowId
                 openTrans.InternalReconciliationOpenTransRows.Add()
                 openTrans.InternalReconciliationOpenTransRows.Item(1).Selected = BoYesNoEnum.tYES
                 openTrans.InternalReconciliationOpenTransRows.Item(1).TransId = lo_pagoR.DocEntryTr ' ID del otro documento
                 openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0 ' Línea del documento
-                ' deberia ser siempre 0, porque es la primera pregunta, TransRowId
-                'End If
-
                 openTrans.InternalReconciliationOpenTransRows.Item(1).ReconcileAmount = System.Math.Abs(System.Math.Round(lo_pagoR.MontoReconciliacion, 2))
 
                 ' Ejecutar la reconciliación
@@ -2351,12 +2371,12 @@ Public Class classProcesarPlanilla
                 If ls_resPla.Trim = "" Then
 
                     ' Se actualiza el objeto de la planilla
-                    po_planilla.Estado = "O"
+                    po_planilla.Estado = "C"
                     ls_resPla = po_planilla.str_actualizar()
 
                     ' Se muestra un mensaje que indica que el proceso se realizó con exito
-                    sub_mostrarMensaje("Se de Reconciliacion la planilla de manera exitosa. (Número de : " & po_planilla.PagosR.int_contar.ToString & "). " & ls_resPla, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
-                    sub_asignarEstadoObjeto("O")
+                    sub_mostrarMensaje("Se realizo la reconciliación de manera exitosa. ( Número de : " & po_planilla.PagosR.int_contar.ToString & "). " & ls_resPla, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
+                    sub_asignarEstadoObjeto("C")
 
                 Else
                     sub_mostrarMensaje("Ocurrió un error al intentar reconciliar en SAP: " & ls_resPla & "", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
@@ -2618,8 +2638,8 @@ Public Class classProcesarPlanilla
             lo_jrnlEntry.TransactionCode = "AD"
 
             'JOLIS
-            lo_jrnlEntry.Reference = "JS2603 Planilla " + po_planillaDet.id.ToString()
-            lo_jrnlEntry.Memo = "JS2603 Ajuste Planilla cobranza " + po_planillaDet.id.ToString()
+            lo_jrnlEntry.Reference = "1739 Planilla " + po_planillaDet.id.ToString()
+            lo_jrnlEntry.Memo = "1739 Ajuste Planilla cobranza " + po_planillaDet.id.ToString()
 
             lo_jrnlEntry.Reference2 = po_planillaDet.idEC
             lo_jrnlEntry.Reference3 = ps_docEntryPago
@@ -2674,7 +2694,7 @@ Public Class classProcesarPlanilla
 
 
 
-                            lo_jrnlEntry.SaveXML("C:\Users\programador_2\Documents\SaveXML_PR\as_1322.xml")
+                            'lo_jrnlEntry.SaveXML("C:\Users\programador_2\Documents\SaveXML_PR\as_1322.xml")
 
                             li_resultado = lo_jrnlEntry.Add()
 
