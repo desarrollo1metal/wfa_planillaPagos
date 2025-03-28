@@ -69,6 +69,81 @@ Public Class classProcesarPlanilla
         End Try
     End Sub
 
+
+    Public Function ValidacionPlanilla(entPlanilla_LineasDel As entPlanilla_Lineas, ByRef mesanje As String, ByRef codigo As Integer) As Boolean
+
+        Dim respon As Boolean
+        respon = True
+
+        'val1
+        Dim columnNamet3 As String
+        Dim Tcfinancierot3 As Double
+        'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
+        Dim dt_Tcfinanciero As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verEstadoTipoCambioFinanciero '" & entPlanilla_LineasDel.FechaPago.ToString("yyyyMMdd") & "'")
+
+        If dt_Tcfinanciero IsNot Nothing Then
+            ' Recorrer las filas del DataTable
+            For Each row As DataRow In dt_Tcfinanciero.Rows
+                ' Recorrer las columnas de cada fila
+                For Each column As DataColumn In dt_Tcfinanciero.Columns
+                    ' Leer el valor de cada celda
+                    columnNamet3 = column.ColumnName
+                    Tcfinancierot3 = Convert.ToDouble(row(column))
+
+                Next
+            Next
+
+
+
+        Else
+            ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+        End If
+
+
+        If Tcfinancierot3 = 1 Then
+
+            mesanje = " Se debe ingresar el TC Financiero de la fecha del pago " & entPlanilla_LineasDel.FechaPago.ToString("yyyy-MM-dd") & " , Documento " & entPlanilla_LineasDel.Referencia
+
+            Return False
+        End If
+
+        'val2
+        Dim columnNameVale2 As String
+        Dim TcfinancierotVale2 As String = "Y"
+        'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
+        Dim dt_TcfinancieroVale2 As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verEstadoPeriodoValidacion '" & entPlanilla_LineasDel.FechaPago.ToString("yyyyMMdd") & "'")
+
+        If dt_TcfinancieroVale2 IsNot Nothing Then
+            ' Recorrer las filas del DataTable
+            For Each row As DataRow In dt_TcfinancieroVale2.Rows
+                ' Recorrer las columnas de cada fila
+                For Each column As DataColumn In dt_TcfinancieroVale2.Columns
+                    ' Leer el valor de cada celda
+                    columnNameVale2 = column.ColumnName
+                    TcfinancierotVale2 = Convert.ToString(row(column))
+
+                Next
+            Next
+
+        Else
+            ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+        End If
+
+
+        If TcfinancierotVale2 <> "N" Then
+
+            mesanje = " El Periodo Contable no esta desbloqueado , del Documento " & entPlanilla_LineasDel.Referencia & " con fecha  " & entPlanilla_LineasDel.FechaPago.ToString("yyyy-MM-dd")
+
+            Return False
+
+        End If
+
+
+
+        Return respon
+
+    End Function
+
     Private Sub sub_procesarPlanilla()
         Try
 
@@ -143,34 +218,22 @@ Public Class classProcesarPlanilla
             lo_planilla.PagosR.sub_limpiar()
 
 
+
             'validación de que todos los documentos en la plantilla deben tener su tipo de cambio financiero.
-            'ini
+            'ini validacion
+
+            Dim mensajeResp As String = String.Empty
+            Dim codigoResp As Integer = 0
+
             Dim fila As Integer = 1
+
             For Each lo_planillaDetTem As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
 
-                Dim columnNamet3 As String
-                Dim Tcfinancierot3 As Double
-                'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
-                Dim dt_Tcfinanciero As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verEstadoTipoCambioFinanciero '" & lo_planillaDetTem.FechaPago.ToString("yyyyMMdd") & "'")
 
-                If dt_Tcfinanciero IsNot Nothing Then
-                    ' Recorrer las filas del DataTable
-                    For Each row As DataRow In dt_Tcfinanciero.Rows
-                        ' Recorrer las columnas de cada fila
-                        For Each column As DataColumn In dt_Tcfinanciero.Columns
-                            ' Leer el valor de cada celda
-                            columnNamet3 = column.ColumnName
-                            Tcfinancierot3 = Convert.ToDouble(row(column))
+                If (ValidacionPlanilla(lo_planillaDetTem, mensajeResp, codigoResp) = False) Then
 
-                        Next
-                    Next
-                Else
-                    ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
-                End If
+                    sub_mostrarMensaje(mensajeResp & " , fila " & fila, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
 
-                If Tcfinancierot3 = 1 Then
-
-                    Dim li_confirm As Integer = MessageBox.Show(" Se debe ingresar el TC Financiero de la fecha del pago " & lo_planillaDetTem.FechaPago.ToString("yyyy-MM-dd") & " , la fila numero " & fila.ToString() & " , Documento " & lo_planillaDetTem.Referencia, "Mensaje de Error", MessageBoxButtons.OK)
 
                     lo_SBOCompany.Disconnect()
 
@@ -178,10 +241,11 @@ Public Class classProcesarPlanilla
 
                 End If
 
+
                 fila += 1
 
             Next
-            'fin
+            'fin validacion
 
 
             ' Crear una lista auxiliar para almacenar las líneas modificadas
@@ -642,13 +706,8 @@ Public Class classProcesarPlanilla
 
             End If
 
-
-
-
             '''' FIN CAMBIO DE ASIENTO JSOLIS
-
-
-
+            '''
             ' Se reasigna el modo del formulario a Busqueda
             sub_asignarModo(enm_modoForm.BUSCAR)
 
@@ -659,11 +718,6 @@ Public Class classProcesarPlanilla
             sub_mostrarMensaje(ex.Message, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_exc)
         End Try
     End Sub
-
-
-
-
-
 
 
     Private Sub sub_procesarPlanilla_25032025_1636()
@@ -2230,8 +2284,36 @@ Public Class classProcesarPlanilla
                 Exit Sub
             End If
 
+
+            'ini
+            Dim listaCampos As New List(Of Tuple(Of String))
+
+
+            Dim aux As String
+            For Each lo_planillaDet As entPlanilla_Lineas In po_planilla.Lineas.lstObjs
+
+                'aux = lo_planillaDet.Codigo
+                'aux1 = po_planilla.Lineas.lstObjs(0)
+                listaCampos.Add(Tuple.Create(lo_planillaDet.Codigo))
+
+            Next
+            'fin
+
+
+
+            Dim i As Integer = 0
+
             ' Se recorre los pagos recibidos generados en la planilla
             For Each lo_pagoR As entPlanilla_PagosR In po_planilla.PagosR.lstObjs
+
+                'Dim carcodet As String = po_planilla.Lineas.lis.Lineas.Nombre(i)
+                i = i + 1
+
+                If lo_pagoR.DocEntryTr = 0 And lo_pagoR.MontoReconciliacion = 0 Then
+
+                    Continue For
+
+                End If
 
                 '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
                 ' Se declara un objeto de Payment de SAP Business One
@@ -2286,24 +2368,34 @@ Public Class classProcesarPlanilla
                 ''INI Obtener el numero de fila,del asiento del PR
                 'TransId_PR
 
-                'Dim TransId_PR_db As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verTransId_PagoRecibido '" & Convert.ToString(lo_pagoR.DocEntrySAP) & "'")
 
-                'If TransId_PR_db IsNot Nothing Then
-                '    ' Recorrer las filas del DataTable
-                '    For Each row As DataRow In TransId_PR_db.Rows
-                '        ' Recorrer las columnas de cada fila
-                '        For Each column As DataColumn In TransId_PR_db.Columns
-                '            ' Leer el valor de cada celda
-                '            columnName = column.ColumnName
-                '            TransId_PR = Convert.ToInt32(row(column))
-                '            'valor = cellValue.ToString()
+                Dim item = listaCampos(i - 1)
+                'lo_planilla.PagosR.id = item.Item1
+
+                Dim query1 As String = String.Empty
+                query1 = "exec gmi_sp_obtenerLineaPR '" & Convert.ToString(TransId_PR) & "', '" & Convert.ToString(item.Item1) & "'"
+
+                Dim linea_id_as As Integer
+                linea_id_as = 0
+
+                Dim obtenerLineaPR_db As DataTable = dtb_ejecutarSQL_doquery(query1)
+
+                If obtenerLineaPR_db IsNot Nothing Then
+                    ' Recorrer las filas del DataTable
+                    For Each row As DataRow In obtenerLineaPR_db.Rows
+                        ' Recorrer las columnas de cada fila
+                        For Each column As DataColumn In obtenerLineaPR_db.Columns
+                            ' Leer el valor de cada celda
+                            columnName = column.ColumnName
+                            linea_id_as = Convert.ToInt32(row(column))
+                            'valor = cellValue.ToString()
 
 
-                '        Next
-                '    Next
-                'Else
-                '    ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
-                'End If
+                        Next
+                    Next
+                Else
+                    ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+                End If
 
 
                 ''FIN Obtener el numero de fila ,del asiento del PR
@@ -2316,7 +2408,8 @@ Public Class classProcesarPlanilla
                 openTrans.InternalReconciliationOpenTransRows.Add()
                 openTrans.InternalReconciliationOpenTransRows.Item(0).Selected = BoYesNoEnum.tYES
                 openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = TransId_PR ' ID del documento
-                openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = 1 ' Línea del documento
+                '¿?
+                openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = linea_id_as ' Línea del documento
                 openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = System.Math.Round(lo_pagoR.MontoReconciliacion, 2)  ' Monto a reconciliar
 
                 'ASIENTO
@@ -2625,31 +2718,29 @@ Public Class classProcesarPlanilla
 
             '' FIN
 
-            ' Se declara un objeto de tipo asiento contable de sap business one
-            Dim lo_jrnlEntry As SAPbobsCOM.JournalEntries
-
-            ' Se inicializa el objeto de asiento contable de sap business one
-            lo_jrnlEntry = po_SBOCompany.GetBusinessObject(BoObjectTypes.oJournalEntries)
-
-            ' Se asigna las propiedades al objeto de asiento contable
-            lo_jrnlEntry.ReferenceDate = po_planillaDet.FechaPago
-            lo_jrnlEntry.TaxDate = po_planillaDet.FechaPago
-            lo_jrnlEntry.DueDate = po_planillaDet.FechaPago
-            lo_jrnlEntry.TransactionCode = "AD"
-
-            'JOLIS
-            lo_jrnlEntry.Reference = "1739 Planilla " + po_planillaDet.id.ToString()
-            lo_jrnlEntry.Memo = "1739 Ajuste Planilla cobranza " + po_planillaDet.id.ToString()
-
-            lo_jrnlEntry.Reference2 = po_planillaDet.idEC
-            lo_jrnlEntry.Reference3 = ps_docEntryPago
-
-
 
             ' Se asigna las propiedades al detalle del asiento
             ' - Se verifica la moneda del depósito
             If po_planillaDet.MonedaPag = str_obtMonLocal() Then
 
+                ' Se declara un objeto de tipo asiento contable de sap business one
+                Dim lo_jrnlEntry As SAPbobsCOM.JournalEntries
+
+                ' Se inicializa el objeto de asiento contable de sap business one
+                lo_jrnlEntry = po_SBOCompany.GetBusinessObject(BoObjectTypes.oJournalEntries)
+
+                ' Se asigna las propiedades al objeto de asiento contable
+                lo_jrnlEntry.ReferenceDate = po_planillaDet.FechaPago
+                lo_jrnlEntry.TaxDate = po_planillaDet.FechaPago
+                lo_jrnlEntry.DueDate = po_planillaDet.FechaPago
+                lo_jrnlEntry.TransactionCode = "AD"
+
+                'JOLIS
+                lo_jrnlEntry.Reference = " Planilla " + po_planillaDet.id.ToString()
+                lo_jrnlEntry.Memo = "Asiento Ajuste Planilla cobranza " + po_planillaDet.id.ToString()
+
+                lo_jrnlEntry.Reference2 = po_planillaDet.idEC
+                lo_jrnlEntry.Reference3 = ps_docEntryPago
 
                 ' Se verifica si el Saldo a Favor es mayor a cero
                 If po_planillaDet.SaldoFavor > 0.0 Then

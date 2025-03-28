@@ -38,6 +38,7 @@ Public Module ModuleSQLComun
 
 
 
+
     Public Function dtb_ejecutarSQL_doquery(ByVal ps_sql As String) As DataTable
         Try
 
