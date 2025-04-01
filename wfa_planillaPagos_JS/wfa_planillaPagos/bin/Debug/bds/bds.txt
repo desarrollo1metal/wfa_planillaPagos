@@ -1,9 +1,0 @@
-inz - Induzinc
-mega - Mega
-sf - Steel
-mim - Mimsa
-rum - Rumi
-tes - test_Mimsa
-te1 - test_INDUZINC
-te2 - test_MEGA
-te3 - test_RUMI
