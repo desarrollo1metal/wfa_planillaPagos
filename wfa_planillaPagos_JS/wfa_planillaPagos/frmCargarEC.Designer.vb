@@ -35,9 +35,10 @@ Partial Class frmCargarEC
         '
         'btnBuscar
         '
-        Me.btnBuscar.Location = New System.Drawing.Point(12, 12)
+        Me.btnBuscar.Location = New System.Drawing.Point(16, 15)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscar.Name = "btnBuscar"
-        Me.btnBuscar.Size = New System.Drawing.Size(115, 22)
+        Me.btnBuscar.Size = New System.Drawing.Size(153, 27)
         Me.btnBuscar.TabIndex = 1
         Me.btnBuscar.Tag = "sub_mostrarRuta"
         Me.btnBuscar.Text = "Buscar"
@@ -45,19 +46,21 @@ Partial Class frmCargarEC
         '
         'txtRuta
         '
-        Me.txtRuta.Location = New System.Drawing.Point(133, 14)
+        Me.txtRuta.Location = New System.Drawing.Point(177, 17)
+        Me.txtRuta.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtRuta.Name = "txtRuta"
         Me.txtRuta.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.txtRuta.Properties.Appearance.Options.UseFont = True
-        Me.txtRuta.Size = New System.Drawing.Size(435, 20)
+        Me.txtRuta.Size = New System.Drawing.Size(580, 24)
         Me.txtRuta.TabIndex = 2
         Me.txtRuta.Tag = "rutaEC"
         '
         'btnMostrar
         '
-        Me.btnMostrar.Location = New System.Drawing.Point(574, 11)
+        Me.btnMostrar.Location = New System.Drawing.Point(765, 14)
+        Me.btnMostrar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnMostrar.Name = "btnMostrar"
-        Me.btnMostrar.Size = New System.Drawing.Size(126, 23)
+        Me.btnMostrar.Size = New System.Drawing.Size(168, 28)
         Me.btnMostrar.TabIndex = 3
         Me.btnMostrar.Tag = "sub_mostrarEC"
         Me.btnMostrar.Text = "Mostrar"
@@ -66,9 +69,10 @@ Partial Class frmCargarEC
         'btnImportar
         '
         Me.btnImportar.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnImportar.Location = New System.Drawing.Point(1098, 12)
+        Me.btnImportar.Location = New System.Drawing.Point(1464, 15)
+        Me.btnImportar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnImportar.Name = "btnImportar"
-        Me.btnImportar.Size = New System.Drawing.Size(142, 23)
+        Me.btnImportar.Size = New System.Drawing.Size(189, 28)
         Me.btnImportar.TabIndex = 4
         Me.btnImportar.Tag = "sub_importarEC"
         Me.btnImportar.Text = "Importar"
@@ -77,9 +81,10 @@ Partial Class frmCargarEC
         'btnECenPLa
         '
         Me.btnECenPLa.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnECenPLa.Location = New System.Drawing.Point(1050, 487)
+        Me.btnECenPLa.Location = New System.Drawing.Point(1400, 599)
+        Me.btnECenPLa.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnECenPLa.Name = "btnECenPLa"
-        Me.btnECenPLa.Size = New System.Drawing.Size(190, 23)
+        Me.btnECenPLa.Size = New System.Drawing.Size(253, 28)
         Me.btnECenPLa.TabIndex = 56
         Me.btnECenPLa.Tag = "sub_ECenPlanillas"
         Me.btnECenPLa.Text = "Estado de Cuenta en Planillas"
@@ -88,9 +93,10 @@ Partial Class frmCargarEC
         'btnConsultEC
         '
         Me.btnConsultEC.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.btnConsultEC.Location = New System.Drawing.Point(854, 487)
+        Me.btnConsultEC.Location = New System.Drawing.Point(1139, 599)
+        Me.btnConsultEC.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnConsultEC.Name = "btnConsultEC"
-        Me.btnConsultEC.Size = New System.Drawing.Size(190, 23)
+        Me.btnConsultEC.Size = New System.Drawing.Size(253, 28)
         Me.btnConsultEC.TabIndex = 57
         Me.btnConsultEC.Tag = "sub_consultarEC"
         Me.btnConsultEC.Text = "Consultar Estado de Cuenta"
@@ -109,11 +115,12 @@ Partial Class frmCargarEC
         Me.ugcEC.conFiltro = False
         Me.ugcEC.conMenu = False
         Me.ugcEC.DataSource = Nothing
-        Me.ugcEC.Location = New System.Drawing.Point(12, 41)
+        Me.ugcEC.Location = New System.Drawing.Point(16, 50)
+        Me.ugcEC.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.ugcEC.Name = "ugcEC"
         Me.ugcEC.ObjDetalle = Nothing
         Me.ugcEC.PermitirOrden = False
-        Me.ugcEC.Size = New System.Drawing.Size(1228, 440)
+        Me.ugcEC.Size = New System.Drawing.Size(1637, 541)
         Me.ugcEC.TabIndex = 68
         Me.ugcEC.Tabla = ""
         Me.ugcEC.TablaId = ""
@@ -125,9 +132,10 @@ Partial Class frmCargarEC
         '
         Me.chkRegPll.Anchor = CType((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.chkRegPll.AutoSize = True
-        Me.chkRegPll.Location = New System.Drawing.Point(854, 15)
+        Me.chkRegPll.Location = New System.Drawing.Point(1141, 18)
+        Me.chkRegPll.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.chkRegPll.Name = "chkRegPll"
-        Me.chkRegPll.Size = New System.Drawing.Size(228, 17)
+        Me.chkRegPll.Size = New System.Drawing.Size(302, 21)
         Me.chkRegPll.TabIndex = 69
         Me.chkRegPll.Tag = "regPll"
         Me.chkRegPll.Text = "Registros para Planilla de Pagos Recibidos"
@@ -135,18 +143,19 @@ Partial Class frmCargarEC
         '
         'frmCargarEC
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(1252, 521)
-        Me.Controls.Add(Me.chkRegPll)
+        Me.ClientSize = New System.Drawing.Size(1669, 641)
         Me.Controls.Add(Me.ugcEC)
+        Me.Controls.Add(Me.chkRegPll)
         Me.Controls.Add(Me.btnConsultEC)
         Me.Controls.Add(Me.btnECenPLa)
         Me.Controls.Add(Me.btnImportar)
         Me.Controls.Add(Me.btnMostrar)
         Me.Controls.Add(Me.txtRuta)
         Me.Controls.Add(Me.btnBuscar)
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Name = "frmCargarEC"
         Me.Tag = ""
         Me.Text = "Cargar Estado de Cuenta"
@@ -156,8 +165,8 @@ Partial Class frmCargarEC
         Me.Controls.SetChildIndex(Me.btnImportar, 0)
         Me.Controls.SetChildIndex(Me.btnECenPLa, 0)
         Me.Controls.SetChildIndex(Me.btnConsultEC, 0)
-        Me.Controls.SetChildIndex(Me.ugcEC, 0)
         Me.Controls.SetChildIndex(Me.chkRegPll, 0)
+        Me.Controls.SetChildIndex(Me.ugcEC, 0)
         CType(Me.txtRuta.Properties, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
