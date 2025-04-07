@@ -60,7 +60,7 @@ Partial Class frmProcesarPlanilla
         Me.cboEstado.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboEstado.FormattingEnabled = True
         Me.cboEstado.Location = New System.Drawing.Point(609, 85)
-        Me.cboEstado.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.cboEstado.Margin = New System.Windows.Forms.Padding(4)
         Me.cboEstado.Name = "cboEstado"
         Me.cboEstado.Size = New System.Drawing.Size(160, 21)
         Me.cboEstado.TabIndex = 65
@@ -81,7 +81,7 @@ Partial Class frmProcesarPlanilla
         Me.DateEdit3.EditValue = Nothing
         Me.DateEdit3.Enabled = False
         Me.DateEdit3.Location = New System.Drawing.Point(468, 85)
-        Me.DateEdit3.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateEdit3.Margin = New System.Windows.Forms.Padding(4)
         Me.DateEdit3.Name = "DateEdit3"
         Me.DateEdit3.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.DateEdit3.Properties.Appearance.Options.UseFont = True
@@ -96,7 +96,7 @@ Partial Class frmProcesarPlanilla
         Me.DateEdit2.EditValue = Nothing
         Me.DateEdit2.Enabled = False
         Me.DateEdit2.Location = New System.Drawing.Point(327, 85)
-        Me.DateEdit2.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateEdit2.Margin = New System.Windows.Forms.Padding(4)
         Me.DateEdit2.Name = "DateEdit2"
         Me.DateEdit2.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.DateEdit2.Properties.Appearance.Options.UseFont = True
@@ -111,7 +111,7 @@ Partial Class frmProcesarPlanilla
         Me.DateEdit1.EditValue = Nothing
         Me.DateEdit1.Enabled = False
         Me.DateEdit1.Location = New System.Drawing.Point(185, 85)
-        Me.DateEdit1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.DateEdit1.Margin = New System.Windows.Forms.Padding(4)
         Me.DateEdit1.Name = "DateEdit1"
         Me.DateEdit1.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.DateEdit1.Properties.Appearance.Options.UseFont = True
@@ -155,7 +155,7 @@ Partial Class frmProcesarPlanilla
         '
         Me.txtNroPla.Enabled = False
         Me.txtNroPla.Location = New System.Drawing.Point(20, 85)
-        Me.txtNroPla.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtNroPla.Margin = New System.Windows.Forms.Padding(4)
         Me.txtNroPla.Name = "txtNroPla"
         Me.txtNroPla.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.txtNroPla.Properties.Appearance.Options.UseFont = True
@@ -179,9 +179,9 @@ Partial Class frmProcesarPlanilla
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.Gainsboro
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
-        Me.Panel1.Size = New System.Drawing.Size(1817, 50)
+        Me.Panel1.Size = New System.Drawing.Size(1811, 50)
         Me.Panel1.TabIndex = 66
         '
         'ugcPlanilla
@@ -198,11 +198,11 @@ Partial Class frmProcesarPlanilla
         Me.ugcPlanilla.conMenu = False
         Me.ugcPlanilla.DataSource = Nothing
         Me.ugcPlanilla.Location = New System.Drawing.Point(16, 127)
-        Me.ugcPlanilla.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.ugcPlanilla.Margin = New System.Windows.Forms.Padding(5)
         Me.ugcPlanilla.Name = "ugcPlanilla"
         Me.ugcPlanilla.ObjDetalle = Nothing
         Me.ugcPlanilla.PermitirOrden = False
-        Me.ugcPlanilla.Size = New System.Drawing.Size(1785, 659)
+        Me.ugcPlanilla.Size = New System.Drawing.Size(1779, 466)
         Me.ugcPlanilla.TabIndex = 67
         Me.ugcPlanilla.Tabla = "gmi_plaPagosDetalle"
         Me.ugcPlanilla.TablaId = "id"
@@ -213,8 +213,8 @@ Partial Class frmProcesarPlanilla
         'btnProcesar
         '
         Me.btnProcesar.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnProcesar.Location = New System.Drawing.Point(20, 794)
-        Me.btnProcesar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnProcesar.Location = New System.Drawing.Point(20, 601)
+        Me.btnProcesar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnProcesar.Name = "btnProcesar"
         Me.btnProcesar.Size = New System.Drawing.Size(146, 39)
         Me.btnProcesar.TabIndex = 68
@@ -225,7 +225,7 @@ Partial Class frmProcesarPlanilla
         'btnBuscar
         '
         Me.btnBuscar.Location = New System.Drawing.Point(1647, 81)
-        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnBuscar.Margin = New System.Windows.Forms.Padding(4)
         Me.btnBuscar.Name = "btnBuscar"
         Me.btnBuscar.Size = New System.Drawing.Size(143, 28)
         Me.btnBuscar.TabIndex = 69
@@ -236,8 +236,8 @@ Partial Class frmProcesarPlanilla
         'ProgressBar1
         '
         Me.ProgressBar1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.ProgressBar1.Location = New System.Drawing.Point(912, 799)
-        Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.ProgressBar1.Location = New System.Drawing.Point(906, 606)
+        Me.ProgressBar1.Margin = New System.Windows.Forms.Padding(4)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(888, 28)
         Me.ProgressBar1.TabIndex = 70
@@ -247,7 +247,7 @@ Partial Class frmProcesarPlanilla
         '
         Me.Label1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(816, 806)
+        Me.Label1.Location = New System.Drawing.Point(810, 613)
         Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(66, 17)
@@ -257,8 +257,8 @@ Partial Class frmProcesarPlanilla
         'btnCancelPla
         '
         Me.btnCancelPla.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.btnCancelPla.Location = New System.Drawing.Point(574, 794)
-        Me.btnCancelPla.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnCancelPla.Location = New System.Drawing.Point(574, 601)
+        Me.btnCancelPla.Margin = New System.Windows.Forms.Padding(4)
         Me.btnCancelPla.Name = "btnCancelPla"
         Me.btnCancelPla.Size = New System.Drawing.Size(156, 38)
         Me.btnCancelPla.TabIndex = 72
@@ -279,7 +279,7 @@ Partial Class frmProcesarPlanilla
         'txtComent
         '
         Me.txtComent.Location = New System.Drawing.Point(779, 85)
-        Me.txtComent.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.txtComent.Margin = New System.Windows.Forms.Padding(4)
         Me.txtComent.Name = "txtComent"
         Me.txtComent.Properties.Appearance.Font = New System.Drawing.Font("Tahoma", 6.75!)
         Me.txtComent.Properties.Appearance.Options.UseFont = True
@@ -290,7 +290,7 @@ Partial Class frmProcesarPlanilla
         'btnExpPlaCerr
         '
         Me.btnExpPlaCerr.Location = New System.Drawing.Point(1797, 81)
-        Me.btnExpPlaCerr.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.btnExpPlaCerr.Margin = New System.Windows.Forms.Padding(4)
         Me.btnExpPlaCerr.Name = "btnExpPlaCerr"
         Me.btnExpPlaCerr.Size = New System.Drawing.Size(143, 28)
         Me.btnExpPlaCerr.TabIndex = 76
@@ -301,7 +301,7 @@ Partial Class frmProcesarPlanilla
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(326, 794)
+        Me.Button1.Location = New System.Drawing.Point(326, 601)
         Me.Button1.Margin = New System.Windows.Forms.Padding(4)
         Me.Button1.Name = "Button1"
         Me.Button1.Size = New System.Drawing.Size(139, 39)
@@ -314,7 +314,7 @@ Partial Class frmProcesarPlanilla
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1816, 846)
+        Me.ClientSize = New System.Drawing.Size(1810, 653)
         Me.Controls.Add(Me.Button1)
         Me.Controls.Add(Me.btnExpPlaCerr)
         Me.Controls.Add(Me.txtComent)
@@ -336,7 +336,7 @@ Partial Class frmProcesarPlanilla
         Me.Controls.Add(Me.Label4)
         Me.Controls.Add(Me.txtNroPla)
         Me.Controls.Add(Me.Label3)
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "frmProcesarPlanilla"
         Me.Tag = "entPlanilla"
         Me.Text = "Procesar Planilla"

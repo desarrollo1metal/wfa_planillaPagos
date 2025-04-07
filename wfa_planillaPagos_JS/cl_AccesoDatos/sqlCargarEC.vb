@@ -107,6 +107,23 @@ Public Class sqlCargarEC
         End Try
     End Function
 
+
+    Public Shared Function dtb_obtEstadoCuentaPPR_Detraccion(ByVal ps_ctaBanc As String) As DataTable
+        Try
+
+            ' Se declara una variable para la consulta SQL
+            Dim ls_sql As String = "exec gmi_sp_obtEstadoCuentaPPR_Detra '" & ps_ctaBanc & "'"
+
+            ' Se ejecuta la consulta
+            Return ModuleSQLComun.dtb_ejecutarSQL_NET(ls_sql)
+
+        Catch ex As Exception
+            sub_mostrarMensaje(ex.Message, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, "sqlCargarEC", System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_exc)
+            Return Nothing
+        End Try
+    End Function
+
+
     Public Shared Function dtb_repEstadoCuenta() As DataTable
         Try
 

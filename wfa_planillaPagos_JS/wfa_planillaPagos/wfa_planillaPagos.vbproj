@@ -383,6 +383,9 @@
     <Content Include="SQLProc\gmi_sp_obtenerTipoCambioPLL.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SQLProc\gmi_sp_obtEstadoCuentaPPR_Detra.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SQLProc\gmi_sp_obtEstadoCuentaPPR.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

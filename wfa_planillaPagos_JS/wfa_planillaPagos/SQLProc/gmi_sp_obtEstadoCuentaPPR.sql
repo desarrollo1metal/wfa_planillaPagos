@@ -15,17 +15,27 @@ select U_GMI_RENDICION, TrsfrAcct, CashAcct, Canceled, TaxDate from ORCT where i
 select 
 T0.id
 , T0.Fecha
+
+, T0.Ruc
+
 , T0.Descripcion + isnull(': ' + T5.CardCode + ' - ' + T5.CardName, '') as Descripcion
+
+, T0.serie as 'serie' 
+, T0.correlativo as 'correlativo' 
+
+
 , T0.Monto
 , T0.Operacion
 , T0.Cuenta
 , T2.ActCurr as Moneda
 , T3.BankName as Banco
 , T2.AcctCode as Cta_Contable
-, T0.Ruc
+, '' as asientoajustoT 
+
 , 'OP' as TipoOp
 , case isnull(T0.esPll, 'N') when 'Y' then 'Si' else 'No' end as EC_dePlanilla
-, '' as asientoajustoT 
+
+
 from 
 GMI_TmpOprBnc T0 
 left join DSC1 T1 on T0.Cuenta = T1.Account

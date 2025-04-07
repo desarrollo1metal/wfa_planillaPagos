@@ -182,7 +182,6 @@ Public Class classProcesarPlanilla
             ' Se verifica si se realizo la conexion hacia SAP Business One
             If lo_SBOCompany Is Nothing Then
                 sub_mostrarMensaje("No se realizó la conexión a SAP Business One.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
-                Exit Sub
             End If
 
             ' Se inicia la transaccion de SAP Business One
@@ -602,6 +601,9 @@ Public Class classProcesarPlanilla
 
 
                 If lo_planillaDet.asientoajustoT = "Y" Then
+
+
+                    ' si los datos del asiento de ajuste , no se creo, de igual manera deberia guardar los datos de la listar del PR.
 
                     li_resultado = int_ajustecrearAsientoTC_sin_pr(lo_planillaDet, lo_SBOCompany2, lo_planilla, lo_planillaDet.DocEntrySAP, Tcfinanciero, TcPagoSAP, cuentaGanancia, cuentaPerdida, asiento_result, montoreconciliaciont)
 
@@ -2835,6 +2837,7 @@ Public Class classProcesarPlanilla
                                 Dim rpta As Integer = 0
                                 Dim msj As String = ""
                                 po_SBOCompany.GetLastError(li_resultado, msj)
+
 
                             Else
                                 'va servir para para la reconciliación

@@ -463,11 +463,20 @@ Public Class classCargarEC
                 Return False
             End If
 
-            ' Se verifica si se obtuvo mas columnas de las necesarias
-            If lo_dtb.Columns.Count <> 6 Then
-                MsgBox("Se encontro " & lo_dtb.Columns.Count & " columnas en el archivo excel; cuando solo debe existir seis (fecha, descripcion, monto, operacion, cuenta y ruc)")
+            '''jsolis version 1
+            '' Se verifica si se obtuvo mas columnas de las necesarias
+            'If lo_dtb.Columns.Count <> 6 Then
+            '    MsgBox("Se encontro " & lo_dtb.Columns.Count & " columnas en el archivo excel; cuando solo debe existir seis (fecha, descripcion, monto, operacion, cuenta y ruc)")
+            '    Return False
+            'End If
+
+            ''jsolis version 2
+            If lo_dtb.Columns.Count <> 6 And lo_dtb.Columns.Count <> 8 Then
+                MsgBox("Se encontro " & lo_dtb.Columns.Count & " columnas en el archivo excel; cuando solo debe existir seis u ocho columnas (fecha, descripcion, monto, operacion, cuenta y ruc)")
                 Return False
             End If
+
+
 
             ' Se verifica si existen las columnas minimas del EC
             If bol_existColumnaDtb(lo_dtb, "fecha") = False Then

@@ -20,10 +20,41 @@ Public Class entCargarEC
     Private i_id As String
     <annAtributo(True, False, "ruc", "ruc", False, True)>
     Private s_ruc As String
+
+    'serie y correlativo
+    <annAtributo(True, False, "serie", "serie", False, True)>
+    Private s_serie As String
+
+    <annAtributo(True, False, "correlativo", "correlativo", False, True)>
+    Private s_correlativo As String
+
+
+
     <annAtributo(True, False, "esPll", "Es de Planillas", False, True)>
     Private s_esPll As String
 
     ' Propiedades
+
+    Public Property Serie() As String
+        Get
+            Return s_serie
+        End Get
+        Set(ByVal value As String)
+            s_serie = value
+        End Set
+    End Property
+
+    Public Property correlativo() As String
+        Get
+            Return s_correlativo
+        End Get
+        Set(ByVal value As String)
+            s_correlativo = value
+        End Set
+    End Property
+
+
+
     Public Property Id() As String
         Get
             Return i_id
@@ -131,6 +162,19 @@ Public Class entCargarEC
 
             ' Se obtiene el estado de cuenta filtrado por cuenta bancaria
             Return sqlCargarEC.dtb_obtEstadoCuentaPPR(ps_ctaBanc)
+
+        Catch ex As Exception
+            sub_mostrarMensaje(ex.Message, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, "entCargarEC", System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_exc)
+            Return Nothing
+        End Try
+    End Function
+
+
+    Public Shared Function dtb_obtEstadoCuentaPPR_Detraccion(ByVal ps_ctaBanc As String) As DataTable
+        Try
+
+            ' Se obtiene el estado de cuenta filtrado por cuenta bancaria
+            Return sqlCargarEC.dtb_obtEstadoCuentaPPR_Detraccion(ps_ctaBanc)
 
         Catch ex As Exception
             sub_mostrarMensaje(ex.Message, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, "entCargarEC", System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_exc)

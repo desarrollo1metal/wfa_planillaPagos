@@ -29,9 +29,10 @@ Partial Class frmReporte
         'Button1
         '
         Me.Button1.Anchor = CType((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
-        Me.Button1.Location = New System.Drawing.Point(12, 469)
+        Me.Button1.Location = New System.Drawing.Point(16, 577)
+        Me.Button1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(75, 23)
+        Me.Button1.Size = New System.Drawing.Size(100, 28)
         Me.Button1.TabIndex = 56
         Me.Button1.Tag = "cancel"
         Me.Button1.Text = "Cancelar"
@@ -50,11 +51,12 @@ Partial Class frmReporte
         Me.uctDatos.conFiltro = True
         Me.uctDatos.conMenu = False
         Me.uctDatos.DataSource = Nothing
-        Me.uctDatos.Location = New System.Drawing.Point(12, 12)
+        Me.uctDatos.Location = New System.Drawing.Point(16, 15)
+        Me.uctDatos.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.uctDatos.Name = "uctDatos"
         Me.uctDatos.ObjDetalle = Nothing
         Me.uctDatos.PermitirOrden = True
-        Me.uctDatos.Size = New System.Drawing.Size(748, 448)
+        Me.uctDatos.Size = New System.Drawing.Size(997, 551)
         Me.uctDatos.TabIndex = 57
         Me.uctDatos.Tabla = Nothing
         Me.uctDatos.TablaId = Nothing
@@ -64,11 +66,12 @@ Partial Class frmReporte
         '
         'frmReporte
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(772, 501)
+        Me.ClientSize = New System.Drawing.Size(1029, 617)
         Me.Controls.Add(Me.uctDatos)
         Me.Controls.Add(Me.Button1)
+        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
         Me.Name = "frmReporte"
         Me.Text = "Reporte"
         Me.Controls.SetChildIndex(Me.Button1, 0)

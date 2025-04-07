@@ -3119,6 +3119,7 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_obtenerInfoEstadoCuentaBancoTXT_PLPR.sql
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_obtenerPagosNroOper.sql
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_obtenerTipoCambioPLL.sql
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_obtEstadoCuentaPPR_Detra.sql
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_obtEstadoCuentaPPR.sql
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_cuentaGananciaDiferenciaTC.sql
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_obtMonLocal.sql

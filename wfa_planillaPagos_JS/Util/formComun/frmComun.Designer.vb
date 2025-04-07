@@ -42,16 +42,18 @@ Partial Class frmComun
         Me.pnlBarraHerr.Controls.Add(Me.btnBuscarOF)
         Me.pnlBarraHerr.Controls.Add(Me.btnNuevo)
         Me.pnlBarraHerr.Location = New System.Drawing.Point(0, 0)
+        Me.pnlBarraHerr.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.pnlBarraHerr.Name = "pnlBarraHerr"
-        Me.pnlBarraHerr.Size = New System.Drawing.Size(899, 39)
+        Me.pnlBarraHerr.Size = New System.Drawing.Size(1199, 48)
         Me.pnlBarraHerr.TabIndex = 55
         '
         'btnCancelar
         '
         Me.btnCancelar.Image = CType(resources.GetObject("btnCancelar.Image"), System.Drawing.Image)
-        Me.btnCancelar.Location = New System.Drawing.Point(130, 3)
+        Me.btnCancelar.Location = New System.Drawing.Point(173, 4)
+        Me.btnCancelar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnCancelar.Name = "btnCancelar"
-        Me.btnCancelar.Size = New System.Drawing.Size(38, 34)
+        Me.btnCancelar.Size = New System.Drawing.Size(51, 42)
         Me.btnCancelar.TabIndex = 51
         Me.btnCancelar.Tag = "sub_cancelar"
         Me.btnCancelar.ToolTip = "Cancelar"
@@ -59,9 +61,10 @@ Partial Class frmComun
         'btnRecp
         '
         Me.btnRecp.Image = CType(resources.GetObject("btnRecp.Image"), System.Drawing.Image)
-        Me.btnRecp.Location = New System.Drawing.Point(89, 3)
+        Me.btnRecp.Location = New System.Drawing.Point(119, 4)
+        Me.btnRecp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnRecp.Name = "btnRecp"
-        Me.btnRecp.Size = New System.Drawing.Size(38, 34)
+        Me.btnRecp.Size = New System.Drawing.Size(51, 42)
         Me.btnRecp.TabIndex = 50
         Me.btnRecp.Tag = "sub_recuperarForm"
         Me.btnRecp.ToolTip = "Recuperar"
@@ -69,9 +72,10 @@ Partial Class frmComun
         'btnBuscarOF
         '
         Me.btnBuscarOF.Image = CType(resources.GetObject("btnBuscarOF.Image"), System.Drawing.Image)
-        Me.btnBuscarOF.Location = New System.Drawing.Point(46, 3)
+        Me.btnBuscarOF.Location = New System.Drawing.Point(61, 4)
+        Me.btnBuscarOF.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnBuscarOF.Name = "btnBuscarOF"
-        Me.btnBuscarOF.Size = New System.Drawing.Size(38, 34)
+        Me.btnBuscarOF.Size = New System.Drawing.Size(51, 42)
         Me.btnBuscarOF.TabIndex = 25
         Me.btnBuscarOF.Tag = "sub_preparaBuscar"
         Me.btnBuscarOF.ToolTip = "Buscar"
@@ -79,9 +83,10 @@ Partial Class frmComun
         'btnNuevo
         '
         Me.btnNuevo.Image = CType(resources.GetObject("btnNuevo.Image"), System.Drawing.Image)
-        Me.btnNuevo.Location = New System.Drawing.Point(3, 3)
+        Me.btnNuevo.Location = New System.Drawing.Point(4, 4)
+        Me.btnNuevo.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnNuevo.Name = "btnNuevo"
-        Me.btnNuevo.Size = New System.Drawing.Size(38, 34)
+        Me.btnNuevo.Size = New System.Drawing.Size(51, 42)
         Me.btnNuevo.TabIndex = 26
         Me.btnNuevo.Tag = "sub_preparaAnadir"
         Me.btnNuevo.ToolTip = "Nuevo"
@@ -89,9 +94,10 @@ Partial Class frmComun
         'lblModo
         '
         Me.lblModo.AutoSize = True
-        Me.lblModo.Location = New System.Drawing.Point(875, 505)
+        Me.lblModo.Location = New System.Drawing.Point(1167, 622)
+        Me.lblModo.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.lblModo.Name = "lblModo"
-        Me.lblModo.Size = New System.Drawing.Size(13, 13)
+        Me.lblModo.Size = New System.Drawing.Size(16, 17)
         Me.lblModo.TabIndex = 56
         Me.lblModo.Tag = "Modo"
         Me.lblModo.Text = "0"
@@ -99,12 +105,13 @@ Partial Class frmComun
         '
         'frmComun
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(900, 527)
+        Me.ClientSize = New System.Drawing.Size(1200, 649)
         Me.Controls.Add(Me.lblModo)
         Me.Controls.Add(Me.pnlBarraHerr)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmComun"
         Me.Text = "Formulario"
         Me.pnlBarraHerr.ResumeLayout(False)

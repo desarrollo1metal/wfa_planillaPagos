@@ -2388,12 +2388,18 @@ Public Class ClassGenPlanilla
                 ls_filtro = entPlanilla.str_obtCtaBancoNacion
 
                 ' Se obtiene los datos del Estado de Cuenta
-                lo_dtb = entCargarEC.dtb_obtEstadoCuentaPPR(ls_filtro)
+
+                'o_dtbEC.Clear()
+                lo_dtb = entCargarEC.dtb_obtEstadoCuentaPPR_Detraccion(ls_filtro)
 
             Else
 
+                ''o_dtbEC.Clear()
+
                 ' Se obtiene los datos del Estado de Cuenta
                 lo_dtb = entCargarEC.dtb_obtEstadoCuentaPPR(ls_filtro)
+
+
 
             End If
 
@@ -2409,7 +2415,7 @@ Public Class ClassGenPlanilla
             ' Se asigna las propiedades necesarias a la grilla del Estado de Cuenta
             sub_asigValorControl("ECBanco", lo_dtb)
 
-            ' Se inicializa el control de usuario GridControl para el Estado de Cuenta
+            ' Se inicializa el control de usuario GridControl para el Estado de Cuenta""
             Dim lo_ugc As Control = ctr_obtenerControl("ECBanco", o_form.Controls)
             CType(lo_ugc, uct_gridConBusqueda).sub_inicializar()
 
