@@ -609,6 +609,8 @@ Public Class classProcesarPlanilla
 
                     If li_resultado = -2 Then
 
+                        lo_planilla.PagosR.sub_anadir()
+
                         Continue For
 
 
@@ -1157,7 +1159,7 @@ Public Class classProcesarPlanilla
 
             End If
             'lo_payment.UserFields.Fields.Item("U_BYR_FECDEP").Value = po_planillaDet.FechaDeposito
-            If po_SBOCompany.CompanyDB <> "SBO_ComercialMendoza" And po_SBOCompany.CompanyDB <> "Z_SBO_MIMSA_13032025" Then
+            If po_SBOCompany.CompanyDB <> "SBO_ComercialMendoza" And po_SBOCompany.CompanyDB <> "Z_SBO_MIMSA_13032025" And po_SBOCompany.CompanyDB <> "Z_MIMSA_04042025_PLL" Then
                 lo_payment.UserFields.Fields.Item("U_BYR_FECDEP").Value = po_planillaDet.FechaDeposito
             End If
             ' Se asigna las propiedades de la cabecera del objeto Payment
@@ -2910,8 +2912,8 @@ Public Class classProcesarPlanilla
             lo_jrnlEntry.TransactionCode = "AD"
 
             'JOLIS
-            lo_jrnlEntry.Reference = "JS1903 Planilla " + po_planilla.id.ToString()
-            lo_jrnlEntry.Memo = "JS1903 Ajuste Planilla cobranza " + po_planilla.id.ToString()
+            lo_jrnlEntry.Reference = "Planilla " + po_planilla.id.ToString()
+            lo_jrnlEntry.Memo = "Ajuste Planilla cobranza " + po_planilla.id.ToString()
 
             lo_jrnlEntry.Reference2 = po_planillaDet.idEC
             lo_jrnlEntry.Reference3 = ps_docEntryPago
@@ -2965,7 +2967,7 @@ Public Class classProcesarPlanilla
 
 
 
-                            lo_jrnlEntry.SaveXML("C:\Users\programador_2\Documents\SaveXML_PR\as_1015.xml")
+                            'lo_jrnlEntry.SaveXML("C:\Users\programador_2\Documents\SaveXML_PR\as_1015.xml")
 
                             li_resultado = lo_jrnlEntry.Add()
 

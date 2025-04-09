@@ -37,6 +37,7 @@ T0.id
 
 , 'OP' as TipoOp
 , case isnull(T0.esPll, 'N') when 'Y' then 'Si' else 'No' end as EC_dePlanilla
+, '' as asientoajustoT 
 
 from 
 GMI_TmpOprBnc T0 

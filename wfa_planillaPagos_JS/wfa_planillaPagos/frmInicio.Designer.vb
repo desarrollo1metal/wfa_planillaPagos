@@ -47,7 +47,7 @@ Partial Class frmInicio
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.Panel1.BackColor = System.Drawing.Color.Gray
         Me.Panel1.Location = New System.Drawing.Point(0, 0)
-        Me.Panel1.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.Panel1.Margin = New System.Windows.Forms.Padding(4)
         Me.Panel1.Name = "Panel1"
         Me.Panel1.Size = New System.Drawing.Size(581, 39)
         Me.Panel1.TabIndex = 58
@@ -57,7 +57,7 @@ Partial Class frmInicio
         Me.pnlMenu.AutoScroll = True
         Me.pnlMenu.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.pnlMenu.Location = New System.Drawing.Point(16, 54)
-        Me.pnlMenu.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.pnlMenu.Margin = New System.Windows.Forms.Padding(4)
         Me.pnlMenu.Name = "pnlMenu"
         Me.pnlMenu.Size = New System.Drawing.Size(546, 344)
         Me.pnlMenu.TabIndex = 62
@@ -96,7 +96,7 @@ Partial Class frmInicio
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lblConn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
-        Me.Margin = New System.Windows.Forms.Padding(5, 5, 5, 5)
+        Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "frmInicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Inicio"

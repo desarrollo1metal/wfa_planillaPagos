@@ -1,13 +1,13 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\TI_MIMSA\\CF\\wfa_planillaPagos_Mimsa_v3\\wfa_planillaPagos_Mimsa_v2\\",
+  "WorkspaceRootPath": "C:\\CF\\WFA_PLANILLAPAGOS\\wfa_planillaPagos_JS\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A1C83738-BAA0-479D-99BD-E2BB4054206F}|cl_Negocio\\cl_Negocio.vbproj|c:\\ti_mimsa\\cf\\wfa_planillapagos_mimsa_v3\\wfa_planillapagos_mimsa_v2\\cl_negocio\\classprocesarplanilla.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{A1C83738-BAA0-479D-99BD-E2BB4054206F}|cl_Negocio\\cl_Negocio.vbproj|c:\\cf\\wfa_planillapagos\\wfa_planillapagos_js\\cl_negocio\\classprocesarplanilla.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{A1C83738-BAA0-479D-99BD-E2BB4054206F}|cl_Negocio\\cl_Negocio.vbproj|solutionrelative:cl_negocio\\classprocesarplanilla.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A98A9512-4EF2-489D-A6B3-40A59E26F0F6}|Util\\Util.vbproj|c:\\ti_mimsa\\cf\\wfa_planillapagos_mimsa_v3\\wfa_planillapagos_mimsa_v2\\util\\sqlcomun\\modulesqlcomun.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
+      "AbsoluteMoniker": "D:0:0:{A98A9512-4EF2-489D-A6B3-40A59E26F0F6}|Util\\Util.vbproj|C:\\CF\\WFA_PLANILLAPAGOS\\wfa_planillaPagos_JS\\util\\sqlcomun\\modulesqlcomun.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}",
       "RelativeMoniker": "D:0:0:{A98A9512-4EF2-489D-A6B3-40A59E26F0F6}|Util\\Util.vbproj|solutionrelative:util\\sqlcomun\\modulesqlcomun.vb||{2C015C70-C72C-11D0-88C3-00A0C9110049}"
     }
   ],
@@ -24,25 +24,24 @@
               "$type": "Document",
               "DocumentIndex": 1,
               "Title": "ModuleSQLComun.vb",
-              "DocumentMoniker": "C:\\TI_MIMSA\\CF\\wfa_planillaPagos_Mimsa_v3\\wfa_planillaPagos_Mimsa_v2\\Util\\SQLComun\\ModuleSQLComun.vb",
+              "DocumentMoniker": "C:\\CF\\WFA_PLANILLAPAGOS\\wfa_planillaPagos_JS\\Util\\SQLComun\\ModuleSQLComun.vb",
               "RelativeDocumentMoniker": "Util\\SQLComun\\ModuleSQLComun.vb",
-              "ToolTip": "C:\\TI_MIMSA\\CF\\wfa_planillaPagos_Mimsa_v3\\wfa_planillaPagos_Mimsa_v2\\Util\\SQLComun\\ModuleSQLComun.vb",
+              "ToolTip": "C:\\CF\\WFA_PLANILLAPAGOS\\wfa_planillaPagos_JS\\Util\\SQLComun\\ModuleSQLComun.vb",
               "RelativeToolTip": "Util\\SQLComun\\ModuleSQLComun.vb",
               "ViewState": "AgIAAC4CAAAAAAAAAAAowEICAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-22T15:08:06.108Z",
-              "IsPinned": true,
-              "EditorCaption": ""
+              "IsPinned": true
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "classProcesarPlanilla.vb",
-              "DocumentMoniker": "C:\\TI_MIMSA\\CF\\wfa_planillaPagos_Mimsa_v3\\wfa_planillaPagos_Mimsa_v2\\cl_Negocio\\classProcesarPlanilla.vb",
+              "DocumentMoniker": "C:\\CF\\WFA_PLANILLAPAGOS\\wfa_planillaPagos_JS\\cl_Negocio\\classProcesarPlanilla.vb",
               "RelativeDocumentMoniker": "cl_Negocio\\classProcesarPlanilla.vb",
-              "ToolTip": "C:\\TI_MIMSA\\CF\\wfa_planillaPagos_Mimsa_v3\\wfa_planillaPagos_Mimsa_v2\\cl_Negocio\\classProcesarPlanilla.vb",
+              "ToolTip": "C:\\CF\\WFA_PLANILLAPAGOS\\wfa_planillaPagos_JS\\cl_Negocio\\classProcesarPlanilla.vb",
               "RelativeToolTip": "cl_Negocio\\classProcesarPlanilla.vb",
-              "ViewState": "AgIAACQGAAAAAAAAAAAswDYGAAAoAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAJgMAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003361|",
               "WhenOpened": "2025-03-22T14:12:02.703Z",
               "IsPinned": true,
