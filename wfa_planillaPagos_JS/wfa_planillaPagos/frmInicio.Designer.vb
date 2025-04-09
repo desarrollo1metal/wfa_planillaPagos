@@ -82,7 +82,7 @@ Partial Class frmInicio
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 17)
         Me.Label2.TabIndex = 64
-        Me.Label2.Text = "Versión : 0.0.2"
+        Me.Label2.Text = "Versión : 0.0.3"
         '
         'frmInicio
         '
