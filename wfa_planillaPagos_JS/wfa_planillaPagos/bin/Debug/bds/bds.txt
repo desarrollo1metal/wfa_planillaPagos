@@ -7,3 +7,4 @@ tes - test_Mimsa
 te1 - test_INDUZINC
 te2 - test_MEGA
 te3 - test_RUMI
+dev - test_DevInduzinc

@@ -889,6 +889,8 @@ C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Entidad\
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Entidad\obj\Debug\cl_Entidad.dll
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Entidad\obj\Debug\cl_Entidad.xml
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Entidad\obj\Debug\cl_Entidad.pdb
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\DevExpress.Data.v14.2.dll
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\obj\Debug\Interop.SAPbobsCOM.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\cl_Entidad.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\cl_Entidad.pdb
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\cl_Entidad.xml
@@ -901,7 +903,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\ExcelDataReade
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\ExcelDataReader.DataSet.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\EPPlus.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\SendServer.dll
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\DevExpress.Data.v14.2.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\DevExpress.Printing.v14.2.Core.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\DevExpress.Sparkline.v14.2.Core.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\DevExpress.XtraPrinting.v14.2.dll
@@ -979,7 +980,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\es\DevExpress.
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\ja\DevExpress.Office.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\bin\Debug\ru\DevExpress.Office.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\obj\Debug\cl_Entidad.vbproj.AssemblyReference.cache
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\obj\Debug\Interop.SAPbobsCOM.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\obj\Debug\cl_Entidad.vbproj.ResolveComReference.cache
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\obj\Debug\cl_Entidad.Resources.resources
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Entidad\obj\Debug\cl_Entidad.vbproj.GenerateResource.cache
