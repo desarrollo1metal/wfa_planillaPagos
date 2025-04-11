@@ -962,6 +962,10 @@ C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Negocio\
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Negocio\obj\Debug\cl_Negocio.dll
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Negocio\obj\Debug\cl_Negocio.xml
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Negocio\obj\Debug\cl_Negocio.pdb
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraGrid.v14.2.xml
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraTreeList.v14.2.xml
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\es\DevExpress.XtraBars.v14.2.resources.dll
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\obj\Debug\Interop.SAPbobsCOM.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\cl_Negocio.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\cl_Negocio.pdb
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\cl_Negocio.xml
@@ -992,7 +996,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\Util.pdb
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\Util.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.Utils.v14.2.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraEditors.v14.2.xml
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraGrid.v14.2.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ExcelDataReader.pdb
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ExcelDataReader.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ExcelDataReader.DataSet.pdb
@@ -1004,7 +1007,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.Xtr
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraLayout.v14.2.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.RichEdit.v14.2.Core.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraBars.v14.2.xml
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraTreeList.v14.2.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.Office.v14.2.Core.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\de\DevExpress.Utils.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\es\DevExpress.Utils.v14.2.resources.dll
@@ -1043,7 +1045,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\es\DevExpress.
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ja\DevExpress.RichEdit.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ru\DevExpress.RichEdit.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\de\DevExpress.XtraBars.v14.2.resources.dll
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\es\DevExpress.XtraBars.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ja\DevExpress.XtraBars.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ru\DevExpress.XtraBars.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\de\DevExpress.XtraTreeList.v14.2.resources.dll
@@ -1055,7 +1056,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\es\DevExpress.
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ja\DevExpress.Office.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ru\DevExpress.Office.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\obj\Debug\cl_Negocio.vbproj.AssemblyReference.cache
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\obj\Debug\Interop.SAPbobsCOM.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\obj\Debug\cl_Negocio.vbproj.ResolveComReference.cache
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\obj\Debug\cl_Negocio.Resources.resources
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\obj\Debug\cl_Negocio.vbproj.GenerateResource.cache

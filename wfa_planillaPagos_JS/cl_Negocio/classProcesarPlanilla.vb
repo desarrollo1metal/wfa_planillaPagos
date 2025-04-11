@@ -838,149 +838,157 @@ Public Class classProcesarPlanilla
             ' Crear una lista auxiliar para almacenar las líneas modificadas
             Dim listaModificada As New List(Of entPlanilla_Lineas)
             'jsolis
-            Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer))
+            Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer))
 
 
 
 #Region "Crear_PR"
 
 
-
             ' Se recorre el detalle de la planilla
             For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
+
 
                 ' Se verifica el numero de asignacion de linea 
                 If li_lineaNumAsg <> lo_planillaDet.LineaNumAsg Then ' La diferencia indica que se trata de una nueva asignacion, por lo tanto se reinicializa el objeto
 
-                    ' El proceso de adicion de MUCHOS A UNO o de UNO a MUCHOS se realiza en el objeto siguiente 
-                    ', pues, al notar un cambio en el numero de asignacion, el proceso debe ingresar los detalles obtenidos en el listado llenado hasta el objeto anterior del FOR EACH
-                    If li_tipoAsg = 1 Or li_tipoAsg = 2 Then
+                        ' El proceso de adicion de MUCHOS A UNO o de UNO a MUCHOS se realiza en el objeto siguiente 
+                        ', pues, al notar un cambio en el numero de asignacion, el proceso debe ingresar los detalles obtenidos en el listado llenado hasta el objeto anterior del FOR EACH
+                        If li_tipoAsg = 1 Or li_tipoAsg = 2 Then
 
-                        ' Se realiza la inserción UNO a MUCHOS o de MUCHOS A UNO
-                        li_resultado = int_procesarMuchosAMuchos(lo_lstPlaDet, lo_SBOCompany, lo_planilla, li_tipoAsg)
+                            ' Se realiza la inserción UNO a MUCHOS o de MUCHOS A UNO
+                            li_resultado = int_procesarMuchosAMuchos(lo_lstPlaDet, lo_SBOCompany, lo_planilla, li_tipoAsg)
 
-                        ' Se verifica el resultado 
-                        If li_resultado <> 0 Then
+                            ' Se verifica el resultado 
+                            If li_resultado <> 0 Then
 
-                            ' Se revierte la transaccion
-                            bol_RollBackTransSBO(lo_SBOCompany)
+                                ' Se revierte la transaccion
+                                bol_RollBackTransSBO(lo_SBOCompany)
 
-                            ' Se desconecta la compañia 
-                            lo_SBOCompany.Disconnect()
+                                ' Se desconecta la compañia 
+                                lo_SBOCompany.Disconnect()
 
-                            ' Se resetea el progressBar
-                            sub_resetProgressBar(lo_progressBar)
+                                ' Se resetea el progressBar
+                                sub_resetProgressBar(lo_progressBar)
 
-                            ' Se finaliza el metodo
-                            Exit Sub
+                                ' Se finaliza el metodo
+                                Exit Sub
 
-                        End If
+                            End If
 
-                        ' Se incrementa el valor del progressBar
-                        sub_incrementarProgressBar(lo_progressBar)
+                            ' Se incrementa el valor del progressBar
+                            sub_incrementarProgressBar(lo_progressBar)
 
-                        ' Se limpia el listado de objetos de detalle 
-                        lo_lstPlaDet.Clear()
-
-                    End If
-
-                    ' Se obtiene el numero de linea de la asignacion del detalle
-                    li_lineaNumAsg = lo_planillaDet.LineaNumAsg
-
-                    ' Se verifica el tipo de asignacion del registro del detalle de la planilla
-                    li_tipoAsg = lo_planillaDet.tipoAsg
-
-                    ' Se verifica el tipo de asignación para generar el pago
-                    If li_tipoAsg = 0 Then ' Asignacion de UNO a UNO
-
-                        ' Se realiza la adición del objeto
-                        li_resultado = int_procesarUnoAUno_sin_AS(lo_planillaDet, lo_SBOCompany, lo_planilla)
-
-                        ' Se verifica el resultado 
-                        If li_resultado <> 0 Then
-
-                            ' Se revierte la transaccion
-                            bol_RollBackTransSBO(lo_SBOCompany)
-
-                            ' Se desconecta la compañia 
-                            lo_SBOCompany.Disconnect()
-
-                            ' Se resetea el progressBar
-                            sub_resetProgressBar(lo_progressBar)
-
-                            ' Se finaliza el metodo
-                            Exit Sub
+                            ' Se limpia el listado de objetos de detalle 
+                            lo_lstPlaDet.Clear()
 
                         End If
 
-                        'correcto 
+                        ' Se obtiene el numero de linea de la asignacion del detalle
+                        li_lineaNumAsg = lo_planillaDet.LineaNumAsg
 
-                        Dim lo_planilla_PagosR_idT As String = lo_planilla.PagosR.id
-                        Dim lo_planilla_PagosR_idECT As Integer = lo_planilla.PagosR.idEC
-                        Dim lo_planilla_PagosR_lineaNumAsgT As Integer = lo_planilla.PagosR.lineaNumAsg
+                        ' Se verifica el tipo de asignacion del registro del detalle de la planilla
+                        li_tipoAsg = lo_planillaDet.tipoAsg
+
+                        ' Se verifica el tipo de asignación para generar el pago
+                        If li_tipoAsg = 0 Then ' Asignacion de UNO a UNO
+
+                            ' Se realiza la adición del objeto
+                            li_resultado = int_procesarUnoAUno_sin_AS(lo_planillaDet, lo_SBOCompany, lo_planilla)
+
+                            ' Se verifica el resultado 
+                            If li_resultado <> 0 Then
+
+                                ' Se revierte la transaccion
+                                bol_RollBackTransSBO(lo_SBOCompany)
+
+                                ' Se desconecta la compañia 
+                                lo_SBOCompany.Disconnect()
+
+                                ' Se resetea el progressBar
+                                sub_resetProgressBar(lo_progressBar)
+
+                                ' Se finaliza el metodo
+                                Exit Sub
+
+                            End If
+
+                            'correcto 
+
+                            Dim lo_planilla_PagosR_idT As String = lo_planilla.PagosR.id
+                            Dim lo_planilla_PagosR_idECT As Integer = lo_planilla.PagosR.idEC
+                            Dim lo_planilla_PagosR_lineaNumAsgT As Integer = lo_planilla.PagosR.lineaNumAsg
                         Dim lo_planilla_PagosR_DocEntrySAPT As Integer = lo_planilla.PagosR.DocEntrySAP
 
+
+                        Dim TransId_AsientoAjuste As Integer = 0
+
                         ' Agregar una tupla con los tres valores a la lista.
-                        listaCampos.Add(Tuple.Create(lo_planilla_PagosR_idT, lo_planilla_PagosR_idECT, lo_planilla_PagosR_lineaNumAsgT, lo_planilla_PagosR_DocEntrySAPT))
+                        listaCampos.Add(Tuple.Create(lo_planilla_PagosR_idT, lo_planilla_PagosR_idECT, lo_planilla_PagosR_lineaNumAsgT, lo_planilla_PagosR_DocEntrySAPT, TransId_AsientoAjuste))
 
 
                         ' Se incrementa el valor del progressBar
                         sub_incrementarProgressBar(lo_progressBar)
-                        li_contProgreso = li_contProgreso + 1
+                            li_contProgreso = li_contProgreso + 1
 
-                    ElseIf li_tipoAsg = 1 Or li_tipoAsg = 2 Then ' Asignacion de UNO a MUCHOS o MUCHOS a UNO
+                        ElseIf li_tipoAsg = 1 Or li_tipoAsg = 2 Then ' Asignacion de UNO a MUCHOS o MUCHOS a UNO
+
+                            ' Se añade el detalle de la planilla al listado
+                            lo_lstPlaDet.Add(lo_planillaDet)
+
+                        Else
+
+                            ' Hubo un error al momento de generar el detalle de la planilla
+                            sub_errorRegistroPlanilla(lo_SBOCompany)
+
+                            ' Se revierte la transaccion
+                            bol_RollBackTransSBO(lo_SBOCompany)
+
+                            ' Se desconecta la compañia 
+                            lo_SBOCompany.Disconnect()
+
+                            ' Se resetea el progressBar
+                            sub_resetProgressBar(lo_progressBar)
+
+                            ' Se termina el metodo
+                            Exit Sub
+
+                        End If
+
+
+
+
+                    Else
+
+                        ' Se verifica si el tipo de asignacion es igual al anterior
+                        If li_tipoAsg <> lo_planillaDet.tipoAsg Or li_tipoAsg = 0 Then
+
+                            ' Hubo un error al momento de generar el detalle de la planilla
+                            sub_errorRegistroPlanilla(lo_SBOCompany)
+
+                            ' Se desconecta la compañia 
+                            lo_SBOCompany.Disconnect()
+
+                            ' Se revierte la transaccion
+                            bol_RollBackTransSBO(lo_SBOCompany)
+
+                            ' Se resetea el progressBar
+                            sub_resetProgressBar(lo_progressBar)
+
+                            ' Se termina el metodo
+                            Exit Sub
+
+                        End If
 
                         ' Se añade el detalle de la planilla al listado
                         lo_lstPlaDet.Add(lo_planillaDet)
 
-                    Else
-
-                        ' Hubo un error al momento de generar el detalle de la planilla
-                        sub_errorRegistroPlanilla(lo_SBOCompany)
-
-                        ' Se revierte la transaccion
-                        bol_RollBackTransSBO(lo_SBOCompany)
-
-                        ' Se desconecta la compañia 
-                        lo_SBOCompany.Disconnect()
-
-                        ' Se resetea el progressBar
-                        sub_resetProgressBar(lo_progressBar)
-
-                        ' Se termina el metodo
-                        Exit Sub
-
                     End If
 
-                Else
 
-                    ' Se verifica si el tipo de asignacion es igual al anterior
-                    If li_tipoAsg <> lo_planillaDet.tipoAsg Or li_tipoAsg = 0 Then
-
-                        ' Hubo un error al momento de generar el detalle de la planilla
-                        sub_errorRegistroPlanilla(lo_SBOCompany)
-
-                        ' Se desconecta la compañia 
-                        lo_SBOCompany.Disconnect()
-
-                        ' Se revierte la transaccion
-                        bol_RollBackTransSBO(lo_SBOCompany)
-
-                        ' Se resetea el progressBar
-                        sub_resetProgressBar(lo_progressBar)
-
-                        ' Se termina el metodo
-                        Exit Sub
-
-                    End If
-
-                    ' Se añade el detalle de la planilla al listado
-                    lo_lstPlaDet.Add(lo_planillaDet)
-
-                End If
+                    listaModificada.Add(lo_planillaDet)
 
 
-                listaModificada.Add(lo_planillaDet)
 
             Next
 
@@ -1061,6 +1069,7 @@ Public Class classProcesarPlanilla
                 ' Se finaliza el metodo
                 Exit Sub
             End If
+
 
             ' Se muestra un mensaje que indica que el proceso se realizó con exito
             MsgBox("El proceso de creación de los Pagos Recibidos en SAP Business One finalizó de manera correcta.")
@@ -1208,6 +1217,16 @@ Public Class classProcesarPlanilla
                     li_resultado = int_ajustecrearAsientoTC_sin_pr(lo_planillaDet, lo_SBOCompany2, lo_planilla, lo_planillaDet.DocEntrySAP, Tcfinanciero, TcPagoSAP, cuentaGanancia, cuentaPerdida, asiento_result, montoreconciliaciont)
 
 
+
+                    '-----
+                    'listaCampos(i) = 
+                    'po_planilla.PagosR.DocEntryTr
+
+                    listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr)
+
+
+                    '----
+
                     Dim item = listaCampos(i)
 
                     If li_resultado = -2 Then
@@ -1262,11 +1281,75 @@ Public Class classProcesarPlanilla
             'ini version2
 
 
-            If li_resultado = 0 Then
-                Dim ls_resPla2 As String = str_CommitTransSBO(lo_SBOCompany2)
-            End If
-            ' Se confirma la transaccion
+            'If li_resultado = 0 Then
+            '    Dim ls_resPla2 As String = str_CommitTransSBO(lo_SBOCompany2)
+            'End If
+            If li_resultado <> 0 Then
 
+                ' Se revierte la transaccion
+                bol_RollBackTransSBO(lo_SBOCompany2)
+
+
+                ''ATTE JSOLIS
+                'Se debe revertir los PR CREADOS
+                ''''''''''''INI REVERTIR
+                '''
+
+                ' Se declara un objeto de Payment de SAP Business One
+                Dim lo_payment2 As Payments
+
+                ' Se inicializa el objeto
+                lo_payment2 = lo_SBOCompany2.GetBusinessObject(BoObjectTypes.oIncomingPayments)
+
+
+                For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer) In listaCampos
+
+                    ' Se obtiene el Pago Recibido por codigo
+                    If lo_payment2.GetByKey(campo.Item4) = False Then
+
+                        ' Ocurrio un error al obtener el Pago Recibido
+                        sub_mostrarMensaje("Ocurrio un error al obtener el Pago Recibido. DocEntry " & campo.Item4.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
+                        ' Se revierte la transaccion
+                        bol_RollBackTransSBO(lo_SBOCompany2)
+
+                        ' Se desconecta la compañia 
+                        lo_SBOCompany2.Disconnect()
+
+                        ' Se resetea el progressBar
+                        sub_resetProgressBar(lo_progressBar)
+
+                        ' Se retorna un error
+                        Exit Sub
+
+                    End If
+
+                    ' Se realiza la cancelacion del Pago Recibido
+                    li_resultado = lo_payment2.Cancel
+
+                Next
+
+                ''''''''''''FIN REVERTIR
+
+
+                ' Se muestra un mensaje que indica que ocurrió un error en el proceso
+                sub_mostrarMensaje("Ocurrió un error durante la ejecución del proceso de creacción de Asiento de Ajuste, se va revertir todos los Pagos Recibido y Asientos de Ajustes creados.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
+
+                ' Se resetea el progressBar
+                sub_resetProgressBar(lo_progressBar)
+
+                ' Se desconecta la compañia 
+                lo_SBOCompany.Disconnect()
+
+
+                ' Se finaliza el metodo
+                Exit Sub
+
+            End If
+
+
+            ' Se confirma la transaccion
+            ls_resPla = str_CommitTransSBO(lo_SBOCompany2)
 
             lo_SBOCompany2.Disconnect()
 
@@ -2020,7 +2103,7 @@ Public Class classProcesarPlanilla
             lo_payment.Remarks = Mid(po_planilla.Comentario, 1, 254)
             lo_payment.JournalRemarks = Mid(po_planilla.Comentario, 1, 50)
             'lo_payment.TransferReference = Mid("Planilla Nro. " & po_planillaDet.id.ToString, 1, 27)
-            lo_payment.TransferReference = Mid(po_planillaDet.Nro_Operacion, 1, 27)
+            lo_payment.TransferReference = ("JS" & Mid(po_planillaDet.Nro_Operacion, 1, 27))
 
             lo_payment.UserFields.Fields.Item("U_GMI_PLANI").Value = Mid("Planilla Nro. " & po_planillaDet.id.ToString, 1, 27)
 
@@ -3685,6 +3768,8 @@ Public Class classProcesarPlanilla
                             'lo_jrnlEntry.Lines.AccountCode = entComun.str_obtenercuentaGananciaDiferenciaTCv2()   ' // Código de cuenta
                             lo_jrnlEntry.Lines.AccountCode = cuentaGanacia
                             lo_jrnlEntry.Lines.Debit = 0.0 '// Monto del débito
+                            ''JSOLIS RETIRAR
+                            'lo_jrnlEntry.Lines.Debit = 777 '(tcFinanciero - tcFechaPago) * po_planillaDet.Saldo '46.01 '; // Monto del débito
                             'lo_jrnlEntry.Lines.Credit = System.Math.Abs((tcFinanciero - tcFechaPago) * po_planillaDet.Saldo) '// Monto del crédito
                             lo_jrnlEntry.Lines.Credit = montoReconciliacionPr '// Monto del crédito
 
@@ -3735,6 +3820,10 @@ Public Class classProcesarPlanilla
                             lo_jrnlEntry.Lines.Debit = 0.0 '(tcFinanciero - tcFechaPago) * po_planillaDet.Saldo '46.01 '; // Monto del débito
                             lo_jrnlEntry.Lines.Credit = montoReconciliacionPr
                             montoreconciliaciont = montoReconciliacionPr
+
+                            ''JSOLIS RETIRAR
+                            'lo_jrnlEntry.Lines.Debit = 777 '(tcFinanciero - tcFechaPago) * po_planillaDet.Saldo '46.01 '; // Monto del débito
+
                             lo_jrnlEntry.Lines.Add()
 
                             li_resultado = lo_jrnlEntry.Add()
