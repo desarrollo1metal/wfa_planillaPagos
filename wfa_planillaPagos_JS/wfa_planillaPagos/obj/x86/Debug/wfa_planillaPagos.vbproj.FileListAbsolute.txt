@@ -3068,6 +3068,8 @@ C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\wfa_planill
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.exe
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.xml
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.pdb
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ru\DevExpress.Data.v14.2.resources.dll
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ru\DevExpress.XtraLayout.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\bds\bds.txt
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\FormatosExcelReportes\DepesitosPendientes.xlsx
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\FormatosExcelReportes\Planilla.xlsx
@@ -3199,7 +3201,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpr
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\de\DevExpress.Data.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\es\DevExpress.Data.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ja\DevExpress.Data.v14.2.resources.dll
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ru\DevExpress.Data.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\de\DevExpress.Printing.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\es\DevExpress.Printing.v14.2.Core.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ja\DevExpress.Printing.v14.2.Core.resources.dll
@@ -3219,7 +3220,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ru\DevE
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\de\DevExpress.XtraLayout.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\es\DevExpress.XtraLayout.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ja\DevExpress.XtraLayout.v14.2.resources.dll
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ru\DevExpress.XtraLayout.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\de\DevExpress.XtraPrinting.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\es\DevExpress.XtraPrinting.v14.2.resources.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ja\DevExpress.XtraPrinting.v14.2.resources.dll
