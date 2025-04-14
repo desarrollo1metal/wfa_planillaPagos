@@ -1328,6 +1328,8 @@ Public Class classProcesarPlanilla
                 Next
 
                 ''''''''''''FIN REVERTIR asiento ajuste
+                '''
+
                 ' Se muestra un mensaje que indica que ocurrió un error en el proceso
                 sub_mostrarMensaje("Ocurrió un error durante la ejecución del proceso de creacción de Asiento de Ajuste, se va revertir todos los Pagos Recibido y Asientos de Ajustes creados.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
 
@@ -1418,7 +1420,7 @@ Public Class classProcesarPlanilla
                 Dim item = listaCampos(j)
 
                 'Dim carcodet As String = po_planilla.Lineas.lis.Lineas.Nombre(i)
-                j = j + 1
+                'j = j + 1
 
                 If item.Item5 = 0 And item.Item6 = 0 Then
 
@@ -1476,11 +1478,11 @@ Public Class classProcesarPlanilla
                 'TransId_PR
 
 
-                Dim item2 = listaCampos(i - 1)
-                'lo_planilla.PagosR.id = item.Item1
+                'Dim item2 = listaCampos(i - 1)
+                ''lo_planilla.PagosR.id = item.Item1
 
                 Dim query1 As String = String.Empty
-                query1 = "exec gmi_sp_obtenerLineaPR '" & Convert.ToString(TransId_PR) & "', '" & Convert.ToString(item2.Item7) & "'"
+                query1 = "exec gmi_sp_obtenerLineaPR '" & Convert.ToString(TransId_PR) & "', '" & Convert.ToString(item.Item7) & "'"
 
                 Dim linea_id_as As Integer
                 linea_id_as = 0
@@ -1505,19 +1507,24 @@ Public Class classProcesarPlanilla
                 End If
 
 
+
                 ''FIN Obtener el numero de fila ,del asiento del PR
-
-
 
                 ' Se inicializa el objeto
                 'PAGOS RECIBIDO ' 
                 ' Agregar primera línea de transacción
                 openTrans.InternalReconciliationOpenTransRows.Add()
                 openTrans.InternalReconciliationOpenTransRows.Item(0).Selected = BoYesNoEnum.tYES
-                openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = TransId_PR ' ID del documento
-                '¿?
+                'openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = item.Item4 ' ID del documento
+                openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = TransId_PR ' ID del documento'¿?TransId_PR
                 openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = linea_id_as ' Línea del documento
-                openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = System.Math.Round(item.Item6) '  .MontoReconciliacion, 2)  ' Monto a reconciliar
+
+                'Dim av As Decimal = System.Math.Round(item.Item6, 2)
+                Dim av1 As Double = System.Math.Round(item.Item6, 2)
+                'Dim av2 As Int = System.Math.Round(item.Item6, 2)
+
+                'openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = System.Math.Round(System.Math.Round(item.Item6, 2)) '  .MontoReconciliacion, 2)  ' Monto a reconciliar
+                openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = av1 '  .MontoReconciliacion, 2)  ' Monto a reconciliar
 
                 'ASIENTO
                 ' Agregar segunda línea de transacción1
@@ -1526,7 +1533,10 @@ Public Class classProcesarPlanilla
                 openTrans.InternalReconciliationOpenTransRows.Item(1).Selected = BoYesNoEnum.tYES
                 openTrans.InternalReconciliationOpenTransRows.Item(1).TransId = item.Item5  'lo_pagoR.DocEntryTr ' ID del otro documento
                 openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0 ' Línea del documento
-                openTrans.InternalReconciliationOpenTransRows.Item(1).ReconcileAmount = System.Math.Abs(System.Math.Round(item.Item6, 2))
+                openTrans.InternalReconciliationOpenTransRows.Item(1).ReconcileAmount = System.Math.Abs(av1)
+
+
+
 
                 ' Ejecutar la reconciliación
                 Try
@@ -1539,6 +1549,101 @@ Public Class classProcesarPlanilla
 
                     ' Se revierte la transaccion
                     bol_RollBackTransSBO(lo_SBOCompany3)
+
+                    '''Se debe revertir los PR y Asientos creados, ayudar de la lista.
+                    ''' Antes de Disconnet se debe revertir los valores del arreglo
+                    '''INI REVERTIR
+                    ''''''''''''INI REVERTIR PAGO RECIBIDO
+                    '''
+
+                    ' Se declara un objeto de Payment de SAP Business One
+                    Dim lo_payment3 As Payments
+                    li_resultado = 0
+
+                    ' Se inicializa el objeto
+                    lo_payment3 = lo_SBOCompany3.GetBusinessObject(BoObjectTypes.oIncomingPayments)
+
+                    For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
+
+                        ' Se obtiene el Pago Recibido por codigo
+                        If lo_payment3.GetByKey(campo.Item4) = False Then
+
+                            ' Ocurrio un error al obtener el Pago Recibido
+                            sub_mostrarMensaje("Ocurrio un error al obtener el Pago Recibido. DocEntry " & campo.Item4.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
+                            ' Se revierte la transaccion
+                            bol_RollBackTransSBO(lo_SBOCompany3)
+
+                            ' Se desconecta la compañia 
+                            lo_SBOCompany3.Disconnect()
+
+                            ' Se resetea el progressBar
+                            sub_resetProgressBar(lo_progressBar)
+
+                            ' Se retorna un error
+                            Exit Sub
+
+                        End If
+
+                        ' Se realiza la cancelacion del Pago Recibido
+                        li_resultado = lo_payment3.Cancel
+
+                    Next
+
+                    ''''''''''''FIN REVERTIR PAGO RECIBIDO
+
+                    '''FIN REVERTIR
+                    '''
+
+
+                    '''INI REVERTIR ASIENTO DE AJUSTE
+                    '''
+
+                    For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
+
+                        If (campo.Item5 <> 0) Then
+
+
+                            Dim lo_JournalEntries As JournalEntries
+                            lo_JournalEntries = lo_SBOCompany3.GetBusinessObject(BoObjectTypes.oJournalEntries)
+
+
+                            ' Se obtiene el Pago Recibido por codigo
+                            If lo_JournalEntries.GetByKey(campo.Item5) = False Then
+
+                                ' Ocurrio un error al obtener el Pago Recibido
+                                sub_mostrarMensaje("Ocurrio un error al obtener el Asiento de Ajuste . DocEntry " & campo.Item5.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
+                                ' Se revierte la transaccion
+                                bol_RollBackTransSBO(lo_SBOCompany3)
+
+                                ' Se desconecta la compañia 
+                                lo_SBOCompany3.Disconnect()
+
+                                ' Se resetea el progressBar
+                                sub_resetProgressBar(lo_progressBar)
+
+                                ' Se retorna un error
+                                Exit Sub
+
+                            End If
+
+                            ' Se realiza la cancelacion del Pago Recibido
+                            li_resultado = lo_JournalEntries.Cancel
+                            'numeroAsientoAjustes = numeroAsientoAjustes + 1
+
+
+                        End If
+
+
+                    Next
+
+
+
+                    '''FIN REVIRTIR ASIENTO DE AJUSTE
+                    '''
+
+
 
                     ' Se desconecta la compañia 
                     lo_SBOCompany3.Disconnect()
@@ -1553,56 +1658,63 @@ Public Class classProcesarPlanilla
                     ' Se muestra un mensaje de error de SAP
                     sub_errorProcesoSAP(lo_SBOCompany3)
 
+
+
                 End Try
                 'RECONCILIACION
-                ' Se incrementa el valor del progressBar
-                sub_incrementarProgressBar(lo_progressBar)
+                '' Se incrementa el valor del progressBar
+                'sub_incrementarProgressBar(lo_progressBar)
                 ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
                 '''
 
             Next
 
 
-            ''''''''' Se confirma la transaccion
-            ''''''''If li_resultado = 0 Then
+            ' Se confirma la transaccion
+            If li_resultado = 0 Then
 
-            ''''''''    ' Se confirma la transaccion
-            ''''''''    Dim ls_resPla As String = str_CommitTransSBO(lo_SBOCompany)
+                ''SE DEBE QUITAR
+                'bol_RollBackTransSBO(lo_SBOCompany3)
 
-            ''''''''    ' Se actualiza el objeto de la planilla
-            ''''''''    If ls_resPla.Trim = "" Then
 
-            ''''''''        ' Se actualiza el objeto de la planilla
-            ''''''''        po_planilla.Estado = "C"
-            ''''''''        ls_resPla = po_planilla.str_actualizar()
+                ' Se confirma la transaccion
+                Dim ls_resPla3 As String = str_CommitTransSBO(lo_SBOCompany3)
 
-            ''''''''        ' Se muestra un mensaje que indica que el proceso se realizó con exito
-            ''''''''        sub_mostrarMensaje("Se realizo la reconciliación de manera exitosa. ( Número de : " & po_planilla.PagosR.int_contar.ToString & "). " & ls_resPla, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
-            ''''''''        sub_asignarEstadoObjeto("C")
+                ' Se actualiza el objeto de la planilla
+                If ls_resPla3.Trim = "" Then
 
-            ''''''''    Else
-            ''''''''        sub_mostrarMensaje("Ocurrió un error al intentar reconciliar en SAP: " & ls_resPla & "", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
-            ''''''''    End If
+                    ' Se actualiza el objeto de la planilla
+                    lo_planilla.Estado = "C"
+                    'ls_resPla. = po_planilla.str_actualizar()
 
-            ''''''''Else
+                    ' Se muestra un mensaje que indica que el proceso se realizó con exito
+                    sub_mostrarMensaje("Se realizo la reconciliación de manera exitosa. ( Número de : 77 ). " & ls_resPla3, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
+                    sub_asignarEstadoObjeto("C")
 
-            ''''''''    ' Se revierte la transaccion
-            ''''''''    bol_RollBackTransSBO(lo_SBOCompany)
+                Else
+                    sub_mostrarMensaje("Ocurrió un error al intentar reconciliar en SAP: " & ls_resPla3 & "", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+                End If
 
-            ''''''''    ' Se muestra un mensaje que indica que ocurrió un error en el proceso
-            ''''''''    sub_mostrarMensaje("Ocurrió un error durante la ejecución del proceso", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+            Else
 
-            ''''''''End If
+                ' Se revierte la transaccion
+                bol_RollBackTransSBO(lo_SBOCompany3)
 
-            ''''''''' Se desconecta la compañia 
-            ''''''''lo_SBOCompany.Disconnect()
+                ' Se muestra un mensaje que indica que ocurrió un error en el proceso
+                sub_mostrarMensaje("Ocurrió un error durante la ejecución del proceso", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
 
-            ''''''''' Se resetea el progressBar
-            ''''''''sub_resetProgressBar(lo_progressBar)
+            End If
+
+            ' Se desconecta la compañia 
+            lo_SBOCompany3.Disconnect()
+
+            ' Se resetea el progressBar
+            sub_resetProgressBar(lo_progressBar)
 
             ''' FIN RECONCILIACION JSOLIS
 
 #End Region
+
 
 
             ' Se actualiza el objeto de la planilla
@@ -1630,11 +1742,52 @@ Public Class classProcesarPlanilla
             ' Se cambia el valor del estado del combo
             sub_asignarEstadoObjeto(lo_planilla.Estado)
 
-            ' Se actualiza los numeros SAP en la tabla de detalle
-            ls_resPla = entPlanilla.str_actualizarNrosSAPPlaDet(lo_planilla.id)
+
+            '' Se actualiza los numeros SAP en la tabla de detalle
+            'ls_resPla = entPlanilla.str_actualizarNrosSAPPlaDet(lo_planilla.id)
+
+            '''INI UPDATE
+            '''
+            '''NEW Se actualiza los numeros SAP en la tabla de detalle
+            'Variables que se necesitan una vez, y no deben estar dentro del for
+            Dim columnName4 As String
+            Dim cuentaGanancia4 As String
+            cuentaGanancia4 = String.Empty
+
+            ''"exec gmi_sp_verEstadoTipoCambioFinanciero '" & po_planillaDet.FechaPago.ToString("yyyyMMdd") & "'"
+            'ini v
+
+            Dim lo_SBOCompany4 As SAPbobsCOM.Company = entComun.sbo_conectar(s_SAPUser, s_SAPPass)
+
+            If bol_iniciarTransSBO(lo_SBOCompany4) = False Then
+                Exit Sub
+            End If
+
+            Dim resultTable4 As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_actualizarNrosSAPPlaDet '" & lo_planilla.id.ToString() & "'")
+
+            If resultTable4 IsNot Nothing Then
+                ' Recorrer las filas del DataTable
+                For Each row As DataRow In resultTable4.Rows
+                    ' Recorrer las columnas de cada fila
+                    For Each column As DataColumn In resultTable4.Columns
+                        ' Leer el valor de cada celda
+                        columnName4 = column.ColumnName
+                        cuentaGanancia4 = row(column)
+                        'valor = cellValue.ToString()
+
+
+                    Next
+                Next
+            Else
+                ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+            End If
+
+            lo_SBOCompany4.Disconnect()
+            '''FIN UPDATE
+            '''
 
             ' Se verifica si se actualizó los números SAP de manera correcta
-            If ls_resPla.Trim <> "" Then
+            If cuentaGanancia4.Trim <> "" Then
 
                 ' Se muestra un mensaje que indique que no se actualizó los números SAP en el detalle de la planilla
                 sub_mostrarMensaje("No se actualizó los números SAP de los Pagos Recibidos creados en el detalle de la planilla.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
