@@ -838,9 +838,18 @@ Public Class classProcesarPlanilla
             ' Crear una lista auxiliar para almacenar las líneas modificadas
             Dim listaModificada As New List(Of entPlanilla_Lineas)
             'jsolis
-            '            Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer, String))
-            'Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer))
+            ''            Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer, String))
+            ''Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer))
             Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String))
+
+
+            ''' Lista de objetos de tipo ItemCampo
+            ''Dim listaCampos2 As New List(Of ItemCampo2)
+
+            ' Crear un nuevo objeto y asignar valores
+
+
+
 
             'String,
             'Integer,
@@ -935,13 +944,22 @@ Public Class classProcesarPlanilla
                         Dim cardCode As String = lo_planillaDet.Codigo
 
 
-                        Dim entero1 As Integer = 0
-                        'listaCampos.Add(New Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer)(
-                        'lo_planilla_PagosR_idT, lo_planilla_PagosR_idECT, lo_planilla_PagosR_lineaNumAsgT, lo_planilla_PagosR_DocEntrySAPT, TransId_AsientoAjuste, MontoReconciliar_asientoAjuste, lo_planillaDet.Codigo, 0
-                        '))
-                        '' Agregar una tupla con los tres valores a la lista.
                         listaCampos.Add(Tuple.Create(lo_planilla_PagosR_idT, lo_planilla_PagosR_idECT, lo_planilla_PagosR_lineaNumAsgT, lo_planilla_PagosR_DocEntrySAPT, TransId_AsientoAjuste, MontoReconciliar_asientoAjuste, lo_planillaDet.Codigo))
-                        'listaCampos.Add(Tuple. Create("a", 1, 2, 3, 4, 3, "b", 1))
+
+                        ''Dim itemv2 As New ItemCampo2 With {
+                        ''    .Id = lo_planilla_PagosR_idT,
+                        ''    .IdEC = lo_planilla_PagosR_idECT,
+                        ''    .LineaNum = lo_planilla_PagosR_lineaNumAsgT,
+                        ''    .DocEntrySAP = lo_planilla_PagosR_DocEntrySAPT,
+                        ''    .TransIdAjuste = TransId_AsientoAjuste,
+                        ''    .MontoReconciliar = MontoReconciliar_asientoAjuste,
+                        ''    .Codigo = lo_planillaDet.Codigo,
+                        ''    .ReconNumRI = lo_planilla.PagosR.ReconNumRI
+                        ''}
+
+                        ''' Agregar a la lista
+                        ''listaCampos2.Add(itemv2)
+
 
 
                         ' Se incrementa el valor del progressBar
@@ -1236,7 +1254,14 @@ Public Class classProcesarPlanilla
 
                     listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, montoreconciliaciont, lo_planillaDet.Codigo)
 
+                    ''INI UPDATE
 
+                    'listaCampos2(i).TransIdAjuste = lo_planilla.PagosR.DocEntryTr
+                    'listaCampos2(i).MontoReconciliar = montoreconciliaciont
+                    'listaCampos2(i).Codigo = lo_planillaDet.Codigo
+
+
+                    ''FIN UPDATE
 
                     Dim item = listaCampos(i)
 
@@ -1247,11 +1272,10 @@ Public Class classProcesarPlanilla
                         lo_planilla.PagosR.lineaNumAsg = item.Item3
 
                         lo_planilla.PagosR.DocEntrySAP = item.Item4
-                        lo_planilla.PagosR.ReconNumRI = 0
 
 
-
-                        lo_planilla.PagosR.sub_anadir()
+                        ''no deberia agregarse aca, sino al momento de crear la retencion
+                        'lo_planilla.PagosR.sub_anadir()
 
                         i = i + 1
                         Continue For
@@ -1265,13 +1289,13 @@ Public Class classProcesarPlanilla
                         lo_planilla.PagosR.idEC = item.Item2
                         lo_planilla.PagosR.lineaNumAsg = item.Item3
                         lo_planilla.PagosR.DocEntrySAP = item.Item4
-                        lo_planilla.PagosR.ReconNumRI = 0
 
 
                         i = i + 1
                         'lo_planilla.PagosR.
 
-                        lo_planilla.PagosR.sub_anadir()
+                        ''no deberia agregarse aca, sino al momento de crear la retencion
+                        'lo_planilla.PagosR.sub_anadir()
 
                         'Next
                         'lo_planillaDet.
@@ -1426,6 +1450,23 @@ Public Class classProcesarPlanilla
 
                 If item.Item5 = 0 And item.Item6 = 0 Then
 
+
+                    ''ini agregar
+
+                    'lo_planilla.PagosR.id = listaCampos2(j).Id
+                    'lo_planilla.PagosR.idEC = listaCampos2(j).IdEC
+                    'lo_planilla.PagosR.lineaNumAsg = listaCampos2(j).LineaNum
+                    'lo_planilla.PagosR.DocEntrySAP = listaCampos2(j).DocEntrySAP
+                    'lo_planilla.PagosR.TransIdSAP = 0
+                    'lo_planilla.PagosR.MontoReconciliacion = 0
+                    ''lo_planilla.PagosR.       = listaCampos2(i).Codigo
+                    'lo_planilla.PagosR.ReconNumRI = 0
+
+
+                    'lo_planilla.PagosR.sub_anadir()
+                    ''fin agregar
+
+
                     Continue For
 
                 End If
@@ -1545,6 +1586,27 @@ Public Class classProcesarPlanilla
                     reconParams = service.Add(openTrans)
                     reconNum = reconParams.ReconNum
 
+                    'listaCampos2(j).ReconNumRI = reconNum
+
+                    ''ini agregar
+
+                    'lo_planilla.PagosR.id = listaCampos2(j).Id
+                    'lo_planilla.PagosR.idEC = listaCampos2(j).IdEC
+                    'lo_planilla.PagosR.lineaNumAsg = listaCampos2(j).LineaNum
+                    'lo_planilla.PagosR.DocEntrySAP = listaCampos2(j).DocEntrySAP
+                    'lo_planilla.PagosR.TransIdSAP = 0
+                    'lo_planilla.PagosR.MontoReconciliacion = 0
+                    ''lo_planilla.PagosR.       = listaCampos2(i).Codigo
+                    'lo_planilla.PagosR.ReconNumRI = 0
+
+
+                    'lo_planilla.PagosR.sub_anadir()
+                    ''fin agregar
+
+
+                    For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
+
+                    Next
                     'Int reconNum = oCompany.GetNewObjectKey();
 
                     'Existo
@@ -3289,6 +3351,9 @@ Public Class classProcesarPlanilla
 
             ' Se desconecta la compañia 
             lo_SBOCompany.Disconnect()
+
+            ' Se reasigna el modo del formulario a Busqueda
+            sub_asignarModo(enm_modoForm.BUSCAR)
 
             ' Se resetea el progressBar
             sub_resetProgressBar(lo_progressBar)
