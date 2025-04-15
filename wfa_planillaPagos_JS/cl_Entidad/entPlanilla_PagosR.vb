@@ -28,6 +28,21 @@ Public Class entPlanilla_PagosR
     <annAtributo(True, False, "MontoReconciliacion", "Monto Reconciliacion", False)>
     Private i_MontoReconciliacion As Double
 
+    <annAtributo(True, False, "ReconNumRI", "ReconNumRI", False)>
+    Private i_ReconNumRI As Integer
+
+
+    'nuevo
+    Public Property ReconNumRI() As Integer
+        Get
+            Return i_ReconNumRI
+        End Get
+        Set(ByVal value As Integer)
+            i_ReconNumRI = value
+        End Set
+    End Property
+
+
     'nuevo
     Public Property MontoReconciliacion() As Double
         Get

@@ -838,6 +838,8 @@ Public Class classProcesarPlanilla
             ' Crear una lista auxiliar para almacenar las líneas modificadas
             Dim listaModificada As New List(Of entPlanilla_Lineas)
             'jsolis
+            '            Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer, String))
+            'Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer))
             Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String))
 
             'String,
@@ -925,13 +927,21 @@ Public Class classProcesarPlanilla
                             Dim lo_planilla_PagosR_idECT As Integer = lo_planilla.PagosR.idEC
                             Dim lo_planilla_PagosR_lineaNumAsgT As Integer = lo_planilla.PagosR.lineaNumAsg
                         Dim lo_planilla_PagosR_DocEntrySAPT As Integer = lo_planilla.PagosR.DocEntrySAP
+                        lo_planilla.PagosR.ReconNumRI = 0
 
 
                         Dim TransId_AsientoAjuste As Integer = 0
                         Dim MontoReconciliar_asientoAjuste As Decimal = 0.0
+                        Dim cardCode As String = lo_planillaDet.Codigo
 
-                        ' Agregar una tupla con los tres valores a la lista.
+
+                        Dim entero1 As Integer = 0
+                        'listaCampos.Add(New Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer)(
+                        'lo_planilla_PagosR_idT, lo_planilla_PagosR_idECT, lo_planilla_PagosR_lineaNumAsgT, lo_planilla_PagosR_DocEntrySAPT, TransId_AsientoAjuste, MontoReconciliar_asientoAjuste, lo_planillaDet.Codigo, 0
+                        '))
+                        '' Agregar una tupla con los tres valores a la lista.
                         listaCampos.Add(Tuple.Create(lo_planilla_PagosR_idT, lo_planilla_PagosR_idECT, lo_planilla_PagosR_lineaNumAsgT, lo_planilla_PagosR_DocEntrySAPT, TransId_AsientoAjuste, MontoReconciliar_asientoAjuste, lo_planillaDet.Codigo))
+                        'listaCampos.Add(Tuple. Create("a", 1, 2, 3, 4, 3, "b", 1))
 
 
                         ' Se incrementa el valor del progressBar
@@ -1224,15 +1234,9 @@ Public Class classProcesarPlanilla
                     li_resultado = int_ajustecrearAsientoTC_sin_pr(lo_planillaDet, lo_SBOCompany2, lo_planilla, lo_planillaDet.DocEntrySAP, Tcfinanciero, TcPagoSAP, cuentaGanancia, cuentaPerdida, asiento_result, montoreconciliaciont)
 
 
-
-                    '-----
-                    'listaCampos(i) = 
-                    'po_planilla.PagosR.DocEntryTr
-
                     listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, montoreconciliaciont, lo_planillaDet.Codigo)
 
 
-                    '----
 
                     Dim item = listaCampos(i)
 
@@ -1241,7 +1245,11 @@ Public Class classProcesarPlanilla
                         lo_planilla.PagosR.id = item.Item1
                         lo_planilla.PagosR.idEC = item.Item2
                         lo_planilla.PagosR.lineaNumAsg = item.Item3
+
                         lo_planilla.PagosR.DocEntrySAP = item.Item4
+                        lo_planilla.PagosR.ReconNumRI = 0
+
+
 
                         lo_planilla.PagosR.sub_anadir()
 
@@ -1257,6 +1265,8 @@ Public Class classProcesarPlanilla
                         lo_planilla.PagosR.idEC = item.Item2
                         lo_planilla.PagosR.lineaNumAsg = item.Item3
                         lo_planilla.PagosR.DocEntrySAP = item.Item4
+                        lo_planilla.PagosR.ReconNumRI = 0
+
 
                         i = i + 1
                         'lo_planilla.PagosR.
@@ -1286,10 +1296,6 @@ Public Class classProcesarPlanilla
 
                 ' Se revierte la transaccion
                 bol_RollBackTransSBO(lo_SBOCompany2)
-
-
-                ''ATTE JSOLIS
-                'Se debe revertir los PR CREADOS
 
                 ''''''''''''INI REVERTIR asiento ajuste
                 '''
@@ -1339,7 +1345,6 @@ Public Class classProcesarPlanilla
                 ' Se desconecta la compañia 
                 lo_SBOCompany.Disconnect()
 
-
                 ' Se finaliza el metodo
                 Exit Sub
 
@@ -1350,11 +1355,7 @@ Public Class classProcesarPlanilla
             ls_resPla = str_CommitTransSBO(lo_SBOCompany2)
 
             lo_SBOCompany2.Disconnect()
-
-
             ''----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-
             'FIN MOVER , PROBAR MOVIENDO ACA 27032025 0939
             '******************************************************************************************************************************************************************************************************
 
@@ -1418,6 +1419,7 @@ Public Class classProcesarPlanilla
             'For Each lo_pagoR As entPlanilla_PagosR In po_planilla.PagosR.lstObjs
             For j = 0 To listaCampos.Count - 1
                 Dim item = listaCampos(j)
+
 
                 'Dim carcodet As String = po_planilla.Lineas.lis.Lineas.Nombre(i)
                 'j = j + 1
@@ -1537,10 +1539,14 @@ Public Class classProcesarPlanilla
 
 
 
-
+                Dim reconNum As Integer
                 ' Ejecutar la reconciliación
                 Try
                     reconParams = service.Add(openTrans)
+                    reconNum = reconParams.ReconNum
+
+                    'Int reconNum = oCompany.GetNewObjectKey();
+
                     'Existo
                 Catch ex As Exception
 
@@ -1745,7 +1751,6 @@ Public Class classProcesarPlanilla
 
             '' Se actualiza los numeros SAP en la tabla de detalle
             'ls_resPla = entPlanilla.str_actualizarNrosSAPPlaDet(lo_planilla.id)
-
             '''INI UPDATE
             '''
             '''NEW Se actualiza los numeros SAP en la tabla de detalle
