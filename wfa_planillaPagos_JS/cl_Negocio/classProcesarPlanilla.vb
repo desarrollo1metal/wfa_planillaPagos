@@ -1243,6 +1243,8 @@ Public Class classProcesarPlanilla
                     ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
                 End If
 
+                listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, montoreconciliaciont, lo_planillaDet.Codigo)
+                Dim item = listaCampos(i)
 
                 If lo_planillaDet.asientoajustoT = "Y" Then
 
@@ -1252,25 +1254,11 @@ Public Class classProcesarPlanilla
                     li_resultado = int_ajustecrearAsientoTC_sin_pr(lo_planillaDet, lo_SBOCompany2, lo_planilla, lo_planillaDet.DocEntrySAP, Tcfinanciero, TcPagoSAP, cuentaGanancia, cuentaPerdida, asiento_result, montoreconciliaciont)
 
 
-                    listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, montoreconciliaciont, lo_planillaDet.Codigo)
-
-                    ''INI UPDATE
-
-                    'listaCampos2(i).TransIdAjuste = lo_planilla.PagosR.DocEntryTr
-                    'listaCampos2(i).MontoReconciliar = montoreconciliaciont
-                    'listaCampos2(i).Codigo = lo_planillaDet.Codigo
-
-
-                    ''FIN UPDATE
-
-                    Dim item = listaCampos(i)
-
                     If li_resultado = -2 Then
 
                         lo_planilla.PagosR.id = item.Item1
                         lo_planilla.PagosR.idEC = item.Item2
                         lo_planilla.PagosR.lineaNumAsg = item.Item3
-
                         lo_planilla.PagosR.DocEntrySAP = item.Item4
 
 
@@ -1290,19 +1278,25 @@ Public Class classProcesarPlanilla
                         lo_planilla.PagosR.lineaNumAsg = item.Item3
                         lo_planilla.PagosR.DocEntrySAP = item.Item4
 
-
                         i = i + 1
-                        'lo_planilla.PagosR.
-
-                        'no deberia agregarse aca, sino al momento de crear la retencion
                         lo_planilla.PagosR.sub_anadir()
 
-                        'Next
-                        'lo_planillaDet.
-                        'actualizar los campos necesarios para guardar los docEntryTransId del asiento creado.
-
-
                     End If
+
+                Else
+
+                    lo_planilla.PagosR.id = item.Item1
+                    lo_planilla.PagosR.idEC = item.Item2
+                    lo_planilla.PagosR.lineaNumAsg = item.Item3
+                    lo_planilla.PagosR.DocEntrySAP = item.Item4
+
+
+                    ''no deberia agregarse aca, sino al momento de crear la retencion
+                    lo_planilla.PagosR.sub_anadir()
+
+                    i = i + 1
+                    Continue For
+
 
                 End If
 
@@ -3222,51 +3216,19 @@ Public Class classProcesarPlanilla
 
                 End If
 
-                ' Se declara un objeto de Payment de SAP Business One
-                Dim lo_payment As Payments
+                If lo_pagoR.DocEntrySAP > 0 Then
 
-                ' Se inicializa el objeto
-                lo_payment = lo_SBOCompany.GetBusinessObject(BoObjectTypes.oIncomingPayments)
+                    ' Se declara un objeto de Payment de SAP Business One
+                    Dim lo_payment As Payments
 
-                ' Se obtiene el Pago Recibido por codigo
-                If lo_payment.GetByKey(lo_pagoR.DocEntrySAP) = False Then
-
-                    ' Ocurrio un error al obtener el Pago Recibido
-                    sub_mostrarMensaje("Ocurrio un error al obtener el Pago Recibido. DocEntry " & lo_pagoR.DocEntrySAP.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
-
-                    ' Se revierte la transaccion
-                    bol_RollBackTransSBO(lo_SBOCompany)
-
-                    ' Se desconecta la compañia 
-                    lo_SBOCompany.Disconnect()
-
-                    ' Se resetea el progressBar
-                    sub_resetProgressBar(lo_progressBar)
-
-                    ' Se retorna un error
-                    Exit Sub
-
-                End If
-
-                ' Se realiza la cancelacion del Pago Recibido
-                li_resultado = lo_payment.Cancel
-
-                numeroPagoRecibidos = numeroPagoRecibidos + 1
-
-                'INI cancelación de ASIENTO
-
-                If (lo_pagoR.DocEntryTr <> 0) Then
-
-
-                    Dim lo_JournalEntries As JournalEntries
-                    lo_JournalEntries = lo_SBOCompany.GetBusinessObject(BoObjectTypes.oJournalEntries)
-
+                    ' Se inicializa el objeto
+                    lo_payment = lo_SBOCompany.GetBusinessObject(BoObjectTypes.oIncomingPayments)
 
                     ' Se obtiene el Pago Recibido por codigo
-                    If lo_JournalEntries.GetByKey(lo_pagoR.DocEntryTr) = False Then
+                    If lo_payment.GetByKey(lo_pagoR.DocEntrySAP) = False Then
 
                         ' Ocurrio un error al obtener el Pago Recibido
-                        sub_mostrarMensaje("Ocurrio un error al obtener el Asiento de Ajuste . DocEntry " & lo_pagoR.DocEntryTr.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+                        sub_mostrarMensaje("Ocurrio un error al obtener el Pago Recibido. DocEntry " & lo_pagoR.DocEntrySAP.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
 
                         ' Se revierte la transaccion
                         bol_RollBackTransSBO(lo_SBOCompany)
@@ -3283,11 +3245,54 @@ Public Class classProcesarPlanilla
                     End If
 
                     ' Se realiza la cancelacion del Pago Recibido
-                    li_resultado = lo_JournalEntries.Cancel
-                    numeroAsientoAjustes = numeroAsientoAjustes + 1
+                    li_resultado = lo_payment.Cancel
 
+                    numeroPagoRecibidos = numeroPagoRecibidos + 1
 
                 End If
+
+
+
+
+                'INI cancelación de ASIENTO
+                If lo_pagoR.DocEntryTr > 0 Then
+                    If (lo_pagoR.DocEntryTr <> 0) Then
+
+
+                        Dim lo_JournalEntries As JournalEntries
+                        lo_JournalEntries = lo_SBOCompany.GetBusinessObject(BoObjectTypes.oJournalEntries)
+
+
+                        ' Se obtiene el Pago Recibido por codigo
+                        If lo_JournalEntries.GetByKey(lo_pagoR.DocEntryTr) = False Then
+
+                            ' Ocurrio un error al obtener el Pago Recibido
+                            sub_mostrarMensaje("Ocurrio un error al obtener el Asiento de Ajuste . DocEntry " & lo_pagoR.DocEntryTr.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
+                            ' Se revierte la transaccion
+                            bol_RollBackTransSBO(lo_SBOCompany)
+
+                            ' Se desconecta la compañia 
+                            lo_SBOCompany.Disconnect()
+
+                            ' Se resetea el progressBar
+                            sub_resetProgressBar(lo_progressBar)
+
+                            ' Se retorna un error
+                            Exit Sub
+
+                        End If
+
+                        ' Se realiza la cancelacion del Pago Recibido
+                        li_resultado = lo_JournalEntries.Cancel
+                        numeroAsientoAjustes = numeroAsientoAjustes + 1
+
+
+                    End If
+
+                End If
+
+
 
 
                 'FIN cancelación de ASIENTO
@@ -3332,7 +3337,7 @@ Public Class classProcesarPlanilla
                     ls_resPla = po_planilla.str_actualizar()
 
                     ' Se muestra un mensaje que indica que el proceso se realizó con exito
-                    sub_mostrarMensaje("Se canceló la planilla de manera exitosa. (Número de Pagos Cancelados: " & numeroPagoRecibidos & " y Número de Asiento de Ajuste Cancelados: " & numeroAsientoAjustes & " ).  " & ls_resPla, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
+                    sub_mostrarMensaje("Se canceló la planilla de manera exitosa. (Pagos Cancelados: " & numeroPagoRecibidos & " y Asiento de Ajuste Cancelados: " & numeroAsientoAjustes & " ).  " & ls_resPla, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
                     sub_asignarEstadoObjeto("O")
 
                 Else

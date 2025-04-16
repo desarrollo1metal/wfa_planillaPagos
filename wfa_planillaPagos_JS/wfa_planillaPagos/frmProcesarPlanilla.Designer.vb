@@ -309,6 +309,7 @@ Partial Class frmProcesarPlanilla
         Me.Button1.Tag = "sub_Reconciliar"
         Me.Button1.Text = "Reconciliar"
         Me.Button1.UseVisualStyleBackColor = True
+        Me.Button1.Visible = False
         '
         'frmProcesarPlanilla
         '
