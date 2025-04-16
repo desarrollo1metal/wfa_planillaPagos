@@ -551,18 +551,16 @@ Public Class ClassGenPlanilla
             End If
 
             '' agregar la respuesta si o no
-            li_confirm = MessageBox.Show("Se va realizar un asiento de ajuste automaticamente por la diferencia ( Si ),en el caso que sea a favor o en contra del cliente marcar ( No )", "caption", MessageBoxButtons.YesNoCancel)
+            li_confirm = MessageBox.Show("¿Desea que se genere un asiento de ajuste?", "caption", MessageBoxButtons.YesNoCancel)
 
             Dim asientoAjustoF As String
             'Se verifica el resultado del mensaje de confirmacion
             If Not li_confirm = DialogResult.Yes Then
 
-                'asientoAjustoF = "N"
                 lo_dtbSelsEC.Rows(0)("asientoajustoT") = "N"
 
             Else
 
-                'asientoAjustoF = "Y"
                 lo_dtbSelsEC.Rows(0)("asientoajustoT") = "Y"
 
             End If

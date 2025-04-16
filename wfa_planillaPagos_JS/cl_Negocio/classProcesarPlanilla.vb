@@ -789,7 +789,8 @@ Public Class classProcesarPlanilla
                 lo_progressBar.Minimum = 0
             End If
 
-            ' Se declara una variable para el numero de linea de la asignacion del detalle
+            ' Se declar
+            ' a una variable para el numero de linea de la asignacion del detalle
             Dim li_lineaNumAsg As Integer = -1
 
             ' Se declara una variable para el tipo de asignacion del registro del detalle de la planilla
@@ -1106,12 +1107,11 @@ Public Class classProcesarPlanilla
             End If
 
 
-            ' Se muestra un mensaje que indica que el proceso se realizó con exito
-            MsgBox("El proceso de creación de los Pagos Recibidos en SAP Business One finalizó de manera correcta.")
+            '' Se muestra un mensaje que indica que el proceso se realizó con exito
+            'MsgBox("El proceso de creación de los Pagos Recibidos en SAP Business One finalizó de manera correcta.")
 
             ' Se desconecta la compañia 
             lo_SBOCompany.Disconnect()
-
 
 #End Region
 
@@ -1275,7 +1275,7 @@ Public Class classProcesarPlanilla
 
 
                         ''no deberia agregarse aca, sino al momento de crear la retencion
-                        'lo_planilla.PagosR.sub_anadir()
+                        lo_planilla.PagosR.sub_anadir()
 
                         i = i + 1
                         Continue For
@@ -1294,8 +1294,8 @@ Public Class classProcesarPlanilla
                         i = i + 1
                         'lo_planilla.PagosR.
 
-                        ''no deberia agregarse aca, sino al momento de crear la retencion
-                        'lo_planilla.PagosR.sub_anadir()
+                        'no deberia agregarse aca, sino al momento de crear la retencion
+                        lo_planilla.PagosR.sub_anadir()
 
                         'Next
                         'lo_planillaDet.
@@ -1756,7 +1756,7 @@ Public Class classProcesarPlanilla
                     'ls_resPla. = po_planilla.str_actualizar()
 
                     ' Se muestra un mensaje que indica que el proceso se realizó con exito
-                    sub_mostrarMensaje("Se realizo la reconciliación de manera exitosa. ( Número de : 77 ). " & ls_resPla3, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
+                    sub_mostrarMensaje("El proceso fue realizado satisfactoriamente." & ls_resPla3, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
                     sub_asignarEstadoObjeto("C")
 
                 Else

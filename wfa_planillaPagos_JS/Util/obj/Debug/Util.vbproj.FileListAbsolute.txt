@@ -1515,3 +1515,4 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\Util\obj\Debug\Util.vbproj.CopyComp
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\Util\obj\Debug\Util.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\Util\obj\Debug\Util.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\Util\obj\Debug\Util.pdb
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\Util\obj\Debug\Util.vbproj.AssemblyReference.cache
