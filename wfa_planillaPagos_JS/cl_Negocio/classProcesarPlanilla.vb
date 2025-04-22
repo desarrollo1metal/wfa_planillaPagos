@@ -849,7 +849,8 @@ Public Class classProcesarPlanilla
 
             ' Crear un nuevo objeto y asignar valores
 
-
+            Dim trueMultiCobranza As Boolean
+            trueMultiCobranza = False
 
 
             'String,
@@ -870,72 +871,73 @@ Public Class classProcesarPlanilla
                 ' Se verifica el numero de asignacion de linea 
                 If li_lineaNumAsg <> lo_planillaDet.LineaNumAsg Then ' La diferencia indica que se trata de una nueva asignacion, por lo tanto se reinicializa el objeto
 
-                        ' El proceso de adicion de MUCHOS A UNO o de UNO a MUCHOS se realiza en el objeto siguiente 
-                        ', pues, al notar un cambio en el numero de asignacion, el proceso debe ingresar los detalles obtenidos en el listado llenado hasta el objeto anterior del FOR EACH
-                        If li_tipoAsg = 1 Or li_tipoAsg = 2 Then
+                    ' El proceso de adicion de MUCHOS A UNO o de UNO a MUCHOS se realiza en el objeto siguiente 
+                    ', pues, al notar un cambio en el numero de asignacion, el proceso debe ingresar los detalles obtenidos en el listado llenado hasta el objeto anterior del FOR EACH
+                    If li_tipoAsg = 1 Or li_tipoAsg = 2 Then
 
-                            ' Se realiza la inserción UNO a MUCHOS o de MUCHOS A UNO
-                            li_resultado = int_procesarMuchosAMuchos(lo_lstPlaDet, lo_SBOCompany, lo_planilla, li_tipoAsg)
+                        trueMultiCobranza = True
+                        ' Se realiza la inserción UNO a MUCHOS o de MUCHOS A UNO
+                        li_resultado = int_procesarMuchosAMuchos(lo_lstPlaDet, lo_SBOCompany, lo_planilla, li_tipoAsg)
 
-                            ' Se verifica el resultado 
-                            If li_resultado <> 0 Then
+                        ' Se verifica el resultado 
+                        If li_resultado <> 0 Then
 
-                                ' Se revierte la transaccion
-                                bol_RollBackTransSBO(lo_SBOCompany)
+                            ' Se revierte la transaccion
+                            bol_RollBackTransSBO(lo_SBOCompany)
 
-                                ' Se desconecta la compañia 
-                                lo_SBOCompany.Disconnect()
+                            ' Se desconecta la compañia 
+                            lo_SBOCompany.Disconnect()
 
-                                ' Se resetea el progressBar
-                                sub_resetProgressBar(lo_progressBar)
+                            ' Se resetea el progressBar
+                            sub_resetProgressBar(lo_progressBar)
 
-                                ' Se finaliza el metodo
-                                Exit Sub
-
-                            End If
-
-                            ' Se incrementa el valor del progressBar
-                            sub_incrementarProgressBar(lo_progressBar)
-
-                            ' Se limpia el listado de objetos de detalle 
-                            lo_lstPlaDet.Clear()
+                            ' Se finaliza el metodo
+                            Exit Sub
 
                         End If
 
-                        ' Se obtiene el numero de linea de la asignacion del detalle
-                        li_lineaNumAsg = lo_planillaDet.LineaNumAsg
+                        ' Se incrementa el valor del progressBar
+                        sub_incrementarProgressBar(lo_progressBar)
 
-                        ' Se verifica el tipo de asignacion del registro del detalle de la planilla
-                        li_tipoAsg = lo_planillaDet.tipoAsg
+                        ' Se limpia el listado de objetos de detalle 
+                        lo_lstPlaDet.Clear()
 
-                        ' Se verifica el tipo de asignación para generar el pago
-                        If li_tipoAsg = 0 Then ' Asignacion de UNO a UNO
+                    End If
 
-                            ' Se realiza la adición del objeto
-                            li_resultado = int_procesarUnoAUno_sin_AS(lo_planillaDet, lo_SBOCompany, lo_planilla)
+                    ' Se obtiene el numero de linea de la asignacion del detalle
+                    li_lineaNumAsg = lo_planillaDet.LineaNumAsg
 
-                            ' Se verifica el resultado 
-                            If li_resultado <> 0 Then
+                    ' Se verifica el tipo de asignacion del registro del detalle de la planilla
+                    li_tipoAsg = lo_planillaDet.tipoAsg
 
-                                ' Se revierte la transaccion
-                                bol_RollBackTransSBO(lo_SBOCompany)
+                    ' Se verifica el tipo de asignación para generar el pago
+                    If li_tipoAsg = 0 Then ' Asignacion de UNO a UNO
 
-                                ' Se desconecta la compañia 
-                                lo_SBOCompany.Disconnect()
+                        ' Se realiza la adición del objeto
+                        li_resultado = int_procesarUnoAUno_sin_AS(lo_planillaDet, lo_SBOCompany, lo_planilla)
 
-                                ' Se resetea el progressBar
-                                sub_resetProgressBar(lo_progressBar)
+                        ' Se verifica el resultado 
+                        If li_resultado <> 0 Then
 
-                                ' Se finaliza el metodo
-                                Exit Sub
+                            ' Se revierte la transaccion
+                            bol_RollBackTransSBO(lo_SBOCompany)
 
-                            End If
+                            ' Se desconecta la compañia 
+                            lo_SBOCompany.Disconnect()
 
-                            'correcto 
+                            ' Se resetea el progressBar
+                            sub_resetProgressBar(lo_progressBar)
 
-                            Dim lo_planilla_PagosR_idT As String = lo_planilla.PagosR.id
-                            Dim lo_planilla_PagosR_idECT As Integer = lo_planilla.PagosR.idEC
-                            Dim lo_planilla_PagosR_lineaNumAsgT As Integer = lo_planilla.PagosR.lineaNumAsg
+                            ' Se finaliza el metodo
+                            Exit Sub
+
+                        End If
+
+                        'correcto 
+
+                        Dim lo_planilla_PagosR_idT As String = lo_planilla.PagosR.id
+                        Dim lo_planilla_PagosR_idECT As Integer = lo_planilla.PagosR.idEC
+                        Dim lo_planilla_PagosR_lineaNumAsgT As Integer = lo_planilla.PagosR.lineaNumAsg
                         Dim lo_planilla_PagosR_DocEntrySAPT As Integer = lo_planilla.PagosR.DocEntrySAP
                         lo_planilla.PagosR.ReconNumRI = 0
 
@@ -965,64 +967,63 @@ Public Class classProcesarPlanilla
 
                         ' Se incrementa el valor del progressBar
                         sub_incrementarProgressBar(lo_progressBar)
-                            li_contProgreso = li_contProgreso + 1
+                        li_contProgreso = li_contProgreso + 1
 
-                        ElseIf li_tipoAsg = 1 Or li_tipoAsg = 2 Then ' Asignacion de UNO a MUCHOS o MUCHOS a UNO
-
-                            ' Se añade el detalle de la planilla al listado
-                            lo_lstPlaDet.Add(lo_planillaDet)
-
-                        Else
-
-                            ' Hubo un error al momento de generar el detalle de la planilla
-                            sub_errorRegistroPlanilla(lo_SBOCompany)
-
-                            ' Se revierte la transaccion
-                            bol_RollBackTransSBO(lo_SBOCompany)
-
-                            ' Se desconecta la compañia 
-                            lo_SBOCompany.Disconnect()
-
-                            ' Se resetea el progressBar
-                            sub_resetProgressBar(lo_progressBar)
-
-                            ' Se termina el metodo
-                            Exit Sub
-
-                        End If
-
-
-
-
-                    Else
-
-                        ' Se verifica si el tipo de asignacion es igual al anterior
-                        If li_tipoAsg <> lo_planillaDet.tipoAsg Or li_tipoAsg = 0 Then
-
-                            ' Hubo un error al momento de generar el detalle de la planilla
-                            sub_errorRegistroPlanilla(lo_SBOCompany)
-
-                            ' Se desconecta la compañia 
-                            lo_SBOCompany.Disconnect()
-
-                            ' Se revierte la transaccion
-                            bol_RollBackTransSBO(lo_SBOCompany)
-
-                            ' Se resetea el progressBar
-                            sub_resetProgressBar(lo_progressBar)
-
-                            ' Se termina el metodo
-                            Exit Sub
-
-                        End If
+                    ElseIf li_tipoAsg = 1 Or li_tipoAsg = 2 Then ' Asignacion de UNO a MUCHOS o MUCHOS a UNO
 
                         ' Se añade el detalle de la planilla al listado
                         lo_lstPlaDet.Add(lo_planillaDet)
 
+                    Else
+
+                        ' Hubo un error al momento de generar el detalle de la planilla
+                        sub_errorRegistroPlanilla(lo_SBOCompany)
+
+                        ' Se revierte la transaccion
+                        bol_RollBackTransSBO(lo_SBOCompany)
+
+                        ' Se desconecta la compañia 
+                        lo_SBOCompany.Disconnect()
+
+                        ' Se resetea el progressBar
+                        sub_resetProgressBar(lo_progressBar)
+
+                        ' Se termina el metodo
+                        Exit Sub
+
                     End If
 
 
-                    listaModificada.Add(lo_planillaDet)
+
+                Else
+
+                    ' Se verifica si el tipo de asignacion es igual al anterior
+                    If li_tipoAsg <> lo_planillaDet.tipoAsg Or li_tipoAsg = 0 Then
+
+                        ' Hubo un error al momento de generar el detalle de la planilla
+                        sub_errorRegistroPlanilla(lo_SBOCompany)
+
+                        ' Se desconecta la compañia 
+                        lo_SBOCompany.Disconnect()
+
+                        ' Se revierte la transaccion
+                        bol_RollBackTransSBO(lo_SBOCompany)
+
+                        ' Se resetea el progressBar
+                        sub_resetProgressBar(lo_progressBar)
+
+                        ' Se termina el metodo
+                        Exit Sub
+
+                    End If
+
+                    ' Se añade el detalle de la planilla al listado
+                    lo_lstPlaDet.Add(lo_planillaDet)
+
+                End If
+
+
+                listaModificada.Add(lo_planillaDet)
 
 
 
@@ -1036,6 +1037,7 @@ Public Class classProcesarPlanilla
                 ' Si el listado de objetos de detalle a procesar tiene objetos, quiere decir que está pendiente una ejecución de una asignacion 1 o 2
                 If li_tipoAsg = 1 Or li_tipoAsg = 2 Then
 
+                    trueMultiCobranza = True
                     ' Se realiza la inserción UNO a MUCHOS o de MUCHOS A UNO
                     li_resultado = int_procesarMuchosAMuchos(lo_lstPlaDet, lo_SBOCompany, lo_planilla, li_tipoAsg)
 
@@ -1130,112 +1132,50 @@ Public Class classProcesarPlanilla
 
             ''recorrer la lista, si aplica generar asiento de ajuste.
 
-            Dim asiento_transId As Integer
-            asiento_transId = 0
-            Dim asiento_result As Integer
-            asiento_result = -1
-            Dim montoreconciliaciont As Decimal
-            montoreconciliaciont = 0
 
-            ' Se realiza la conexion a SAP Business One
-            Dim lo_SBOCompany2 As SAPbobsCOM.Company = entComun.sbo_conectar(s_SAPUser, s_SAPPass)
-
-            ' Se verifica si se realizo la conexion hacia SAP Business One
-            If lo_SBOCompany2 Is Nothing Then
-                sub_mostrarMensaje("No se realizó la conexión a SAP Business One.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
-                Exit Sub
-            End If
-
-            ' Se inicia la transaccion de SAP Business One
-            If bol_iniciarTransSBO(lo_SBOCompany2) = False Then
-                Exit Sub
-            End If
+            If trueMultiCobranza = False Then
 
 
-            'Variables que se necesitan una vez, y no deben estar dentro del for
-            Dim columnName As String
-            Dim cuentaGanancia As String
-            cuentaGanancia = String.Empty
+                Dim asiento_transId As Integer
+                asiento_transId = 0
+                Dim asiento_result As Integer
+                asiento_result = -1
+                Dim montoreconciliaciont As Decimal
+                montoreconciliaciont = 0
 
-            'ini v
-            Dim resultTable As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_cuentaGananciaDiferenciaTC")
+                ' Se realiza la conexion a SAP Business One
+                Dim lo_SBOCompany2 As SAPbobsCOM.Company = entComun.sbo_conectar(s_SAPUser, s_SAPPass)
 
-            If resultTable IsNot Nothing Then
-                ' Recorrer las filas del DataTable
-                For Each row As DataRow In resultTable.Rows
-                    ' Recorrer las columnas de cada fila
-                    For Each column As DataColumn In resultTable.Columns
-                        ' Leer el valor de cada celda
-                        columnName = column.ColumnName
-                        cuentaGanancia = row(column)
-                        'valor = cellValue.ToString()
+                ' Se verifica si se realizo la conexion hacia SAP Business One
+                If lo_SBOCompany2 Is Nothing Then
+                    sub_mostrarMensaje("No se realizó la conexión a SAP Business One.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
+                    Exit Sub
+                End If
 
-
-                    Next
-                Next
-            Else
-                ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
-            End If
-
-            'ini PERDIDA
-            Dim cuentaPerdida As String
-            cuentaPerdida = String.Empty
-            'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
-            Dim cuentaPerdidadt As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_cuentaPerdidaDiferenciaTC")
-
-            If cuentaPerdidadt IsNot Nothing Then
-                ' Recorrer las filas del DataTable
-                For Each row As DataRow In cuentaPerdidadt.Rows
-                    ' Recorrer las columnas de cada fila
-                    For Each column As DataColumn In cuentaPerdidadt.Columns
-                        ' Leer el valor de cada celda
-                        columnName = column.ColumnName
-                        cuentaPerdida = row(column)
-                        'valor = cellValue.ToString()
+                ' Se inicia la transaccion de SAP Business One
+                If bol_iniciarTransSBO(lo_SBOCompany2) = False Then
+                    Exit Sub
+                End If
 
 
-                    Next
-                Next
-            Else
-                ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
-            End If
+                'Variables que se necesitan una vez, y no deben estar dentro del for
+                Dim columnName As String
+                Dim cuentaGanancia As String
+                cuentaGanancia = String.Empty
 
+                'ini v
+                Dim resultTable As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_cuentaGananciaDiferenciaTC")
 
-            '' Segundo ciclo: usar la lista auxiliar para trabajar con los objetos modificados
-            'For Each linea As entPlanilla_Lineas In listaModificada
-            '    ' Aquí puedes acceder a los valores modificados
-            '    Console.WriteLine("Cantidad: " & linea.DocEntrySAP)
-            'Next
-
-            'ls_resPla = lo_planilla.str_actualizar()
-            'lo_planilla.PagosR.sub_limpiar()
-
-            Dim i As Integer
-            i = 0
-            'ini version2
-            For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
-
-                Dim TcPagoSAP As Decimal
-                TcPagoSAP = dbl_obtTipoCambio("USD", CDate(lo_planillaDet.FechaPago).ToString("yyyyMMdd"))
-                'TcPagoSAP = TcPagoSAPt
-
-                ''para la 2da vuelta, se cae aca.
-
-                '''
-                Dim Tcfinanciero As Double
-                Dim respo2 As String = String.Empty
-                respo2 = "exec gmi_sp_verEstadoTipoCambioFinanciero '" & lo_planillaDet.FechaPago.ToString("yyyyMMdd") & "'"
-                'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
-                Dim dt_Tcfinanciero As DataTable = dtb_ejecutarSQL_doquery(respo2)
-
-                If dt_Tcfinanciero IsNot Nothing Then
+                If resultTable IsNot Nothing Then
                     ' Recorrer las filas del DataTable
-                    For Each row As DataRow In dt_Tcfinanciero.Rows
+                    For Each row As DataRow In resultTable.Rows
                         ' Recorrer las columnas de cada fila
-                        For Each column As DataColumn In dt_Tcfinanciero.Columns
+                        For Each column As DataColumn In resultTable.Columns
                             ' Leer el valor de cada celda
                             columnName = column.ColumnName
-                            Tcfinanciero = Convert.ToDouble(row(column))
+                            cuentaGanancia = row(column)
+                            'valor = cellValue.ToString()
+
 
                         Next
                     Next
@@ -1243,18 +1183,128 @@ Public Class classProcesarPlanilla
                     ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
                 End If
 
-                listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, montoreconciliaciont, lo_planillaDet.Codigo)
-                Dim item = listaCampos(i)
+                'ini PERDIDA
+                Dim cuentaPerdida As String
+                cuentaPerdida = String.Empty
+                'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
+                Dim cuentaPerdidadt As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_cuentaPerdidaDiferenciaTC")
 
-                If lo_planillaDet.asientoajustoT = "Y" Then
+                If cuentaPerdidadt IsNot Nothing Then
+                    ' Recorrer las filas del DataTable
+                    For Each row As DataRow In cuentaPerdidadt.Rows
+                        ' Recorrer las columnas de cada fila
+                        For Each column As DataColumn In cuentaPerdidadt.Columns
+                            ' Leer el valor de cada celda
+                            columnName = column.ColumnName
+                            cuentaPerdida = row(column)
+                            'valor = cellValue.ToString()
 
 
-                    ' si los datos del asiento de ajuste , no se creo, de igual manera deberia guardar los datos de la listar del PR.
+                        Next
+                    Next
+                Else
+                    ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+                End If
 
-                    li_resultado = int_ajustecrearAsientoTC_sin_pr(lo_planillaDet, lo_SBOCompany2, lo_planilla, lo_planillaDet.DocEntrySAP, Tcfinanciero, TcPagoSAP, cuentaGanancia, cuentaPerdida, asiento_result, montoreconciliaciont)
+
+                '' Segundo ciclo: usar la lista auxiliar para trabajar con los objetos modificados
+                'For Each linea As entPlanilla_Lineas In listaModificada
+                '    ' Aquí puedes acceder a los valores modificados
+                '    Console.WriteLine("Cantidad: " & linea.DocEntrySAP)
+                'Next
+
+                'ls_resPla = lo_planilla.str_actualizar()
+                'lo_planilla.PagosR.sub_limpiar()
+
+                Dim i As Integer
+                i = 0
+                'ini version2
+                For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
+
+                    Dim TcPagoSAP As Decimal
+                    TcPagoSAP = dbl_obtTipoCambio("USD", CDate(lo_planillaDet.FechaPago).ToString("yyyyMMdd"))
+                    'TcPagoSAP = TcPagoSAPt
+
+                    ''para la 2da vuelta, se cae aca.
+
+                    '''
+                    Dim Tcfinanciero As Double
+                    Dim respo2 As String = String.Empty
+                    respo2 = "exec gmi_sp_verEstadoTipoCambioFinanciero '" & lo_planillaDet.FechaPago.ToString("yyyyMMdd") & "'"
+                    'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
+                    Dim dt_Tcfinanciero As DataTable = dtb_ejecutarSQL_doquery(respo2)
+
+                    If dt_Tcfinanciero IsNot Nothing Then
+                        ' Recorrer las filas del DataTable
+                        For Each row As DataRow In dt_Tcfinanciero.Rows
+                            ' Recorrer las columnas de cada fila
+                            For Each column As DataColumn In dt_Tcfinanciero.Columns
+                                ' Leer el valor de cada celda
+                                columnName = column.ColumnName
+                                Tcfinanciero = Convert.ToDouble(row(column))
+
+                            Next
+                        Next
+                    Else
+                        ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+                    End If
+
+                    listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, montoreconciliaciont, lo_planillaDet.Codigo)
+                    Dim item = listaCampos(i)
+
+                    If lo_planillaDet.asientoajustoT = "Y" Then
 
 
-                    If li_resultado = -2 Then
+                        If lo_planillaDet.MonedaDoc = lo_planillaDet.MonedaPag Then
+
+                            'For Each item In listaCampos
+                            lo_planilla.PagosR.id = item.Item1
+                            lo_planilla.PagosR.idEC = item.Item2
+                            lo_planilla.PagosR.lineaNumAsg = item.Item3
+                            lo_planilla.PagosR.DocEntrySAP = item.Item4
+
+                            i = i + 1
+                            lo_planilla.PagosR.sub_anadir()
+
+                            li_resultado = 0
+                            Continue For
+
+                        End If
+                        ' si los datos del asiento de ajuste , no se creo, de igual manera deberia guardar los datos de la listar del PR.
+
+                        li_resultado = int_ajustecrearAsientoTC_sin_pr(lo_planillaDet, lo_SBOCompany2, lo_planilla, lo_planillaDet.DocEntrySAP, Tcfinanciero, TcPagoSAP, cuentaGanancia, cuentaPerdida, asiento_result, montoreconciliaciont)
+
+
+                        If li_resultado = -2 Then
+
+                            lo_planilla.PagosR.id = item.Item1
+                            lo_planilla.PagosR.idEC = item.Item2
+                            lo_planilla.PagosR.lineaNumAsg = item.Item3
+                            lo_planilla.PagosR.DocEntrySAP = item.Item4
+
+
+                            ''no deberia agregarse aca, sino al momento de crear la retencion
+                            lo_planilla.PagosR.sub_anadir()
+
+                            i = i + 1
+                            Continue For
+
+                        End If
+
+                        If li_resultado = 0 Then
+
+                            'For Each item In listaCampos
+                            lo_planilla.PagosR.id = item.Item1
+                            lo_planilla.PagosR.idEC = item.Item2
+                            lo_planilla.PagosR.lineaNumAsg = item.Item3
+                            lo_planilla.PagosR.DocEntrySAP = item.Item4
+
+                            i = i + 1
+                            lo_planilla.PagosR.sub_anadir()
+
+                        End If
+
+                    Else
 
                         lo_planilla.PagosR.id = item.Item1
                         lo_planilla.PagosR.idEC = item.Item2
@@ -1268,111 +1318,85 @@ Public Class classProcesarPlanilla
                         i = i + 1
                         Continue For
 
-                    End If
-
-                    If li_resultado = 0 Then
-
-                        'For Each item In listaCampos
-                        lo_planilla.PagosR.id = item.Item1
-                        lo_planilla.PagosR.idEC = item.Item2
-                        lo_planilla.PagosR.lineaNumAsg = item.Item3
-                        lo_planilla.PagosR.DocEntrySAP = item.Item4
-
-                        i = i + 1
-                        lo_planilla.PagosR.sub_anadir()
 
                     End If
 
-                Else
-
-                    lo_planilla.PagosR.id = item.Item1
-                    lo_planilla.PagosR.idEC = item.Item2
-                    lo_planilla.PagosR.lineaNumAsg = item.Item3
-                    lo_planilla.PagosR.DocEntrySAP = item.Item4
-
-
-                    ''no deberia agregarse aca, sino al momento de crear la retencion
-                    lo_planilla.PagosR.sub_anadir()
-
-                    i = i + 1
-                    Continue For
-
-
-                End If
-
-                'i = i + 1
-
-            Next
-
-            'ini version2
-
-
-            'If li_resultado = 0 Then
-            '    Dim ls_resPla2 As String = str_CommitTransSBO(lo_SBOCompany2)
-            'End If
-            If li_resultado <> 0 Then
-
-                ' Se revierte la transaccion
-                bol_RollBackTransSBO(lo_SBOCompany2)
-
-                ''''''''''''INI REVERTIR asiento ajuste
-                '''
-
-                ' Se declara un objeto de Payment de SAP Business One
-                Dim lo_payment2 As Payments
-
-                ' Se inicializa el objeto
-                lo_payment2 = lo_SBOCompany2.GetBusinessObject(BoObjectTypes.oIncomingPayments)
-
-                For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
-
-                    ' Se obtiene el Pago Recibido por codigo
-                    If lo_payment2.GetByKey(campo.Item4) = False Then
-
-                        ' Ocurrio un error al obtener el Pago Recibido
-                        sub_mostrarMensaje("Ocurrio un error al obtener el Pago Recibido. DocEntry " & campo.Item4.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
-
-                        ' Se revierte la transaccion
-                        bol_RollBackTransSBO(lo_SBOCompany2)
-
-                        ' Se desconecta la compañia 
-                        lo_SBOCompany2.Disconnect()
-
-                        ' Se resetea el progressBar
-                        sub_resetProgressBar(lo_progressBar)
-
-                        ' Se retorna un error
-                        Exit Sub
-
-                    End If
-
-                    ' Se realiza la cancelacion del Pago Recibido
-                    li_resultado = lo_payment2.Cancel
+                    'i = i + 1
 
                 Next
 
-                ''''''''''''FIN REVERTIR asiento ajuste
-                '''
+                'ini version2
 
-                ' Se muestra un mensaje que indica que ocurrió un error en el proceso
-                sub_mostrarMensaje("Ocurrió un error durante la ejecución del proceso de creacción de Asiento de Ajuste, se va revertir todos los Pagos Recibido y Asientos de Ajustes creados.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
 
-                ' Se resetea el progressBar
-                sub_resetProgressBar(lo_progressBar)
+                'If li_resultado = 0 Then
+                '    Dim ls_resPla2 As String = str_CommitTransSBO(lo_SBOCompany2)
+                'End If
+                If li_resultado <> 0 Then
 
-                ' Se desconecta la compañia 
-                lo_SBOCompany.Disconnect()
+                    ' Se revierte la transaccion
+                    bol_RollBackTransSBO(lo_SBOCompany2)
 
-                ' Se finaliza el metodo
-                Exit Sub
+                    ''''''''''''INI REVERTIR asiento ajuste
+                    '''
+
+                    ' Se declara un objeto de Payment de SAP Business One
+                    Dim lo_payment2 As Payments
+
+                    ' Se inicializa el objeto
+                    lo_payment2 = lo_SBOCompany2.GetBusinessObject(BoObjectTypes.oIncomingPayments)
+
+                    For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
+
+                        ' Se obtiene el Pago Recibido por codigo
+                        If lo_payment2.GetByKey(campo.Item4) = False Then
+
+                            ' Ocurrio un error al obtener el Pago Recibido
+                            sub_mostrarMensaje("Ocurrio un error al obtener el Pago Recibido. DocEntry " & campo.Item4.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
+                            ' Se revierte la transaccion
+                            bol_RollBackTransSBO(lo_SBOCompany2)
+
+                            ' Se desconecta la compañia 
+                            lo_SBOCompany2.Disconnect()
+
+                            ' Se resetea el progressBar
+                            sub_resetProgressBar(lo_progressBar)
+
+                            ' Se retorna un error
+                            Exit Sub
+
+                        End If
+
+                        ' Se realiza la cancelacion del Pago Recibido
+                        li_resultado = lo_payment2.Cancel
+
+                    Next
+
+                    ''''''''''''FIN REVERTIR asiento ajuste
+                    '''
+
+                    ' Se muestra un mensaje que indica que ocurrió un error en el proceso
+                    sub_mostrarMensaje("Ocurrió un error durante la ejecución del proceso de creacción de Asiento de Ajuste, se va revertir todos los Pagos Recibido y Asientos de Ajustes creados.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
+
+                    ' Se resetea el progressBar
+                    sub_resetProgressBar(lo_progressBar)
+
+                    ' Se desconecta la compañia 
+                    lo_SBOCompany.Disconnect()
+
+                    ' Se finaliza el metodo
+                    Exit Sub
+
+                End If
+
+
+                ' Se confirma la transaccion
+                ls_resPla = str_CommitTransSBO(lo_SBOCompany2)
+
+                lo_SBOCompany2.Disconnect()
 
             End If
 
-
-            ' Se confirma la transaccion
-            ls_resPla = str_CommitTransSBO(lo_SBOCompany2)
-
-            lo_SBOCompany2.Disconnect()
             ''----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
             'FIN MOVER , PROBAR MOVIENDO ACA 27032025 0939
             '******************************************************************************************************************************************************************************************************
@@ -1384,297 +1408,257 @@ Public Class classProcesarPlanilla
 
             ''-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-            ''' INI RECONCILIACION JSOLIS
+            If trueMultiCobranza = False Then
 
-            ' Se declara una variable para el resultado
-            Dim li_resultado_reco As Integer = 0
-            Dim ls_mensaje_reco As String = ""
+                ''' INI RECONCILIACION JSOLIS
 
-            ' Se realiza la conexion a SAP Business One
-            Dim lo_SBOCompany3 As SAPbobsCOM.Company = entComun.sbo_conectar(s_SAPUser, s_SAPPass)
+                ' Se declara una variable para el resultado
+                Dim li_resultado_reco As Integer = 0
+                Dim ls_mensaje_reco As String = ""
 
-            ' Se verifica si se realizo la conexion hacia SAP Business One
-            If lo_SBOCompany3 Is Nothing Then
-                sub_mostrarMensaje("No se realizó la conexión a SAP Business One.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
-                Exit Sub
-            End If
+                ' Se realiza la conexion a SAP Business One
+                Dim lo_SBOCompany3 As SAPbobsCOM.Company = entComun.sbo_conectar(s_SAPUser, s_SAPPass)
 
-            '' Se obtiene el progressBar asociado al proceso
-            'Dim lo_progressBar As System.Windows.Forms.ProgressBar = ctr_obtenerControl("progresoPlanilla", o_form.Controls)
-
-
-
-            'If Not lo_progressBar Is Nothing Then
-            '    lo_progressBar.Maximum = po_planilla.PagosR.int_contar
-            '    lo_progressBar.Minimum = 0
-            'End If
-
-            ' Se inicia la transaccion de SAP Business One
-            If bol_iniciarTransSBO(lo_SBOCompany3) = False Then
-                Exit Sub
-            End If
-
-
-            ''ini
-            'Dim listaCampos2 As New List(Of Tuple(Of String))
-
-            '''' Ya se tiene en el arreglo el valor de CardCode
-            'Dim aux As String
-            'For Each lo_planillaDet As entPlanilla_Lineas In po_planilla.Lineas.lstObjs
-
-            '    'aux = lo_planillaDet.Codigo
-            '    'aux1 = po_planilla.Lineas.lstObjs(0)
-            '    listaCampos2.Add(Tuple.Create(lo_planillaDet.Codigo))
-
-            'Next
-            ''fin
-
-
-
-            Dim j As Integer = 0
-
-            ' Se recorre los pagos recibidos generados en la planilla
-            'For Each lo_pagoR As entPlanilla_PagosR In po_planilla.PagosR.lstObjs
-            For j = 0 To listaCampos.Count - 1
-                Dim item = listaCampos(j)
-
-
-                'Dim carcodet As String = po_planilla.Lineas.lis.Lineas.Nombre(i)
-                'j = j + 1
-
-                If item.Item5 = 0 And item.Item6 = 0 Then
-
-
-                    ''ini agregar
-
-                    'lo_planilla.PagosR.id = listaCampos2(j).Id
-                    'lo_planilla.PagosR.idEC = listaCampos2(j).IdEC
-                    'lo_planilla.PagosR.lineaNumAsg = listaCampos2(j).LineaNum
-                    'lo_planilla.PagosR.DocEntrySAP = listaCampos2(j).DocEntrySAP
-                    'lo_planilla.PagosR.TransIdSAP = 0
-                    'lo_planilla.PagosR.MontoReconciliacion = 0
-                    ''lo_planilla.PagosR.       = listaCampos2(i).Codigo
-                    'lo_planilla.PagosR.ReconNumRI = 0
-
-
-                    'lo_planilla.PagosR.sub_anadir()
-                    ''fin agregar
-
-
-                    Continue For
-
+                ' Se verifica si se realizo la conexion hacia SAP Business One
+                If lo_SBOCompany3 Is Nothing Then
+                    sub_mostrarMensaje("No se realizó la conexión a SAP Business One.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
+                    Exit Sub
                 End If
 
-                '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-                '' Se declara un objeto de Payment de SAP Business One
-                'Dim lo_payment As Payments
-
-                Dim companyService As CompanyService = lo_SBOCompany3.GetCompanyService()
-                Dim service As InternalReconciliationsService = companyService.GetBusinessService(ServiceTypes.InternalReconciliationsService)
-
-                ' Crear transacciones abiertas para reconciliación
-                Dim openTrans As InternalReconciliationOpenTrans = service.GetDataInterface(InternalReconciliationsServiceDataInterfaces.irsInternalReconciliationOpenTrans)
-                Dim reconParams As InternalReconciliationParams = service.GetDataInterface(InternalReconciliationsServiceDataInterfaces.irsInternalReconciliationParams)
-
-                ' Especificar que la reconciliación es para un socio de negocio (cliente o proveedor)
-                openTrans.CardOrAccount = CardOrAccountEnum.coaCard
-
-                'obtener TransId del PR
-                'dte_obtFechaContabPago(lo_planillaDet.FechaPago)
-                Dim TransId_PR As Integer
-                TransId_PR = 0
+                '' Se obtiene el progressBar asociado al proceso
+                'Dim lo_progressBar As System.Windows.Forms.ProgressBar = ctr_obtenerControl("progresoPlanilla", o_form.Controls)
 
 
-                'ini
-                Dim columnName_reco As String
+
+                'If Not lo_progressBar Is Nothing Then
+                '    lo_progressBar.Maximum = po_planilla.PagosR.int_contar
+                '    lo_progressBar.Minimum = 0
+                'End If
+
+                ' Se inicia la transaccion de SAP Business One
+                If bol_iniciarTransSBO(lo_SBOCompany3) = False Then
+                    Exit Sub
+                End If
 
 
-                Dim TransId_PR_db As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verTransId_PagoRecibido '" & Convert.ToString(item.Item4) & "'")
+                ''ini
+                'Dim listaCampos2 As New List(Of Tuple(Of String))
 
-                If TransId_PR_db IsNot Nothing Then
-                    ' Recorrer las filas del DataTable
-                    For Each row As DataRow In TransId_PR_db.Rows
-                        ' Recorrer las columnas de cada fila
-                        For Each column As DataColumn In TransId_PR_db.Columns
-                            ' Leer el valor de cada celda
-                            columnName_reco = column.ColumnName
-                            TransId_PR = Convert.ToInt32(row(column))
-                            'valor = cellValue.ToString()
+                '''' Ya se tiene en el arreglo el valor de CardCode
+                'Dim aux As String
+                'For Each lo_planillaDet As entPlanilla_Lineas In po_planilla.Lineas.lstObjs
+
+                '    'aux = lo_planillaDet.Codigo
+                '    'aux1 = po_planilla.Lineas.lstObjs(0)
+                '    listaCampos2.Add(Tuple.Create(lo_planillaDet.Codigo))
+
+                'Next
+                ''fin
 
 
+
+                Dim j As Integer = 0
+
+                ' Se recorre los pagos recibidos generados en la planilla
+                'For Each lo_pagoR As entPlanilla_PagosR In po_planilla.PagosR.lstObjs
+                For j = 0 To listaCampos.Count - 1
+                    Dim item = listaCampos(j)
+
+
+                    'Dim carcodet As String = po_planilla.Lineas.lis.Lineas.Nombre(i)
+                    'j = j + 1
+
+                    If item.Item5 = 0 And item.Item6 = 0 Then
+
+
+                        ''ini agregar
+
+                        'lo_planilla.PagosR.id = listaCampos2(j).Id
+                        'lo_planilla.PagosR.idEC = listaCampos2(j).IdEC
+                        'lo_planilla.PagosR.lineaNumAsg = listaCampos2(j).LineaNum
+                        'lo_planilla.PagosR.DocEntrySAP = listaCampos2(j).DocEntrySAP
+                        'lo_planilla.PagosR.TransIdSAP = 0
+                        'lo_planilla.PagosR.MontoReconciliacion = 0
+                        ''lo_planilla.PagosR.       = listaCampos2(i).Codigo
+                        'lo_planilla.PagosR.ReconNumRI = 0
+
+
+                        'lo_planilla.PagosR.sub_anadir()
+                        ''fin agregar
+
+
+                        Continue For
+
+                    End If
+
+                    '''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                    '' Se declara un objeto de Payment de SAP Business One
+                    'Dim lo_payment As Payments
+
+                    Dim companyService As CompanyService = lo_SBOCompany3.GetCompanyService()
+                    Dim service As InternalReconciliationsService = companyService.GetBusinessService(ServiceTypes.InternalReconciliationsService)
+
+                    ' Crear transacciones abiertas para reconciliación
+                    Dim openTrans As InternalReconciliationOpenTrans = service.GetDataInterface(InternalReconciliationsServiceDataInterfaces.irsInternalReconciliationOpenTrans)
+                    Dim reconParams As InternalReconciliationParams = service.GetDataInterface(InternalReconciliationsServiceDataInterfaces.irsInternalReconciliationParams)
+
+                    ' Especificar que la reconciliación es para un socio de negocio (cliente o proveedor)
+                    openTrans.CardOrAccount = CardOrAccountEnum.coaCard
+
+                    'obtener TransId del PR
+                    'dte_obtFechaContabPago(lo_planillaDet.FechaPago)
+                    Dim TransId_PR As Integer
+                    TransId_PR = 0
+
+
+                    'ini
+                    Dim columnName_reco As String
+
+
+                    Dim TransId_PR_db As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verTransId_PagoRecibido '" & Convert.ToString(item.Item4) & "'")
+
+                    If TransId_PR_db IsNot Nothing Then
+                        ' Recorrer las filas del DataTable
+                        For Each row As DataRow In TransId_PR_db.Rows
+                            ' Recorrer las columnas de cada fila
+                            For Each column As DataColumn In TransId_PR_db.Columns
+                                ' Leer el valor de cada celda
+                                columnName_reco = column.ColumnName
+                                TransId_PR = Convert.ToInt32(row(column))
+                                'valor = cellValue.ToString()
+
+
+                            Next
                         Next
-                    Next
-                Else
-                    ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
-                End If
+                    Else
+                        ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+                    End If
 
 
-                'fin
+                    'fin
 
-                ''INI Obtener el numero de fila,del asiento del PR
-                'TransId_PR
-
-
-                'Dim item2 = listaCampos(i - 1)
-                ''lo_planilla.PagosR.id = item.Item1
-
-                Dim query1 As String = String.Empty
-                query1 = "exec gmi_sp_obtenerLineaPR '" & Convert.ToString(TransId_PR) & "', '" & Convert.ToString(item.Item7) & "'"
-
-                Dim linea_id_as As Integer
-                linea_id_as = 0
-
-                Dim obtenerLineaPR_db As DataTable = dtb_ejecutarSQL_doquery(query1)
-
-                If obtenerLineaPR_db IsNot Nothing Then
-                    ' Recorrer las filas del DataTable
-                    For Each row As DataRow In obtenerLineaPR_db.Rows
-                        ' Recorrer las columnas de cada fila
-                        For Each column As DataColumn In obtenerLineaPR_db.Columns
-                            ' Leer el valor de cada celda
-                            columnName = column.ColumnName
-                            linea_id_as = Convert.ToInt32(row(column))
-                            'valor = cellValue.ToString()
+                    ''INI Obtener el numero de fila,del asiento del PR
+                    'TransId_PR
 
 
+                    'Dim item2 = listaCampos(i - 1)
+                    ''lo_planilla.PagosR.id = item.Item1
+
+                    Dim query1 As String = String.Empty
+                    query1 = "exec gmi_sp_obtenerLineaPR '" & Convert.ToString(TransId_PR) & "', '" & Convert.ToString(item.Item7) & "'"
+
+                    Dim linea_id_as As Integer
+                    linea_id_as = 0
+                    Dim columnName As String
+
+                    Dim obtenerLineaPR_db As DataTable = dtb_ejecutarSQL_doquery(query1)
+
+                    If obtenerLineaPR_db IsNot Nothing Then
+                        ' Recorrer las filas del DataTable
+                        For Each row As DataRow In obtenerLineaPR_db.Rows
+                            ' Recorrer las columnas de cada fila
+                            For Each column As DataColumn In obtenerLineaPR_db.Columns
+                                ' Leer el valor de cada celda
+                                columnName = column.ColumnName
+                                linea_id_as = Convert.ToInt32(row(column))
+                                'valor = cellValue.ToString()
+
+
+                            Next
                         Next
-                    Next
-                Else
-                    ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
-                End If
+                    Else
+                        ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
+                    End If
 
 
 
-                ''FIN Obtener el numero de fila ,del asiento del PR
-
-                ' Se inicializa el objeto
-                'PAGOS RECIBIDO ' 
-                ' Agregar primera línea de transacción
-                openTrans.InternalReconciliationOpenTransRows.Add()
-                openTrans.InternalReconciliationOpenTransRows.Item(0).Selected = BoYesNoEnum.tYES
-                'openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = item.Item4 ' ID del documento
-                openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = TransId_PR ' ID del documento'¿?TransId_PR
-                openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = linea_id_as ' Línea del documento
-
-                'Dim av As Decimal = System.Math.Round(item.Item6, 2)
-                Dim av1 As Double = System.Math.Round(item.Item6, 2)
-                'Dim av2 As Int = System.Math.Round(item.Item6, 2)
-
-                'openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = System.Math.Round(System.Math.Round(item.Item6, 2)) '  .MontoReconciliacion, 2)  ' Monto a reconciliar
-                openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = av1 '  .MontoReconciliacion, 2)  ' Monto a reconciliar
-
-                'ASIENTO
-                ' Agregar segunda línea de transacción1
-                ' openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0,deberia ser siempre 0, porque es la primera pregunta, TransRowId
-                openTrans.InternalReconciliationOpenTransRows.Add()
-                openTrans.InternalReconciliationOpenTransRows.Item(1).Selected = BoYesNoEnum.tYES
-                openTrans.InternalReconciliationOpenTransRows.Item(1).TransId = item.Item5  'lo_pagoR.DocEntryTr ' ID del otro documento
-                openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0 ' Línea del documento
-                openTrans.InternalReconciliationOpenTransRows.Item(1).ReconcileAmount = System.Math.Abs(av1)
-
-
-
-                Dim reconNum As Integer
-                ' Ejecutar la reconciliación
-                Try
-                    reconParams = service.Add(openTrans)
-                    reconNum = reconParams.ReconNum
-
-                    'listaCampos2(j).ReconNumRI = reconNum
-
-                    ''ini agregar
-
-                    'lo_planilla.PagosR.id = listaCampos2(j).Id
-                    'lo_planilla.PagosR.idEC = listaCampos2(j).IdEC
-                    'lo_planilla.PagosR.lineaNumAsg = listaCampos2(j).LineaNum
-                    'lo_planilla.PagosR.DocEntrySAP = listaCampos2(j).DocEntrySAP
-                    'lo_planilla.PagosR.TransIdSAP = 0
-                    'lo_planilla.PagosR.MontoReconciliacion = 0
-                    ''lo_planilla.PagosR.       = listaCampos2(i).Codigo
-                    'lo_planilla.PagosR.ReconNumRI = 0
-
-
-                    'lo_planilla.PagosR.sub_anadir()
-                    ''fin agregar
-
-
-                    For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
-
-                    Next
-                    'Int reconNum = oCompany.GetNewObjectKey();
-
-                    'Existo
-                Catch ex As Exception
-
-                    ' Ocurrio un error al obtener el Pago Recibido
-                    sub_mostrarMensaje("Ocurrio al intentar reconciliar interno por Socio de Negocio " & ex.ToString(), System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
-
-                    ' Se revierte la transaccion
-                    bol_RollBackTransSBO(lo_SBOCompany3)
-
-                    '''Se debe revertir los PR y Asientos creados, ayudar de la lista.
-                    ''' Antes de Disconnet se debe revertir los valores del arreglo
-                    '''INI REVERTIR
-                    ''''''''''''INI REVERTIR PAGO RECIBIDO
-                    '''
-
-                    ' Se declara un objeto de Payment de SAP Business One
-                    Dim lo_payment3 As Payments
-                    li_resultado = 0
+                    ''FIN Obtener el numero de fila ,del asiento del PR
 
                     ' Se inicializa el objeto
-                    lo_payment3 = lo_SBOCompany3.GetBusinessObject(BoObjectTypes.oIncomingPayments)
+                    'PAGOS RECIBIDO ' 
+                    ' Agregar primera línea de transacción
+                    openTrans.InternalReconciliationOpenTransRows.Add()
+                    openTrans.InternalReconciliationOpenTransRows.Item(0).Selected = BoYesNoEnum.tYES
+                    'openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = item.Item4 ' ID del documento
+                    openTrans.InternalReconciliationOpenTransRows.Item(0).TransId = TransId_PR ' ID del documento'¿?TransId_PR
+                    openTrans.InternalReconciliationOpenTransRows.Item(0).TransRowId = linea_id_as ' Línea del documento
 
-                    For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
+                    'Dim av As Decimal = System.Math.Round(item.Item6, 2)
+                    Dim av1 As Double = System.Math.Round(item.Item6, 2)
+                    'Dim av2 As Int = System.Math.Round(item.Item6, 2)
 
-                        ' Se obtiene el Pago Recibido por codigo
-                        If lo_payment3.GetByKey(campo.Item4) = False Then
+                    'openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = System.Math.Round(System.Math.Round(item.Item6, 2)) '  .MontoReconciliacion, 2)  ' Monto a reconciliar
+                    openTrans.InternalReconciliationOpenTransRows.Item(0).ReconcileAmount = av1 '  .MontoReconciliacion, 2)  ' Monto a reconciliar
 
-                            ' Ocurrio un error al obtener el Pago Recibido
-                            sub_mostrarMensaje("Ocurrio un error al obtener el Pago Recibido. DocEntry " & campo.Item4.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
-
-                            ' Se revierte la transaccion
-                            bol_RollBackTransSBO(lo_SBOCompany3)
-
-                            ' Se desconecta la compañia 
-                            lo_SBOCompany3.Disconnect()
-
-                            ' Se resetea el progressBar
-                            sub_resetProgressBar(lo_progressBar)
-
-                            ' Se retorna un error
-                            Exit Sub
-
-                        End If
-
-                        ' Se realiza la cancelacion del Pago Recibido
-                        li_resultado = lo_payment3.Cancel
-
-                    Next
-
-                    ''''''''''''FIN REVERTIR PAGO RECIBIDO
-
-                    '''FIN REVERTIR
-                    '''
+                    'ASIENTO
+                    ' Agregar segunda línea de transacción1
+                    ' openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0,deberia ser siempre 0, porque es la primera pregunta, TransRowId
+                    openTrans.InternalReconciliationOpenTransRows.Add()
+                    openTrans.InternalReconciliationOpenTransRows.Item(1).Selected = BoYesNoEnum.tYES
+                    openTrans.InternalReconciliationOpenTransRows.Item(1).TransId = item.Item5  'lo_pagoR.DocEntryTr ' ID del otro documento
+                    openTrans.InternalReconciliationOpenTransRows.Item(1).TransRowId = 0 ' Línea del documento
+                    openTrans.InternalReconciliationOpenTransRows.Item(1).ReconcileAmount = System.Math.Abs(av1)
 
 
-                    '''INI REVERTIR ASIENTO DE AJUSTE
-                    '''
 
-                    For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
+                    Dim reconNum As Integer
+                    ' Ejecutar la reconciliación
+                    Try
+                        reconParams = service.Add(openTrans)
+                        reconNum = reconParams.ReconNum
 
-                        If (campo.Item5 <> 0) Then
+                        'listaCampos2(j).ReconNumRI = reconNum
+
+                        ''ini agregar
+
+                        'lo_planilla.PagosR.id = listaCampos2(j).Id
+                        'lo_planilla.PagosR.idEC = listaCampos2(j).IdEC
+                        'lo_planilla.PagosR.lineaNumAsg = listaCampos2(j).LineaNum
+                        'lo_planilla.PagosR.DocEntrySAP = listaCampos2(j).DocEntrySAP
+                        'lo_planilla.PagosR.TransIdSAP = 0
+                        'lo_planilla.PagosR.MontoReconciliacion = 0
+                        ''lo_planilla.PagosR.       = listaCampos2(i).Codigo
+                        'lo_planilla.PagosR.ReconNumRI = 0
 
 
-                            Dim lo_JournalEntries As JournalEntries
-                            lo_JournalEntries = lo_SBOCompany3.GetBusinessObject(BoObjectTypes.oJournalEntries)
+                        'lo_planilla.PagosR.sub_anadir()
+                        ''fin agregar
 
+
+                        For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
+
+                        Next
+                        'Int reconNum = oCompany.GetNewObjectKey();
+
+                        'Existo
+                    Catch ex As Exception
+
+                        ' Ocurrio un error al obtener el Pago Recibido
+                        sub_mostrarMensaje("Ocurrio al intentar reconciliar interno por Socio de Negocio " & ex.ToString(), System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
+                        ' Se revierte la transaccion
+                        bol_RollBackTransSBO(lo_SBOCompany3)
+
+                        '''Se debe revertir los PR y Asientos creados, ayudar de la lista.
+                        ''' Antes de Disconnet se debe revertir los valores del arreglo
+                        '''INI REVERTIR
+                        ''''''''''''INI REVERTIR PAGO RECIBIDO
+                        '''
+
+                        ' Se declara un objeto de Payment de SAP Business One
+                        Dim lo_payment3 As Payments
+                        li_resultado = 0
+
+                        ' Se inicializa el objeto
+                        lo_payment3 = lo_SBOCompany3.GetBusinessObject(BoObjectTypes.oIncomingPayments)
+
+                        For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
 
                             ' Se obtiene el Pago Recibido por codigo
-                            If lo_JournalEntries.GetByKey(campo.Item5) = False Then
+                            If lo_payment3.GetByKey(campo.Item4) = False Then
 
                                 ' Ocurrio un error al obtener el Pago Recibido
-                                sub_mostrarMensaje("Ocurrio un error al obtener el Asiento de Ajuste . DocEntry " & campo.Item5.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+                                sub_mostrarMensaje("Ocurrio un error al obtener el Pago Recibido. DocEntry " & campo.Item4.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
 
                                 ' Se revierte la transaccion
                                 bol_RollBackTransSBO(lo_SBOCompany3)
@@ -1691,87 +1675,134 @@ Public Class classProcesarPlanilla
                             End If
 
                             ' Se realiza la cancelacion del Pago Recibido
-                            li_resultado = lo_JournalEntries.Cancel
-                            'numeroAsientoAjustes = numeroAsientoAjustes + 1
+                            li_resultado = lo_payment3.Cancel
+
+                        Next
+
+                        ''''''''''''FIN REVERTIR PAGO RECIBIDO
+
+                        '''FIN REVERTIR
+                        '''
 
 
-                        End If
+                        '''INI REVERTIR ASIENTO DE AJUSTE
+                        '''
+
+                        For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
+
+                            If (campo.Item5 <> 0) Then
 
 
-                    Next
+                                Dim lo_JournalEntries As JournalEntries
+                                lo_JournalEntries = lo_SBOCompany3.GetBusinessObject(BoObjectTypes.oJournalEntries)
+
+
+                                ' Se obtiene el Pago Recibido por codigo
+                                If lo_JournalEntries.GetByKey(campo.Item5) = False Then
+
+                                    ' Ocurrio un error al obtener el Pago Recibido
+                                    sub_mostrarMensaje("Ocurrio un error al obtener el Asiento de Ajuste . DocEntry " & campo.Item5.ToString, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
+                                    ' Se revierte la transaccion
+                                    bol_RollBackTransSBO(lo_SBOCompany3)
+
+                                    ' Se desconecta la compañia 
+                                    lo_SBOCompany3.Disconnect()
+
+                                    ' Se resetea el progressBar
+                                    sub_resetProgressBar(lo_progressBar)
+
+                                    ' Se retorna un error
+                                    Exit Sub
+
+                                End If
+
+                                ' Se realiza la cancelacion del Pago Recibido
+                                li_resultado = lo_JournalEntries.Cancel
+                                'numeroAsientoAjustes = numeroAsientoAjustes + 1
+
+
+                            End If
+
+
+                        Next
 
 
 
-                    '''FIN REVIRTIR ASIENTO DE AJUSTE
+                        '''FIN REVIRTIR ASIENTO DE AJUSTE
+                        '''
+
+
+
+                        ' Se desconecta la compañia 
+                        lo_SBOCompany3.Disconnect()
+
+                        ' Se resetea el progressBar
+                        sub_resetProgressBar(lo_progressBar)
+
+                        ' Se retorna un error
+                        Exit Sub
+
+                        ''''''''''''''''''''''''''''''''''''''''''''''''''''''
+                        ' Se muestra un mensaje de error de SAP
+                        sub_errorProcesoSAP(lo_SBOCompany3)
+
+
+
+                    End Try
+                    'RECONCILIACION
+                    '' Se incrementa el valor del progressBar
+                    'sub_incrementarProgressBar(lo_progressBar)
+                    ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
                     '''
 
-
-
-                    ' Se desconecta la compañia 
-                    lo_SBOCompany3.Disconnect()
-
-                    ' Se resetea el progressBar
-                    sub_resetProgressBar(lo_progressBar)
-
-                    ' Se retorna un error
-                    Exit Sub
-
-                    ''''''''''''''''''''''''''''''''''''''''''''''''''''''
-                    ' Se muestra un mensaje de error de SAP
-                    sub_errorProcesoSAP(lo_SBOCompany3)
-
-
-
-                End Try
-                'RECONCILIACION
-                '' Se incrementa el valor del progressBar
-                'sub_incrementarProgressBar(lo_progressBar)
-                ''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''''
-                '''
-
-            Next
-
-
-            ' Se confirma la transaccion
-            If li_resultado = 0 Then
-
-                ''SE DEBE QUITAR
-                'bol_RollBackTransSBO(lo_SBOCompany3)
+                Next
 
 
                 ' Se confirma la transaccion
-                Dim ls_resPla3 As String = str_CommitTransSBO(lo_SBOCompany3)
+                If li_resultado = 0 Then
 
-                ' Se actualiza el objeto de la planilla
-                If ls_resPla3.Trim = "" Then
+                    ''SE DEBE QUITAR
+                    'bol_RollBackTransSBO(lo_SBOCompany3)
+
+
+                    ' Se confirma la transaccion
+                    Dim ls_resPla3 As String = str_CommitTransSBO(lo_SBOCompany3)
 
                     ' Se actualiza el objeto de la planilla
-                    lo_planilla.Estado = "C"
-                    'ls_resPla. = po_planilla.str_actualizar()
+                    If ls_resPla3.Trim = "" Then
 
-                    ' Se muestra un mensaje que indica que el proceso se realizó con exito
-                    sub_mostrarMensaje("El proceso fue realizado satisfactoriamente." & ls_resPla3, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
-                    sub_asignarEstadoObjeto("C")
+                        ' Se actualiza el objeto de la planilla
+                        lo_planilla.Estado = "C"
+                        'ls_resPla. = po_planilla.str_actualizar()
+
+                        ' Se muestra un mensaje que indica que el proceso se realizó con exito
+                        sub_mostrarMensaje("El proceso fue realizado satisfactoriamente." & ls_resPla3, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.exito)
+                        sub_asignarEstadoObjeto("C")
+
+                    Else
+                        sub_mostrarMensaje("Ocurrió un error al intentar reconciliar en SAP: " & ls_resPla3 & "", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+                    End If
 
                 Else
-                    sub_mostrarMensaje("Ocurrió un error al intentar reconciliar en SAP: " & ls_resPla3 & "", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
+                    ' Se revierte la transaccion
+                    bol_RollBackTransSBO(lo_SBOCompany3)
+
+                    ' Se muestra un mensaje que indica que ocurrió un error en el proceso
+                    sub_mostrarMensaje("Ocurrió un error durante la ejecución del proceso", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+
                 End If
 
-            Else
+                ' Se desconecta la compañia 
+                lo_SBOCompany3.Disconnect()
 
-                ' Se revierte la transaccion
-                bol_RollBackTransSBO(lo_SBOCompany3)
-
-                ' Se muestra un mensaje que indica que ocurrió un error en el proceso
-                sub_mostrarMensaje("Ocurrió un error durante la ejecución del proceso", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
+                ' Se resetea el progressBar
+                sub_resetProgressBar(lo_progressBar)
 
             End If
 
-            ' Se desconecta la compañia 
-            lo_SBOCompany3.Disconnect()
 
-            ' Se resetea el progressBar
-            sub_resetProgressBar(lo_progressBar)
 
             ''' FIN RECONCILIACION JSOLIS
 
@@ -2304,7 +2335,7 @@ Public Class classProcesarPlanilla
 
             End If
             'lo_payment.UserFields.Fields.Item("U_BYR_FECDEP").Value = po_planillaDet.FechaDeposito
-            If po_SBOCompany.CompanyDB <> "SBO_ComercialMendoza" And po_SBOCompany.CompanyDB <> "Z_SBO_MIMSA_13032025" And po_SBOCompany.CompanyDB <> "Z_MIMSA_04042025_PLL" Then
+            If po_SBOCompany.CompanyDB <> "Z_MIMSA_04042025_PLL" And po_SBOCompany.CompanyDB <> "SBO_ComercialMendoza" And po_SBOCompany.CompanyDB <> "Z_SBO_MIMSA_13032025" And po_SBOCompany.CompanyDB <> "Z_MIMSA_04042025_PLL" Then
                 lo_payment.UserFields.Fields.Item("U_BYR_FECDEP").Value = po_planillaDet.FechaDeposito
             End If
             ' Se asigna las propiedades de la cabecera del objeto Payment
@@ -2426,7 +2457,7 @@ Public Class classProcesarPlanilla
                     po_planilla.PagosR.DocEntryTr = 0
                     po_planilla.PagosR.MontoReconciliacion = montoreconciliaciont
 
-                    ''' Se añade el detalle
+                    '' Se añade el detalle
                     'po_planilla.PagosR.sub_anadir()
 
                 End If
@@ -2859,9 +2890,12 @@ Public Class classProcesarPlanilla
 
                     End If
                     'lo_payment.UserFields.Fields.Item("U_BYR_FECDEP").Value = lo_planillaDet.FechaDeposito
-                    If po_SBOCompany.CompanyDB <> "SBO_ComercialMendoza" Then
+                    If po_SBOCompany.CompanyDB <> "SBO_ComercialMendoza" And po_SBOCompany.CompanyDB <> "Z_MIMSA_04042025_PLL" Then
+
                         lo_payment.UserFields.Fields.Item("U_BYR_FECDEP").Value = lo_planillaDet.FechaDeposito
                     End If
+
+
                     ' Se asigna las propiedades de la cabecera del objeto Payment
                     lo_payment.CardCode = lo_planillaDet.Codigo
                     lo_payment.DocCurrency = lo_planillaDet.MonedaPag
@@ -2944,6 +2978,12 @@ Public Class classProcesarPlanilla
 
                 ' Se obtiene y se muestra un mensaje de error
                 sub_errorProcesoSAP(po_SBOCompany)
+
+
+                Dim rpta As Integer = 0
+                Dim msj As String = ""
+                po_SBOCompany.GetLastError(li_resultado, msj)
+
 
                 ' Se muestra un mensaje con los detalles
                 sub_mostrarMensaje("Numero de asignacion: " & li_LineaNumAsg & " - Numero de Operacion: " & ls_nroOperacion, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)

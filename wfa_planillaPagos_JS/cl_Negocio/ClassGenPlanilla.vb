@@ -526,6 +526,10 @@ Public Class ClassGenPlanilla
             '    Exit Sub
             'End If
 
+            'FOOD PARA AJUSTE
+            Dim aplicaAjuste As Boolean
+            aplicaAjuste = True
+
             ' Se verifica si alguna de las grillas cuenta con mas de un registro seleccionado
             If lo_dtbSelsClient.Rows.Count > 1 Or lo_dtbSelsEC.Rows.Count > 1 Then
 
@@ -541,29 +545,53 @@ Public Class ClassGenPlanilla
                 ' Si la grilla de clientes tiene mas de un registro, se distrubye el monto de la operacion del EC seleccionada entrer los documentos del cliente seleccionados
                 If lo_dtbSelsClient.Rows.Count > 1 Then
                     sub_adicionMuchosAUno(lo_dtbSelsClient, lo_dtbSelsEC)
+
+                    aplicaAjuste = False
+
+
                 End If
 
                 ' Si la grilla del EC tiene mas de un registro, se distribuye el monto del documento del cliente entre el número de operaciones de pago del EC
                 If lo_dtbSelsEC.Rows.Count > 1 Then
                     sub_adicionUnoAMuchos(lo_dtbSelsClient, lo_dtbSelsEC)
+
+                    aplicaAjuste = False
+
                 End If
 
             End If
 
-            '' agregar la respuesta si o no
-            li_confirm = MessageBox.Show("¿Desea que se genere un asiento de ajuste?", "caption", MessageBoxButtons.YesNoCancel)
 
-            Dim asientoAjustoF As String
-            'Se verifica el resultado del mensaje de confirmacion
-            If Not li_confirm = DialogResult.Yes Then
+            ' Se verifica si ambas grillas cuentan con un registro
+            If lo_dtbSelsClient.Rows.Count = 1 And lo_dtbSelsEC.Rows.Count = 1 Then
 
-                lo_dtbSelsEC.Rows(0)("asientoajustoT") = "N"
-
-            Else
-
-                lo_dtbSelsEC.Rows(0)("asientoajustoT") = "Y"
+                ' Se añade añade el registro en la grilla de la planilla
+                sub_adicionUnoAUno(lo_dtbSelsClient, lo_dtbSelsEC)
 
             End If
+
+
+
+            If aplicaAjuste Then
+
+                '' agregar la respuesta si o no
+                li_confirm = MessageBox.Show("¿Desea que se genere un asiento de ajuste?", "caption", MessageBoxButtons.YesNoCancel)
+
+                Dim asientoAjustoF As String
+                'Se verifica el resultado del mensaje de confirmacion
+                If Not li_confirm = DialogResult.Yes Then
+
+                    lo_dtbSelsEC.Rows(0)("asientoajustoT") = "N"
+
+                Else
+
+                    lo_dtbSelsEC.Rows(0)("asientoajustoT") = "Y"
+
+                End If
+
+            End If
+
+
             'If lo_dtbSelsClient.Rows.Count = 0 Or lo_dtbSelsEC.Rows.Count = 0 Then
 
             '    ' Se muestra un mensaje que indique que se debe seleccionar registros en ambas grillas
@@ -576,13 +604,7 @@ Public Class ClassGenPlanilla
 
 
 
-            ' Se verifica si ambas grillas cuentan con un registro
-            If lo_dtbSelsClient.Rows.Count = 1 And lo_dtbSelsEC.Rows.Count = 1 Then
 
-                ' Se añade añade el registro en la grilla de la planilla
-                sub_adicionUnoAUno(lo_dtbSelsClient, lo_dtbSelsEC)
-
-            End If
 
         Catch ex As Exception
             sub_mostrarMensaje(ex.Message, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_exc)
@@ -845,6 +867,9 @@ Public Class ClassGenPlanilla
                 lo_row("Comentario") = po_dtbDocsClien.Rows(0)("Comentario")
                 lo_row("MonedaDoc") = po_dtbDocsClien.Rows(0)("MonedaDoc")
                 lo_row("TipoCambioDoc") = po_dtbDocsClien.Rows(0)("TipoCambioDoc")
+
+                lo_row("asientoajustoT") = "N"
+
                 lo_row("Total") = po_dtbDocsClien.Rows(0)("Total")
                 lo_row("Saldo") = po_dtbDocsClien.Rows(0)("Saldo")
                 lo_row("Imp_Aplicado") = ld_impApl2
@@ -1066,6 +1091,11 @@ Public Class ClassGenPlanilla
                 lo_row("Saldo") = lo_rowDoc("Saldo")
                 lo_row("MonedaPag") = lo_rowEC("Moneda")
                 lo_row("MontoOp") = lo_rowEC("Monto")
+
+                ''AGREGADO JSOLIS
+                'lo_dtbSelsEC.Rows(0)("asientoajustoT") = "N"
+                lo_row("asientoajustoT") = "N"
+
                 'lo_row("Tipo_Cambio") = dbl_obtTipoCambio("USD", CDate(lo_rowEC("Fecha")).ToString("yyyyMMdd"))
                 lo_row("Tipo_Cambio") = dbl_obtTipoCambio("USD", CDate(lo_rowCD("FechaDoc")).ToString("yyyyMMdd"))
                 lo_row("Cuenta") = lo_rowEC("Cta_Contable")
@@ -1087,6 +1117,9 @@ Public Class ClassGenPlanilla
                 ' Se asigna los saldos a favor del cliente
                 lo_row("SaldoFavor") = str_obtSaldoAFavor(ls_monedaLocal, ld_saldo2, ld_saldoME2, lo_row("Imp_Aplicado"), lo_row("Imp_AplicadoME"))
                 lo_row("SaldoFavorME") = str_obtSaldoAFavor("USD", ld_saldo2, ld_saldoME2, lo_row("Imp_Aplicado"), lo_row("Imp_AplicadoME"))
+
+
+
 
                 lo_row.EndEdit()
 
