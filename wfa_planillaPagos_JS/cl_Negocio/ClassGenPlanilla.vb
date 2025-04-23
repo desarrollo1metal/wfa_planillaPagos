@@ -562,16 +562,11 @@ Public Class ClassGenPlanilla
             End If
 
 
-            ' Se verifica si ambas grillas cuentan con un registro
-            If lo_dtbSelsClient.Rows.Count = 1 And lo_dtbSelsEC.Rows.Count = 1 Then
-
-                ' Se añade añade el registro en la grilla de la planilla
-                sub_adicionUnoAUno(lo_dtbSelsClient, lo_dtbSelsEC)
-
-            End If
 
 
 
+            Dim booleanaj As String
+            booleanaj = String.Empty
             If aplicaAjuste Then
 
                 '' agregar la respuesta si o no
@@ -581,15 +576,28 @@ Public Class ClassGenPlanilla
                 'Se verifica el resultado del mensaje de confirmacion
                 If Not li_confirm = DialogResult.Yes Then
 
-                    lo_dtbSelsEC.Rows(0)("asientoajustoT") = "N"
+                    'lo_dtbSelsEC.Rows(0)("asientoajustoT") = "N"
+                    booleanaj = "N"
 
                 Else
-
-                    lo_dtbSelsEC.Rows(0)("asientoajustoT") = "Y"
+                    ''lo_dtbSelsEC.Rows(0)("asientoajustoT") = "Y"
+                    ''lo_dtbSelsEC.Rows(0)("asientoajustoT") = "Y"
+                    'lo_dtbSelsEC.Rows.Add()
+                    'lo_dtbSelsEC.Rows(0)("asientoajustoT") = "Y"
+                    booleanaj = "Y"
 
                 End If
 
             End If
+
+            ' Se verifica si ambas grillas cuentan con un registro
+            If lo_dtbSelsClient.Rows.Count = 1 And lo_dtbSelsEC.Rows.Count = 1 Then
+
+                ' Se añade añade el registro en la grilla de la planilla
+                sub_adicionUnoAUnov2(lo_dtbSelsClient, lo_dtbSelsEC, booleanaj)
+
+            End If
+
 
 
             'If lo_dtbSelsClient.Rows.Count = 0 Or lo_dtbSelsEC.Rows.Count = 0 Then
@@ -715,6 +723,113 @@ Public Class ClassGenPlanilla
             sub_mostrarMensaje(ex.Message, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_exc)
         End Try
     End Sub
+
+
+    Private Sub sub_adicionUnoAUnov2(ByVal po_dtbDocsClien As DataTable, ByVal po_dtbEC As DataTable, ByVal valor1AJ As String)
+        Try
+
+            ' Se obtiene el dataTable del grid de planilla
+            Dim lo_control As Control = ctr_obtenerControl("gmi_plaPagosDetalle", o_form.Controls)
+            Dim lo_uctPlanilla As uct_gridConBusqueda = CType(lo_control, uct_gridConBusqueda)
+            Dim lo_dtb As DataTable = CType(obj_obtValorControl(lo_uctPlanilla), DataTable)
+
+            ' Se obtiene el tipo de planilla
+            Dim ls_tipoPla As String = str_obtTipoPlanilla()
+
+            ' Se verifica si se obtuvo el tipo de planilla
+            If ls_tipoPla.Trim = "" Then
+                sub_mostrarMensaje("No se obtuvo el tipo de planilla.", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
+                Exit Sub
+            End If
+
+            ' Se declara una variable para obtener la moneda local de la compañia SAP
+            Dim ls_monedaLocal As String = entComun.str_obtMonLocal
+
+            ' Se declara una variable para obtener el saldo del documento
+            Dim ld_saldoDoc As Double = CDbl(po_dtbDocsClien.Rows(0)("Saldo"))
+
+            ' Se obtiene el saldo del documento en ambas monedas: local y extrangera
+            Dim ld_saldoDocLocal As Double = dbl_obtImportesPorMoneda(ld_saldoDoc, po_dtbDocsClien.Rows(0)("MonedaDoc"), ls_monedaLocal, po_dtbDocsClien.Rows(0)("FechaDoc"))
+            Dim ld_saldoDocME As Double = dbl_obtImportesPorMoneda(ld_saldoDoc, po_dtbDocsClien.Rows(0)("MonedaDoc"), "USD", po_dtbDocsClien.Rows(0)("FechaDoc"))
+
+            ' Se añade el registro a la grilla de PLanilla
+            Dim lo_row As DataRow = lo_dtb.NewRow
+            lo_row.BeginEdit()
+            lo_row("id") = obj_obtValorControl(ctr_obtenerControl("id", o_form.Controls))
+            lo_row("lineaNumAsg") = int_obtLineaNumAsg()
+            lo_row("Codigo") = po_dtbDocsClien.Rows(0)("Codigo")
+            lo_row("Nombre") = po_dtbDocsClien.Rows(0)("Nombre")
+            lo_row("Id_Doc") = po_dtbDocsClien.Rows(0)("Id_Doc")
+            lo_row("Referencia") = po_dtbDocsClien.Rows(0)("Referencia")
+            lo_row("Tipo_Doc") = po_dtbDocsClien.Rows(0)("TransType")
+            lo_row("DocLine") = po_dtbDocsClien.Rows(0)("Line_ID")
+            lo_row("FechaDoc") = po_dtbDocsClien.Rows(0)("FechaDoc")
+            lo_row("Comentario") = po_dtbDocsClien.Rows(0)("Comentario")
+            lo_row("MonedaDoc") = po_dtbDocsClien.Rows(0)("MonedaDoc")
+            lo_row("TipoCambioDoc") = po_dtbDocsClien.Rows(0)("TipoCambioDoc")
+            lo_row("Total") = po_dtbDocsClien.Rows(0)("Total")
+            lo_row("Saldo") = po_dtbDocsClien.Rows(0)("Saldo")
+
+
+            ' Se verifica el tipo de planilla
+            If ls_tipoPla = "D" Then
+                lo_row("Imp_Aplicado") = dbl_obtImportesPorMoneda(po_dtbEC.Rows(0)("Monto"), po_dtbEC.Rows(0)("Moneda"), "SOL", po_dtbDocsClien.Rows(0)("FechaDoc"))
+                lo_row("Imp_AplicadoME") = dbl_obtImportesPorMoneda(po_dtbEC.Rows(0)("Monto"), po_dtbEC.Rows(0)("Moneda"), "USD", po_dtbDocsClien.Rows(0)("FechaDoc"))
+            Else
+                If ls_tipoPla = "A" Then
+                    lo_row("Imp_Aplicado") = dbl_obtImportesPorMoneda(po_dtbEC.Rows(0)("Monto"), po_dtbEC.Rows(0)("Moneda"), "SOL", po_dtbDocsClien.Rows(0)("FechaDoc"))
+                    lo_row("Imp_AplicadoME") = dbl_obtImportesPorMoneda(po_dtbEC.Rows(0)("Monto"), po_dtbEC.Rows(0)("Moneda"), "USD", po_dtbDocsClien.Rows(0)("FechaDoc"))
+                Else
+                    lo_row("Imp_Aplicado") = dbl_obtImportesPorMoneda(po_dtbEC.Rows(0)("Monto"), po_dtbEC.Rows(0)("Moneda"), "SOL", po_dtbDocsClien.Rows(0)("FechaDoc"))
+                    lo_row("Imp_AplicadoME") = dbl_obtImportesPorMoneda(po_dtbEC.Rows(0)("Monto"), po_dtbEC.Rows(0)("Moneda"), "USD", po_dtbDocsClien.Rows(0)("FechaDoc"))
+                End If
+
+            End If
+
+            lo_row("MonedaPag") = po_dtbEC.Rows(0)("Moneda")
+            lo_row("Tipo_Cambio") = dbl_obtTipoCambio("USD", CDate(po_dtbDocsClien.Rows(0)("FechaDoc")).ToString("yyyyMMdd"))
+            lo_row("Cuenta") = po_dtbEC.Rows(0)("Cta_Contable")
+
+            Dim FechaDocumento As DevExpress.XtraEditors.DateEdit = ctr_obtenerControl("FechaDocumento", o_form.Controls)
+            lo_row("FechaPago") = If(FechaDocumento.EditValue = Nothing, po_dtbEC.Rows(0)("Fecha"), FechaDocumento.EditValue)
+            lo_row("FechaDeposito") = po_dtbEC.Rows(0)("Fecha")
+            lo_row("Nro_Operacion") = po_dtbEC.Rows(0)("Operacion")
+            lo_row("idEC") = po_dtbEC.Rows(0)("id")
+            lo_row("ComentarioPl") = str_obtComentOper(lo_row("MonedaDoc"), lo_row("Saldo"), lo_row("Imp_Aplicado"), lo_row("Imp_AplicadoME"))
+            lo_row("SaldoFavor") = str_obtSaldoAFavor(ls_monedaLocal, ld_saldoDocLocal, ld_saldoDocME, lo_row("Imp_Aplicado"), lo_row("Imp_AplicadoME"))
+            lo_row("SaldoFavorME") = str_obtSaldoAFavor("USD", ld_saldoDocLocal, ld_saldoDocME, lo_row("Imp_Aplicado"), lo_row("Imp_AplicadoME"))
+            lo_row("MontoOp") = po_dtbEC.Rows(0)("Monto")
+            lo_row("tipoAsg") = 0
+            lo_row("tipoEC") = po_dtbEC.Rows(0)("TipoOp")
+
+            lo_row("asientoajustoT") = valor1AJ
+
+            lo_row("difTC") = "N"
+            lo_row("FechaCrea") = Now.Date
+            lo_row("Ruc") = po_dtbDocsClien.Rows(0)("Ruc").ToString
+            lo_row("CodBien") = po_dtbDocsClien.Rows(0)("CodBien").ToString
+
+            Dim lo_cboPosBanco As Control = ctr_obtenerControl("PosBanco", o_form.Controls)
+            lo_row("numPos") = lo_cboPosBanco.Text
+            lo_row.EndEdit()
+
+            ' Seobtienen las grillas superiores
+            Dim lo_uctDocsClient As uct_gridConBusqueda = ctr_obtenerControl("ECClientes", o_form.Controls)
+            Dim lo_uctEC As uct_gridConBusqueda = ctr_obtenerControl("ECBanco", o_form.Controls)
+
+            ' Se valida la adicion del registro
+            If bol_valUnoAUno(po_dtbDocsClien.Rows(0), po_dtbEC.Rows(0)) = True Then
+
+                ' Se añade la fila al grid Planilla
+                sub_adcFilaUnoAUno(lo_row, lo_dtb, lo_uctDocsClient, lo_uctEC, lo_uctPlanilla)
+
+            End If
+
+        Catch ex As Exception
+            sub_mostrarMensaje(ex.Message, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_exc)
+        End Try
+    End Sub
+
 
     Private Sub sub_adicionUnoAMuchos(ByVal po_dtbDocsClien As DataTable, ByVal po_dtbEC As DataTable)
         Try

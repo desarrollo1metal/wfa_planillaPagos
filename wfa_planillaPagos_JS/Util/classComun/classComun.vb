@@ -2026,6 +2026,16 @@ Public Class classComun
             ' Se verifica si existe una transaccion abierta
             If po_SBOCompany.InTransaction = True Then
                 po_SBOCompany.EndTransaction(SAPbobsCOM.BoWfTransOpt.wf_Commit)
+
+                Dim lErrCode As Integer
+                Dim sErrMsg As String
+                po_SBOCompany.GetLastError(lErrCode, sErrMsg)
+
+                If lErrCode <> 0 Then
+                    Return "Error al finalizar la transacción: " & sErrMsg
+                End If
+
+
             Else
                 Return "Error en la transaccion"
             End If

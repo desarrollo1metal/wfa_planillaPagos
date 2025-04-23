@@ -843,6 +843,7 @@ Public Class classProcesarPlanilla
             ''Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String, Integer))
             Dim listaCampos As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String))
 
+            Dim listaCamposExtendida As New List(Of Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String))
 
             ''' Lista de objetos de tipo ItemCampo
             ''Dim listaCampos2 As New List(Of ItemCampo2)
@@ -1249,8 +1250,10 @@ Public Class classProcesarPlanilla
                         ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
                     End If
 
-                    listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, montoreconciliaciont, lo_planillaDet.Codigo)
+                    'listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, montoreconciliaciont, lo_planillaDet.Codigo)
                     Dim item = listaCampos(i)
+
+                    montoreconciliaciont = 0
 
                     If lo_planillaDet.asientoajustoT = "Y" Then
 
@@ -1262,6 +1265,22 @@ Public Class classProcesarPlanilla
                             lo_planilla.PagosR.idEC = item.Item2
                             lo_planilla.PagosR.lineaNumAsg = item.Item3
                             lo_planilla.PagosR.DocEntrySAP = item.Item4
+
+                            'listaCampos(i) = Tuple.Create(listaCampos(i).Item1, listaCampos(i).Item2, listaCampos(i).Item3, listaCampos(i).Item4, lo_planilla.PagosR.DocEntryTr, 0.0, lo_planillaDet.Codigo)
+                            'listaCamposExtendida.Add(nuevaTupla)
+
+                            'ini
+                            Dim nuevaTupla = Tuple.Create(
+                                    item.Item1, ' id
+                                    item.Item2, ' idEC
+                                    item.Item3, ' lineaNumAsg
+                                    item.Item4, ' DocEntrySAP
+                                    lo_planilla.PagosR.DocEntryTr,
+                                    montoreconciliaciont,
+                                    lo_planillaDet.Codigo
+                                )
+                            listaCamposExtendida.Add(nuevaTupla)
+                            'fin
 
                             i = i + 1
                             lo_planilla.PagosR.sub_anadir()
@@ -1283,6 +1302,19 @@ Public Class classProcesarPlanilla
                             lo_planilla.PagosR.DocEntrySAP = item.Item4
 
 
+                            'ini
+                            Dim nuevaTupla = Tuple.Create(
+                                    item.Item1, ' id
+                                    item.Item2, ' idEC
+                                    item.Item3, ' lineaNumAsg
+                                    item.Item4, ' DocEntrySAP
+                                    lo_planilla.PagosR.DocEntryTr,
+                                    montoreconciliaciont,
+                                    lo_planillaDet.Codigo
+                                )
+                            listaCamposExtendida.Add(nuevaTupla)
+                            'fin
+
                             ''no deberia agregarse aca, sino al momento de crear la retencion
                             lo_planilla.PagosR.sub_anadir()
 
@@ -1299,6 +1331,21 @@ Public Class classProcesarPlanilla
                             lo_planilla.PagosR.lineaNumAsg = item.Item3
                             lo_planilla.PagosR.DocEntrySAP = item.Item4
 
+
+                            'ini
+                            Dim nuevaTupla = Tuple.Create(
+                                    item.Item1, ' id
+                                    item.Item2, ' idEC
+                                    item.Item3, ' lineaNumAsg
+                                    item.Item4, ' DocEntrySAP
+                                    lo_planilla.PagosR.DocEntryTr,
+                                    montoreconciliaciont,
+                                    lo_planillaDet.Codigo
+                                )
+                            listaCamposExtendida.Add(nuevaTupla)
+                            'fin
+
+
                             i = i + 1
                             lo_planilla.PagosR.sub_anadir()
 
@@ -1311,6 +1358,19 @@ Public Class classProcesarPlanilla
                         lo_planilla.PagosR.lineaNumAsg = item.Item3
                         lo_planilla.PagosR.DocEntrySAP = item.Item4
 
+
+                        'ini
+                        Dim nuevaTupla = Tuple.Create(
+                                    item.Item1, ' id
+                                    item.Item2, ' idEC
+                                    item.Item3, ' lineaNumAsg
+                                    item.Item4, ' DocEntrySAP
+                                    lo_planilla.PagosR.DocEntryTr,
+                                    montoreconciliaciont,
+                                    lo_planillaDet.Codigo
+                                )
+                        listaCamposExtendida.Add(nuevaTupla)
+                        'fin
 
                         ''no deberia agregarse aca, sino al momento de crear la retencion
                         lo_planilla.PagosR.sub_anadir()
@@ -1461,8 +1521,11 @@ Public Class classProcesarPlanilla
 
                 ' Se recorre los pagos recibidos generados en la planilla
                 'For Each lo_pagoR As entPlanilla_PagosR In po_planilla.PagosR.lstObjs
-                For j = 0 To listaCampos.Count - 1
-                    Dim item = listaCampos(j)
+                'antes del cambio pro la segunda lista
+
+
+                For j = 0 To listaCamposExtendida.Count - 1
+                    Dim item = listaCamposExtendida(j)
 
 
                     'Dim carcodet As String = po_planilla.Lineas.lis.Lineas.Nombre(i)
@@ -1652,7 +1715,7 @@ Public Class classProcesarPlanilla
                         ' Se inicializa el objeto
                         lo_payment3 = lo_SBOCompany3.GetBusinessObject(BoObjectTypes.oIncomingPayments)
 
-                        For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
+                        For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCamposExtendida
 
                             ' Se obtiene el Pago Recibido por codigo
                             If lo_payment3.GetByKey(campo.Item4) = False Then
@@ -1688,7 +1751,7 @@ Public Class classProcesarPlanilla
                         '''INI REVERTIR ASIENTO DE AJUSTE
                         '''
 
-                        For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCampos
+                        For Each campo As Tuple(Of String, Integer, Integer, Integer, Integer, Decimal, String) In listaCamposExtendida
 
                             If (campo.Item5 <> 0) Then
 
@@ -3220,6 +3283,9 @@ Public Class classProcesarPlanilla
             Dim li_resultado As Integer = 0
             Dim ls_mensaje As String = ""
 
+            Dim rptaPR As Integer = 0
+            Dim msjPR As String = String.Empty
+
             Dim numeroPagoRecibidos As Integer = 0
             Dim numeroAsientoAjustes As Integer = 0
 
@@ -3287,7 +3353,22 @@ Public Class classProcesarPlanilla
                     ' Se realiza la cancelacion del Pago Recibido
                     li_resultado = lo_payment.Cancel
 
+
+
                     numeroPagoRecibidos = numeroPagoRecibidos + 1
+
+
+
+
+                    If li_resultado <> 0 Then
+
+                        'Dim rptaPR As Integer = 0
+                        'Dim msjPR As String = ""
+                        lo_SBOCompany.GetLastError(li_resultado, msjPR)
+
+                    End If
+
+
 
                 End If
 
@@ -3339,27 +3420,34 @@ Public Class classProcesarPlanilla
 
 
                 ' Se verifica el resultado de la operacion
+
+
+
                 If li_resultado <> 0 Then
 
-                    ' Se muestra un mensaje de error de SAP
-                    sub_errorProcesoSAP(lo_SBOCompany)
+                        ' Se muestra un mensaje de error de SAP
+                        sub_errorProcesoSAP(lo_SBOCompany)
 
-                    ' Se revierte la transaccion
-                    bol_RollBackTransSBO(lo_SBOCompany)
+                        ' Se revierte la transaccion
+                        bol_RollBackTransSBO(lo_SBOCompany)
 
-                    ' Se desconecta la compañia 
-                    lo_SBOCompany.Disconnect()
+                        ' Se desconecta la compañia 
+                        lo_SBOCompany.Disconnect()
 
-                    ' Se resetea el progressBar
-                    sub_resetProgressBar(lo_progressBar)
+                        ' Se resetea el progressBar
+                        sub_resetProgressBar(lo_progressBar)
 
-                    ' Se retorna el codigo de error
-                    Exit Sub
+                        ' Se retorna el codigo de error
+                        Exit Sub
 
-                End If
+                    End If
 
-                ' Se incrementa el valor del progressBar
-                sub_incrementarProgressBar(lo_progressBar)
+
+
+
+
+                    ' Se incrementa el valor del progressBar
+                    sub_incrementarProgressBar(lo_progressBar)
 
             Next
 
@@ -4017,6 +4105,7 @@ Public Class classProcesarPlanilla
                     Else
                         'ganancia
                         If tcFinanciero > tcFechaPago Then
+
                             'dbl_obtenercuentaGananciaDiferenciaTC
                             ' Agregar líneas de asiento _SYS00000000089
                             'lo_jrnlEntry.Lines.AccountCode = po_planillaDet.Cuenta '; // Código de cuenta
@@ -4026,18 +4115,12 @@ Public Class classProcesarPlanilla
                             lo_jrnlEntry.Lines.Credit = 0.0 '; // Monto del crédito
                             lo_jrnlEntry.Lines.Add()
 
-                            'lo_jrnlEntry.Lines.AccountCode = "776001-00"   ' // Código de cuenta 
-                            'lo_jrnlEntry.Lines.AccountCode = str_cuentaGananciaDiferenciaTC()   ' // Código de cuenta
-                            'lo_jrnlEntry.Lines.AccountCode = entComun.str_obtenercuentaGananciaDiferenciaTCv2()   ' // Código de cuenta
+                            'JSOLIS 23042025
                             lo_jrnlEntry.Lines.AccountCode = cuentaGanacia
                             lo_jrnlEntry.Lines.Debit = 0.0 '// Monto del débito
-                            ''JSOLIS RETIRAR
-                            'lo_jrnlEntry.Lines.Debit = 777 '(tcFinanciero - tcFechaPago) * po_planillaDet.Saldo '46.01 '; // Monto del débito
-                            'lo_jrnlEntry.Lines.Credit = System.Math.Abs((tcFinanciero - tcFechaPago) * po_planillaDet.Saldo) '// Monto del crédito
+                            'lo_jrnlEntry.Lines.Debit = 777 '// Monto del débito
                             lo_jrnlEntry.Lines.Credit = montoReconciliacionPr '// Monto del crédito
-
                             montoreconciliaciont = montoReconciliacionPr
-
                             lo_jrnlEntry.Lines.Add()
 
 
