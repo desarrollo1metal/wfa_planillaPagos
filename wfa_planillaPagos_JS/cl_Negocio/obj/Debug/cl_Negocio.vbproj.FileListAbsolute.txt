@@ -962,13 +962,13 @@ C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Negocio\
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Negocio\obj\Debug\cl_Negocio.dll
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Negocio\obj\Debug\cl_Negocio.xml
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\cl_Negocio\obj\Debug\cl_Negocio.pdb
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraEditors.v14.2.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\cl_Negocio.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\cl_Negocio.pdb
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\cl_Negocio.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\cl_AccesoDatos.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\cl_Entidad.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.Utils.v14.2.dll
-C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraEditors.v14.2.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraGrid.v14.2.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\EPPlus.dll
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\Util.dll

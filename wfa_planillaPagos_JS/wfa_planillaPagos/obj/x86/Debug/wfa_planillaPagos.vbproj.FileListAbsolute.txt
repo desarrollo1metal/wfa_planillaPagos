@@ -3069,6 +3069,11 @@ C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\wfa_planill
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.xml
 C:\TI_MIMSA\CF\wfa_planillaPagos_Mimsa_v3\wfa_planillaPagos_Mimsa_v2\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.pdb
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\bds\bds.txt
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\conn\prueba1\conn.txt
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\conn\te1\conn.txt
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\conn\te2\conn.txt
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\conn\te3\conn.txt
+C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\conn\tes\conn.txt
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\FormatosExcelReportes\DepesitosPendientes.xlsx
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\FormatosExcelReportes\Planilla.xlsx
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\FormatosExcelReportes\PlanillaCerrada.xlsx

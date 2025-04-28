@@ -22,6 +22,7 @@ Partial Class frmInicio
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmInicio))
         Me.lblConn = New System.Windows.Forms.Label()
         Me.Panel1 = New System.Windows.Forms.Panel()
         Me.pnlMenu = New System.Windows.Forms.Panel()
@@ -82,7 +83,7 @@ Partial Class frmInicio
         Me.Label2.Name = "Label2"
         Me.Label2.Size = New System.Drawing.Size(100, 17)
         Me.Label2.TabIndex = 64
-        Me.Label2.Text = "Versión : 0.0.4"
+        Me.Label2.Text = "Versión : 0.0.5"
         '
         'frmInicio
         '
@@ -96,6 +97,7 @@ Partial Class frmInicio
         Me.Controls.Add(Me.Panel1)
         Me.Controls.Add(Me.lblConn)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Margin = New System.Windows.Forms.Padding(5)
         Me.Name = "frmInicio"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
