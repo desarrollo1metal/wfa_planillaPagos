@@ -3265,9 +3265,6 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.exe
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.pdb
-C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraEditors.v14.2.xml
-C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraTreeList.v14.2.xml
-C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ru\DevExpress.XtraBars.v14.2.resources.dll
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\bds\bds.txt
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\conn\prueba1\conn.txt
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\conn\te1\conn.txt
@@ -3384,6 +3381,7 @@ C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.Data.v14.2.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.Printing.v14.2.Core.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.Utils.v14.2.xml
+C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraEditors.v14.2.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraGrid.v14.2.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraLayout.v14.2.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraPrinting.v14.2.xml
@@ -3396,6 +3394,7 @@ C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.Sparkline.v14.2.Core.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.RichEdit.v14.2.Core.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraBars.v14.2.xml
+C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraTreeList.v14.2.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\cl_AccesoDatos.pdb
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\cl_AccesoDatos.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.Office.v14.2.Core.xml
@@ -3438,6 +3437,7 @@ C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\de\DevExpress.XtraBars.v14.2.resources.dll
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\es\DevExpress.XtraBars.v14.2.resources.dll
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ja\DevExpress.XtraBars.v14.2.resources.dll
+C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ru\DevExpress.XtraBars.v14.2.resources.dll
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\de\DevExpress.XtraTreeList.v14.2.resources.dll
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\es\DevExpress.XtraTreeList.v14.2.resources.dll
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ja\DevExpress.XtraTreeList.v14.2.resources.dll
@@ -3446,6 +3446,7 @@ C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\es\DevExpress.Office.v14.2.Core.resources.dll
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ja\DevExpress.Office.v14.2.Core.resources.dll
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ru\DevExpress.Office.v14.2.Core.resources.dll
+C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.vbproj.AssemblyReference.cache
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.frmCargarEC.resources
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.frmConfig.resources
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.frmConfigMenu.resources
@@ -3461,4 +3462,3 @@ C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.exe
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.xml
 C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.pdb
-C:\CF\PLANILLA_DEV\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\obj\x86\Debug\wfa_planillaPagos.vbproj.AssemblyReference.cache
