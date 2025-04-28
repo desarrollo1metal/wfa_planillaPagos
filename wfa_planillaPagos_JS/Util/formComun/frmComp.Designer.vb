@@ -22,6 +22,7 @@ Partial Class frmComp
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frmComp))
         Me.btnConectar = New System.Windows.Forms.Button()
         Me.cboComp = New System.Windows.Forms.ComboBox()
         Me.Label1 = New System.Windows.Forms.Label()
@@ -34,9 +35,10 @@ Partial Class frmComp
         '
         'btnConectar
         '
-        Me.btnConectar.Location = New System.Drawing.Point(106, 88)
+        Me.btnConectar.Location = New System.Drawing.Point(141, 108)
+        Me.btnConectar.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnConectar.Name = "btnConectar"
-        Me.btnConectar.Size = New System.Drawing.Size(112, 23)
+        Me.btnConectar.Size = New System.Drawing.Size(149, 28)
         Me.btnConectar.TabIndex = 5
         Me.btnConectar.Tag = "sub_conectar"
         Me.btnConectar.Text = "Conectar"
@@ -47,9 +49,10 @@ Partial Class frmComp
         Me.cboComp.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList
         Me.cboComp.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cboComp.FormattingEnabled = True
-        Me.cboComp.Location = New System.Drawing.Point(87, 14)
+        Me.cboComp.Location = New System.Drawing.Point(116, 17)
+        Me.cboComp.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.cboComp.Name = "cboComp"
-        Me.cboComp.Size = New System.Drawing.Size(235, 19)
+        Me.cboComp.Size = New System.Drawing.Size(312, 21)
         Me.cboComp.TabIndex = 4
         Me.cboComp.Tag = "company"
         '
@@ -57,18 +60,20 @@ Partial Class frmComp
         '
         Me.Label1.AutoSize = True
         Me.Label1.ForeColor = System.Drawing.Color.Black
-        Me.Label1.Location = New System.Drawing.Point(17, 15)
+        Me.Label1.Location = New System.Drawing.Point(23, 18)
+        Me.Label1.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(54, 13)
+        Me.Label1.Size = New System.Drawing.Size(71, 17)
         Me.Label1.TabIndex = 3
         Me.Label1.Text = "Compañia"
         '
         'Label2
         '
         Me.Label2.AutoSize = True
-        Me.Label2.Location = New System.Drawing.Point(17, 40)
+        Me.Label2.Location = New System.Drawing.Point(23, 49)
+        Me.Label2.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label2.Name = "Label2"
-        Me.Label2.Size = New System.Drawing.Size(43, 13)
+        Me.Label2.Size = New System.Drawing.Size(57, 17)
         Me.Label2.TabIndex = 6
         Me.Label2.Text = "Usuario"
         '
@@ -76,17 +81,19 @@ Partial Class frmComp
         '
         Me.txtUsuario.Enabled = False
         Me.txtUsuario.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtUsuario.Location = New System.Drawing.Point(87, 38)
+        Me.txtUsuario.Location = New System.Drawing.Point(116, 47)
+        Me.txtUsuario.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtUsuario.Name = "txtUsuario"
-        Me.txtUsuario.Size = New System.Drawing.Size(152, 18)
+        Me.txtUsuario.Size = New System.Drawing.Size(201, 21)
         Me.txtUsuario.TabIndex = 7
         '
         'Label3
         '
         Me.Label3.AutoSize = True
-        Me.Label3.Location = New System.Drawing.Point(17, 63)
+        Me.Label3.Location = New System.Drawing.Point(23, 78)
+        Me.Label3.Margin = New System.Windows.Forms.Padding(4, 0, 4, 0)
         Me.Label3.Name = "Label3"
-        Me.Label3.Size = New System.Drawing.Size(61, 13)
+        Me.Label3.Size = New System.Drawing.Size(81, 17)
         Me.Label3.TabIndex = 8
         Me.Label3.Text = "Contraseña"
         '
@@ -94,26 +101,28 @@ Partial Class frmComp
         '
         Me.txtContrasena.Enabled = False
         Me.txtContrasena.Font = New System.Drawing.Font("Tahoma", 6.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.txtContrasena.Location = New System.Drawing.Point(87, 62)
+        Me.txtContrasena.Location = New System.Drawing.Point(116, 76)
+        Me.txtContrasena.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.txtContrasena.Name = "txtContrasena"
         Me.txtContrasena.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.txtContrasena.Size = New System.Drawing.Size(180, 18)
+        Me.txtContrasena.Size = New System.Drawing.Size(239, 21)
         Me.txtContrasena.TabIndex = 9
         '
         'btnHabil
         '
-        Me.btnHabil.Location = New System.Drawing.Point(245, 38)
+        Me.btnHabil.Location = New System.Drawing.Point(327, 47)
+        Me.btnHabil.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.btnHabil.Name = "btnHabil"
-        Me.btnHabil.Size = New System.Drawing.Size(22, 18)
+        Me.btnHabil.Size = New System.Drawing.Size(29, 22)
         Me.btnHabil.TabIndex = 10
         Me.btnHabil.UseVisualStyleBackColor = True
         '
         'frmComp
         '
-        Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.BackColor = System.Drawing.Color.White
-        Me.ClientSize = New System.Drawing.Size(339, 114)
+        Me.ClientSize = New System.Drawing.Size(452, 140)
         Me.Controls.Add(Me.btnHabil)
         Me.Controls.Add(Me.txtContrasena)
         Me.Controls.Add(Me.Label3)
@@ -122,6 +131,8 @@ Partial Class frmComp
         Me.Controls.Add(Me.btnConectar)
         Me.Controls.Add(Me.cboComp)
         Me.Controls.Add(Me.Label1)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
         Me.Name = "frmComp"
         Me.Text = "Seleccionar Compañia"
         Me.ResumeLayout(False)
