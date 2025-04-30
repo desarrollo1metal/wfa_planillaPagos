@@ -1,9 +1,0 @@
-<DBServ>192.168.1.2</DBServ>
-<DBUser>sa</DBUser>
-<DBPass>B1Admin</DBPass>
-<SAPComp>Z_SBO_INDUZINC_12032025</SAPComp>
-<SAPUser>manager9</SAPUser>
-<SAPPass>1234</SAPPass>
-<IPServ>192.168.1.2</IPServ>
-<SvrUsr>metalindustrias.local\programador_2</SvrUsr>
-<SvrPwd>usugm2ag.</SvrPwd>

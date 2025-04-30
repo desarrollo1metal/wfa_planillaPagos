@@ -2554,6 +2554,7 @@ Public Class classProcesarPlanilla
 
             '''
             Dim Tcfinanciero As String
+            Tcfinanciero = "1"
             'cuentaPerdida = str_cuentaPerdidaDiferenciaTC()
             Dim dt_Tcfinanciero As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_verEstadoTipoCambioFinanciero '" & po_planillaDet.FechaPago.ToString("yyyyMMdd") & "'")
 
@@ -2650,16 +2651,33 @@ Public Class classProcesarPlanilla
                 lo_payment.Invoices.DocLine = po_planillaDet.DocLine
             End If
 
+
+
             ' Se asigna el importe aplicado
             If po_planillaDet.MonedaDoc = entComun.str_obtMonLocal Then
                 lo_payment.Invoices.SumApplied = po_planillaDet.Imp_Aplicado
             Else
-                lo_payment.Invoices.AppliedFC = po_planillaDet.Imp_AplicadoME
+
+                If po_planillaDet.asientoajustoT = "Y" Then
+
+                    lo_payment.Invoices.AppliedFC = po_planillaDet.Imp_Aplicado / (Convert.ToDecimal(Tcfinanciero))
+                Else
+
+                    lo_payment.Invoices.AppliedFC = po_planillaDet.Imp_AplicadoME
+                    'lo_payment.Invoices.AppliedFC =   /Convert.ToDoubl(Tcfinanciero)
+
+                End If
+
+
             End If
+
+
 
             ' Se asigna el monto y la cuenta con la que se realiza el pago
             lo_payment.TransferAccount = po_planillaDet.Cuenta
             lo_payment.TransferSum = po_planillaDet.MontoOp
+
+            lo_payment.SaveXML("C:\TI_MIMSA\PROJ3\pr1.xml")
 
             ' Se realiza la inserción del objeto en la base de datos
             li_resultado = lo_payment.Add
@@ -3124,7 +3142,15 @@ Public Class classProcesarPlanilla
             lo_payment.CardCode = po_planillaDet.Codigo
             lo_payment.Remarks = Mid(po_planilla.Comentario, 1, 254)
             lo_payment.JournalRemarks = Mid(po_planilla.Comentario, 1, 50)
-            lo_payment.TransferReference = Mid("Planilla Nro. " & po_planillaDet.id.ToString, 1, 27)
+
+            ''ANTES se solicito cambio
+            'lo_payment.TransferReference = Mid("Planilla Nro. " & po_planillaDet.id.ToString, 1, 27)
+
+            'nuevo
+            lo_payment.TransferReference = (Mid(po_planillaDet.Nro_Operacion, 1, 27))
+            lo_payment.UserFields.Fields.Item("U_GMI_PLANI").Value = Mid("Planilla Nro. " & po_planillaDet.id.ToString, 1, 27)
+
+
             lo_payment.DocCurrency = po_planillaDet.MonedaPag
             lo_payment.UserFields.Fields.Item("U_BPP_TRAN").Value = "999"
             lo_payment.UserFields.Fields.Item("U_GMI_RENDICION").Value = po_planillaDet.Nro_Operacion
@@ -4470,13 +4496,17 @@ Public Class classProcesarPlanilla
                             ' Agregar líneas de asiento _SYS00000000089
                             'lo_jrnlEntry.Lines.AccountCode = po_planillaDet.Cuenta '; // Código de cuenta
                             lo_jrnlEntry.Lines.ShortName = po_planillaDet.Codigo '; // Código de cuenta
+                            'lo_jrnlEntry.Lines.ShortName = "77600100" '; // Código de cuenta
+
+
                             'lo_jrnlEntry.Lines.AccountCode = "_SYS00000000089" '; // Código de cuenta
                             lo_jrnlEntry.Lines.Debit = montoReconciliacionPr 'System.Math.Abs((tcFinanciero - tcFechaPago) * po_planillaDet.Saldo) '46.01 '; // Monto del débito
                             lo_jrnlEntry.Lines.Credit = 0.0 '; // Monto del crédito
                             lo_jrnlEntry.Lines.Add()
 
-                            'JSOLIS 23042025
+                            ''JSOLIS 23042025
                             lo_jrnlEntry.Lines.AccountCode = cuentaGanacia
+                            'lo_jrnlEntry.Lines.AccountCode = "_SYS00000001306"
                             lo_jrnlEntry.Lines.Debit = 0.0 '// Monto del débito
                             'lo_jrnlEntry.Lines.Debit = 777 '// Monto del débito
                             lo_jrnlEntry.Lines.Credit = montoReconciliacionPr '// Monto del crédito
