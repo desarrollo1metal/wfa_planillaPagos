@@ -6,6 +6,7 @@
 
 as
 
+
 with tvw_orct as
 (
 select U_GMI_RENDICION, TrsfrAcct, CashAcct, Canceled, TaxDate from ORCT where isnull(U_GMI_RENDICION, '') <> '' and ISNULL(Canceled, 'N') <> 'Y'
@@ -37,7 +38,6 @@ T0.id
 
 , 'OP' as TipoOp
 , case isnull(T0.esPll, 'N') when 'Y' then 'Si' else 'No' end as EC_dePlanilla
-, '' as asientoajustoT 
 
 from 
 GMI_TmpOprBnc T0 

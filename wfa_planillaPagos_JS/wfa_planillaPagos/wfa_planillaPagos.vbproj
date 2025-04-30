@@ -353,6 +353,24 @@
     <Content Include="SQLProc\gmi_sp_actualizarNrosSAPPlaDet.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="SQLProc\gmi_sp_obtMontoacuentaReconciliacion.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLProc\gmi_sp_verEstadoPeriodoValidacion.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLProc\gmi_sp_obtenerLineaPR.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLProc\gmi_sp_verExitDocEnPllAbierta2.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLProc\verEstadoTipoCambioFinanciero.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQLProc\gmi_sp_verTransId_PagoRecibido.sql">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="SQLProc\gmi_sp_cuentaPerdidaDiferenciaTC.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
