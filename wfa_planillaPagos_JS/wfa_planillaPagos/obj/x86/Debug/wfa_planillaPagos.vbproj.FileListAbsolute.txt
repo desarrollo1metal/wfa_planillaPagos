@@ -3567,6 +3567,7 @@ C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\De
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraGrid.v14.2.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraLayout.v14.2.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraPrinting.v14.2.dll
+C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\log4net.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\Util.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\cl_Entidad.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\EPPlus.dll
@@ -3589,6 +3590,7 @@ C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\De
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraGrid.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraLayout.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\DevExpress.XtraPrinting.v14.2.xml
+C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\log4net.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\cl_Entidad.pdb
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\cl_Entidad.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\ExcelDataReader.pdb

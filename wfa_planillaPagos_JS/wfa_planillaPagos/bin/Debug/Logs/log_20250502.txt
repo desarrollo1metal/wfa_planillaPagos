@@ -1,0 +1,54 @@
+2025-05-02 14:15:40,665 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando procesamiento de planilla...
+2025-05-02 15:18:25,723 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando procesamiento de planilla...
+2025-05-02 15:22:34,348 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza
+2025-05-02 15:22:57,112 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 16:15:06,436 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza
+2025-05-02 16:17:00,381 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 16:18:29,173 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza
+2025-05-02 16:18:36,499 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 16:27:11,735 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza
+2025-05-02 16:27:21,015 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 16:59:02,098 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza
+2025-05-02 16:59:12,767 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 17:02:52,660 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza
+2025-05-02 17:23:29,720 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza
+2025-05-02 17:23:50,173 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 17:38:43,438 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-02 17:38:43,465 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-02 17:39:00,548 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-02 17:39:00,588 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 17:50:01,895 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-02 17:50:01,916 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-02 17:50:19,256 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-02 17:50:19,257 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-02 17:50:23,810 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 17:50:23,842 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-02 18:19:33,652 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-02 18:19:33,683 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-02 18:21:23,003 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-02 18:21:23,042 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-02 18:21:28,029 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-02 18:21:28,029 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-02 18:21:32,420 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 18:21:33,401 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-02 18:27:56,939 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-02 18:27:56,964 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-02 18:28:03,018 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-02 18:28:03,018 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-02 18:28:05,078 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 18:28:09,266 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-02 18:28:09,294 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-02 18:28:13,851 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-02 18:28:13,851 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-02 18:28:15,838 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 18:28:16,526 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-02 18:28:52,940 [1] ERROR cl_Negocio.classProcesarPlanilla - Primero, debe realizar la busqueda de una planilla abierta.
+2025-05-02 18:29:35,371 [1] ERROR cl_Negocio.classProcesarPlanilla - sub_procesarPlanilla_v2
+2025-05-02 18:34:15,615 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-02 18:34:15,634 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-02 18:34:19,918 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-02 18:34:19,920 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-02 18:34:21,538 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-02 18:34:24,910 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-02 18:35:07,772 [1] ERROR cl_Negocio.classProcesarPlanilla - sub_procesarPlanilla_v2
+2025-05-02 18:35:07,783 [1] INFO  cl_Negocio.classProcesarPlanilla - a

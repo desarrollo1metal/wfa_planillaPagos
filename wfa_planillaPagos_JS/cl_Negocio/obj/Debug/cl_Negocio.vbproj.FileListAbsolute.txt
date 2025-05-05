@@ -1073,6 +1073,7 @@ C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\Dev
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraEditors.v14.2.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraGrid.v14.2.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\EPPlus.dll
+C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\log4net.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\Util.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ExcelDataReader.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ExcelDataReader.DataSet.dll
@@ -1095,6 +1096,7 @@ C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\Uti
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.Utils.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraEditors.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\DevExpress.XtraGrid.v14.2.xml
+C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\log4net.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ExcelDataReader.pdb
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ExcelDataReader.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_Negocio\bin\Debug\ExcelDataReader.DataSet.pdb

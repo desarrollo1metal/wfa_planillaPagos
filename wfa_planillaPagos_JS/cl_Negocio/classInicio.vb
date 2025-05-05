@@ -4,9 +4,12 @@ Imports Util
 Imports System.Drawing
 Imports System.Reflection
 Imports cl_Entidad
+Imports log4net
 Imports OfficeOpenXml
 Public Class classInicio
     Inherits classComun
+
+    Private Shared ReadOnly log As ILog = LogManager.GetLogger(GetType(classInicio))
 
 #Region "Constructor"
 
@@ -419,6 +422,7 @@ Public Class classInicio
             ' Se declara un formulario de seleccion de compañia
             Dim lo_frmComp As New frmComp
 
+            log.Info("ShowDialog")
             ' Se muestra un dialogro del formulario declarado
             lo_frmComp.ShowDialog()
 
@@ -446,7 +450,7 @@ Public Class classInicio
 
                 ' Se actualiza los datos de inicializacion que corresponden a la nueva version
                 bol_iniComponentesVersion()
-
+                log.Info(" APLICA ")
                 ' Se verifica el usuario ingresado
                 If bol_verUsuarioSistema() = False Then
                     sub_conectar()
@@ -456,6 +460,7 @@ Public Class classInicio
                 ' Se construye el menu
                 bol_construirMenu()
 
+                log.Info("Ingreso a la aplicacion")
                 ' Se registra el Log de ingreso al sistema
                 sub_registrarLog("Ingreso a la aplicacion", System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.info)
 
@@ -789,6 +794,8 @@ Public Class classInicio
             ' Se verifica si existe el usuario administrador
             Dim ls_resVer As String = str_verUsrAdmin()
 
+            log.Info("sub_verExistAdmin")
+
             ' Se verifica si la operacion se realizó de manera correcta
             If ls_resVer.Trim <> "" Then
                 sub_mostrarMensaje("Ocurrió un error al verificar el usuario administrador: " & ls_resVer, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.info)
@@ -801,6 +808,8 @@ Public Class classInicio
 
     Private Function bol_verUsuarioSistema() As Boolean
         Try
+
+            log.Info("bol_verUsuarioSistema")
 
             ' Se verifica si el usuario ingresado es igual al usuario de windows que ha ingresado
             If s_sysUsr.Trim = str_obtWinUsr.Trim Then

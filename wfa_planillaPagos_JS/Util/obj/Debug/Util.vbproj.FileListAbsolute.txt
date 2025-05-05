@@ -1706,7 +1706,6 @@ C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\Util\bin\Debug\de\DevExp
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\Util\bin\Debug\es\DevExpress.Office.v14.2.Core.resources.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\Util\bin\Debug\ja\DevExpress.Office.v14.2.Core.resources.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\Util\bin\Debug\ru\DevExpress.Office.v14.2.Core.resources.dll
-C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\Util\obj\Debug\Util.vbproj.AssemblyReference.cache
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\Util\obj\Debug\Interop.SAPbobsCOM.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\Util\obj\Debug\Util.vbproj.ResolveComReference.cache
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\Util\obj\Debug\Util.FrmDistribucion_Prs.resources

@@ -5,14 +5,23 @@ Imports DevExpress.XtraEditors
 Imports SAPbobsCOM
 Imports System.IO
 Imports OfficeOpenXml
+Imports log4net
+Imports log4net.Config
+
 Imports Microsoft.VisualBasic.CompilerServices
 
 Public Class classProcesarPlanilla
     Inherits classComun
 
+
+
+    Private Shared ReadOnly log As ILog = LogManager.GetLogger(GetType(classProcesarPlanilla))
+
+
 #Region "Constructor"
 
     Public Sub New(ByVal po_form As frmComun)
+
         MyBase.New(po_form)
     End Sub
 
@@ -40,6 +49,7 @@ Public Class classProcesarPlanilla
 
             ' Se verifica el modo del formulario
             If o_form.Modo = enm_modoForm.BUSCAR Then
+                log.Error("Primero, debe realizar la busqueda de una planilla abierta.")
                 MsgBox("Primero, debe realizar la busqueda de una planilla abierta.")
                 Exit Sub
             End If
@@ -47,6 +57,7 @@ Public Class classProcesarPlanilla
             ' Se obtiene el estado del documento
             Dim ls_estado As String = str_obtEstadoObjeto()
 
+            log.Debug("Solo se puede procesar planillas abiertas.")
             ' Se verifica el estado JSOLIS se debe descomentar , solo para desarrollo.
             If ls_estado <> "O" Then
                 MsgBox("Solo se puede procesar planillas abiertas.")
@@ -64,7 +75,7 @@ Public Class classProcesarPlanilla
             '''10/04/2025 0940 Esta es la version principal, antes de los grandes cambios.
             '' Se procesa la planilla
             'sub_procesarPlanilla()
-
+            log.Debug("sub_procesarPlanilla_v2")
             sub_procesarPlanilla_v2()
 
 
@@ -732,6 +743,9 @@ Public Class classProcesarPlanilla
     Private Sub sub_procesarPlanilla_v2()
 
         Try
+            'log4net.Config.XmlConfigurator.Configure()
+
+            log.Info("05052025")
 
             Dim ls_resPla As String = String.Empty
 
@@ -836,7 +850,7 @@ Public Class classProcesarPlanilla
 
 #End Region
 
-
+            log.Info("ini validacion")
             ' Crear una lista auxiliar para almacenar las líneas modificadas
             Dim listaModificada As New List(Of entPlanilla_Lineas)
             'jsolis
@@ -855,13 +869,15 @@ Public Class classProcesarPlanilla
             trueMultiCobranza = False
 
 
-
+            log.Info("for1")
             'INI MULTI_COBRANZA X MULTI DOCUMENTO
             For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
 
                 If lo_planillaDet.tipoAsg <> 0 Then
 
                     trueMultiCobranza = True
+
+                    log.Debug("trueMultiCobranza = " & trueMultiCobranza.ToString())
 
                     Exit For
 
@@ -870,6 +886,7 @@ Public Class classProcesarPlanilla
             Next
             'FIN MULTI_COBRANZA X MULTI DOCUMENTO
 
+            log.Info("trueMultiCobranza")
             'de muchos a mucho
             If trueMultiCobranza Then
 
@@ -886,6 +903,7 @@ Public Class classProcesarPlanilla
                         ', pues, al notar un cambio en el numero de asignacion, el proceso debe ingresar los detalles obtenidos en el listado llenado hasta el objeto anterior del FOR EACH
                         If li_tipoAsg = 1 Or li_tipoAsg = 2 Then
 
+                            log.Debug(" INICIO int_procesarMuchosAMuchos ")
                             ' Se realiza la inserción UNO a MUCHOS o de MUCHOS A UNO
                             li_resultado = int_procesarMuchosAMuchos(lo_lstPlaDet, lo_SBOCompany, lo_planilla, li_tipoAsg)
 
@@ -923,6 +941,7 @@ Public Class classProcesarPlanilla
                         ' Se verifica el tipo de asignación para generar el pago
                         If li_tipoAsg = 0 Then ' Asignacion de UNO a UNO
 
+                            log.Debug(" INICIO int_procesarUnoAUno ")
                             ' Se realiza la adición del objeto
                             li_resultado = int_procesarUnoAUno(lo_planillaDet, lo_SBOCompany, lo_planilla)
 
@@ -1006,6 +1025,7 @@ Public Class classProcesarPlanilla
                     ' Si el listado de objetos de detalle a procesar tiene objetos, quiere decir que está pendiente una ejecución de una asignacion 1 o 2
                     If li_tipoAsg = 1 Or li_tipoAsg = 2 Then
 
+                        log.Debug(" INICIO int_procesarUnoAUno ")
                         ' Se realiza la inserción UNO a MUCHOS o de MUCHOS A UNO
                         li_resultado = int_procesarMuchosAMuchos(lo_lstPlaDet, lo_SBOCompany, lo_planilla, li_tipoAsg)
 
@@ -1073,6 +1093,7 @@ Public Class classProcesarPlanilla
                     Exit Sub
                 End If
 
+                log.Debug(" El proceso de creación de los Pagos Recibidos en SAP Business One finalizó de manera correcta. ")
                 ' Se muestra un mensaje que indica que el proceso se realizó con exito
                 MsgBox("El proceso de creación de los Pagos Recibidos en SAP Business One finalizó de manera correcta.")
 
@@ -1088,6 +1109,10 @@ Public Class classProcesarPlanilla
 #Region "Crear_PR"
 
 
+                log.Info("********************************* Crear PR  *********************************")
+
+
+
                 ' Se recorre el detalle de la planilla
                 For Each lo_planillaDet As entPlanilla_Lineas In lo_planilla.Lineas.lstObjs
 
@@ -1099,7 +1124,7 @@ Public Class classProcesarPlanilla
                         ', pues, al notar un cambio en el numero de asignacion, el proceso debe ingresar los detalles obtenidos en el listado llenado hasta el objeto anterior del FOR EACH
                         If li_tipoAsg = 1 Or li_tipoAsg = 2 Then
 
-
+                            log.Info("int_procesarMuchosAMuchos")
                             ' Se realiza la inserción UNO a MUCHOS o de MUCHOS A UNO
                             li_resultado = int_procesarMuchosAMuchos(lo_lstPlaDet, lo_SBOCompany, lo_planilla, li_tipoAsg)
 
@@ -1137,6 +1162,8 @@ Public Class classProcesarPlanilla
                         ' Se verifica el tipo de asignación para generar el pago
                         If li_tipoAsg = 0 Then ' Asignacion de UNO a UNO
 
+                            'log.Debug("int_procesarUnoAUno_sin_AS()")
+                            log.Info("int_procesarUnoAUno_sin_AS")
                             ' Se realiza la adición del objeto
                             li_resultado = int_procesarUnoAUno_sin_AS(lo_planillaDet, lo_SBOCompany, lo_planilla)
 
@@ -1173,6 +1200,8 @@ Public Class classProcesarPlanilla
 
                             listaCampos.Add(Tuple.Create(lo_planilla_PagosR_idT, lo_planilla_PagosR_idECT, lo_planilla_PagosR_lineaNumAsgT, lo_planilla_PagosR_DocEntrySAPT, TransId_AsientoAjuste, MontoReconciliar_asientoAjuste, lo_planillaDet.Codigo))
 
+                            '''log.Debug("js" & listaCampos.ToString())
+
                             ''Dim itemv2 As New ItemCampo2 With {
                             ''    .Id = lo_planilla_PagosR_idT,
                             ''    .IdEC = lo_planilla_PagosR_idECT,
@@ -1200,6 +1229,7 @@ Public Class classProcesarPlanilla
 
                         Else
 
+                            log.Error("Error al crear Pago Recibido")
                             ' Hubo un error al momento de generar el detalle de la planilla
                             sub_errorRegistroPlanilla(lo_SBOCompany)
 
@@ -1350,7 +1380,7 @@ Public Class classProcesarPlanilla
                 '' Conectar a di api
 
                 ''recorrer la lista, si aplica generar asiento de ajuste.
-
+                log.Info("********** Crear_AsientoAjuste **********")
 
                 If trueMultiCobranza = False Then
 
@@ -1690,7 +1720,7 @@ Public Class classProcesarPlanilla
 #Region "Crear_Reconciliar"
 
                 ''-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
+                log.Info("********** Crear Reconciliacion Interna **********")
                 If trueMultiCobranza = False Then
 
                     ''' INI RECONCILIACION JSOLIS
@@ -1893,6 +1923,7 @@ Public Class classProcesarPlanilla
                             reconParams = service.Add(openTrans)
                             reconNum = reconParams.ReconNum
 
+                            log.Info("Creacion existosa de reconciliacion , reconNum = " & reconNum)
                             'listaCampos2(j).ReconNumRI = reconNum
 
                             ''ini agregar
@@ -1920,6 +1951,7 @@ Public Class classProcesarPlanilla
                         Catch ex As Exception
 
                             ' Ocurrio un error al obtener el Pago Recibido
+                            log.Error(" Error crear reconciliacion " & ex.Message.ToString())
                             sub_mostrarMensaje("Ocurrio al intentar reconciliar interno por Socio de Negocio " & ex.ToString(), System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sap)
 
                             ' Se revierte la transaccion
@@ -2099,6 +2131,7 @@ Public Class classProcesarPlanilla
 
 
 
+            log.Info("lo_planilla.Estado")
 
             ' Se actualiza el objeto de la planilla
             lo_planilla.Estado = "C"
@@ -2179,6 +2212,9 @@ Public Class classProcesarPlanilla
             sub_resetProgressBar(lo_progressBar)
 
         Catch ex As Exception
+
+            log.Error(ex.Message.ToString())
+
             sub_mostrarMensaje(ex.Message, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_exc)
         End Try
     End Sub
@@ -2546,6 +2582,10 @@ Public Class classProcesarPlanilla
             'TcPagoSAP = TcPagoSAPt
 
 
+            ' Loggs
+            'ApplicationEvents.InitializeLogging()
+
+
 
             ''para la 2da vuelta, se cae aca.
             ''cuenta de ganancia
@@ -2677,15 +2717,18 @@ Public Class classProcesarPlanilla
             lo_payment.TransferAccount = po_planillaDet.Cuenta
             lo_payment.TransferSum = po_planillaDet.MontoOp
 
-            lo_payment.SaveXML("C:\TI_MIMSA\PROJ3\pr1.xml")
+            'lo_payment.SaveXML("C:\TI_MIMSA\PROJ3\pr1.xml")
 
             ' Se realiza la inserción del objeto en la base de datos
+            log.Info("_resultado = lo_payment.Add")
             li_resultado = lo_payment.Add
 
             'd1 = dbl_obtTipoCambio("USD", DateTime.Now.ToString("yyyyMMdd"))
 
             'ini v
             Dim resultTable As DataTable = dtb_ejecutarSQL_doquery("exec gmi_sp_cuentaGananciaDiferenciaTC")
+
+            log.Info("exec gmi_sp_cuentaGananciaDiferenciaTC")
 
             If resultTable IsNot Nothing Then
                 ' Recorrer las filas del DataTable
@@ -2726,6 +2769,7 @@ Public Class classProcesarPlanilla
                 ' Console.WriteLine("La consulta no devolvió resultados o hubo un error.")
             End If
 
+            log.Info(" li_resultado = lo_payment.Add ")
 
             ' Se verifica el resultado
             If li_resultado <> 0 Then
@@ -2734,6 +2778,7 @@ Public Class classProcesarPlanilla
                 sub_errorProcesoSAP(po_SBOCompany)
 
                 ' Se muestra un mensaje con los detalles
+                log.Error("Numero de asignacion: " & po_planillaDet.LineaNumAsg & " - Id del Documento SAP: " & po_planillaDet.Id_Doc & " - Id del Estado de Cuenta: " & po_planillaDet.idEC)
                 sub_mostrarMensaje("Numero de asignacion: " & po_planillaDet.LineaNumAsg & " - Id del Documento SAP: " & po_planillaDet.Id_Doc & " - Id del Estado de Cuenta: " & po_planillaDet.idEC, System.Reflection.Assembly.GetExecutingAssembly.GetName.Name, Me.GetType.Name.ToString, System.Reflection.MethodInfo.GetCurrentMethod.Name, enm_tipoMsj.error_sis)
 
             Else ' Si el proceso de adicion a SAP se ejecutó de manera correcta
@@ -2746,6 +2791,8 @@ Public Class classProcesarPlanilla
 
                 ' Se verifica el resultado de la creación del asiento de diferencia de cambio
                 If li_resultado = 0 Then
+
+                    log.Info(" li_resultado = 0 , sin errores ")
 
                     ' Se actualiza los DocEntry de los pagos recien ingresados
                     po_planilla.PagosR.id = po_planillaDet.id

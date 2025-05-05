@@ -69,6 +69,9 @@
   <PropertyGroup>
     <ApplicationManifest>My Project\app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>logo_final1.ico</ApplicationIcon>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="DevExpress.Data.v14.2, Version=14.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a">
       <Private>True</Private>
@@ -119,6 +122,7 @@
     <Import Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ApplicationEvents.vb" />
     <Compile Include="frmCargarEC.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -290,6 +294,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="EPPlus.dll" />
+    <Content Include="logo_final1.ico" />
     <Content Include="Menu\menu.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
