@@ -917,6 +917,8 @@ C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\cl_AccesoD
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.xml
 C:\CF\WFA_PLANILLAPAGOS\wfa_planillaPagos_JS\cl_AccesoDatos\obj\Debug\cl_AccesoDatos.pdb
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.Utils.v14.2.dll
+C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.Utils.v14.2.xml
+C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraBars.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\cl_AccesoDatos.dll
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\cl_AccesoDatos.pdb
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\cl_AccesoDatos.xml
@@ -939,7 +941,6 @@ C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\Util.pdb
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\Util.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraEditors.v14.2.xml
-C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.Utils.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraGrid.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\ExcelDataReader.pdb
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\ExcelDataReader.xml
@@ -951,7 +952,6 @@ C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraPrinting.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraLayout.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.RichEdit.v14.2.Core.xml
-C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraBars.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.XtraTreeList.v14.2.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\DevExpress.Office.v14.2.Core.xml
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\cl_AccesoDatos\bin\Debug\de\DevExpress.XtraEditors.v14.2.resources.dll

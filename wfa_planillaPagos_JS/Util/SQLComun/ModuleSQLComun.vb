@@ -186,8 +186,11 @@ Public Module ModuleSQLComun
             SBOCompany.DbServerType = SAPbobsCOM.BoDataServerTypes.dst_MSSQL2017
             SBOCompany.DbUserName = S_DbUserName
             SBOCompany.DbPassword = S_SQLPassword
-            SBOCompany.Server = "192.168.1.2"
-            SBOCompany.LicenseServer = "192.168.1.2:30000"
+            'SBOCompany.Server = "192.168.1.2"  'PRODUCCION
+            SBOCompany.Server = "192.168.1.3"   'PRUEBAS
+            'SBOCompany.LicenseServer = "192.168.1.2:30000"
+            SBOCompany.LicenseServer = "192.168.1.2:30000" 'SIEMPRE SERÁ LA MISMA
+
             SBOCompany.CompanyDB = S_CompanyDB
             SBOCompany.UserName = ps_SBOUsrName
             SBOCompany.Password = ps_SBOPass

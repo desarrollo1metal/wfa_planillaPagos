@@ -1,0 +1,143 @@
+2025-05-22 08:44:31,447 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 08:44:31,463 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 08:46:49,399 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 08:46:49,431 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 08:47:06,526 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 08:47:06,526 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 08:47:06,571 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 08:47:06,638 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:03:46,532 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:07:30,098 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:07:30,161 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:07:40,438 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:07:40,438 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:07:40,486 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:07:40,534 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:08:01,386 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:13:07,601 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:13:07,646 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:13:42,947 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:13:42,947 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:13:42,994 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:13:43,046 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:13:57,736 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:14:56,239 [1] ERROR cl_Negocio.classProcesarPlanilla - Referencia a objeto no establecida como instancia de un objeto.
+2025-05-22 09:25:31,431 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:25:31,463 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:26:57,842 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:26:57,859 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:28:45,508 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:28:45,525 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:35:41,125 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:35:41,142 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:37:21,036 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:37:21,120 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:37:30,834 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:37:30,834 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:37:30,897 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:37:30,936 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:37:50,103 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:38:09,344 [1] ERROR cl_Negocio.classProcesarPlanilla - Referencia a objeto no establecida como instancia de un objeto.
+2025-05-22 09:38:14,151 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:41:11,185 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:41:11,214 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:41:27,436 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:41:27,436 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:41:27,477 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:41:27,519 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:41:40,914 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:44:17,515 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:44:17,530 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:44:23,039 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:44:23,039 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:44:23,083 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:44:23,115 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:44:44,276 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:44:44,295 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:44:52,257 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:44:52,257 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:44:52,298 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:44:52,345 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:45:08,150 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:47:27,923 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:47:27,938 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:47:35,211 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:47:35,211 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:47:35,243 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:47:35,270 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:47:47,922 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:49:18,616 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:49:18,665 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:50:17,989 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:50:17,989 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:50:18,045 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:50:18,090 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:50:33,471 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:54:06,102 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 09:54:06,130 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 09:54:15,734 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 09:54:15,734 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 09:54:15,774 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 09:54:15,812 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 09:54:26,789 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 09:54:43,791 [1] ERROR cl_Negocio.classProcesarPlanilla - Referencia a objeto no establecida como instancia de un objeto.
+2025-05-22 10:03:14,279 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 10:03:14,294 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 10:03:23,938 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 10:03:23,939 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 10:03:23,984 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 10:03:24,038 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 10:03:41,454 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 10:06:58,608 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 10:06:58,718 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 10:07:10,254 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 10:07:10,254 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 10:07:10,319 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 10:07:10,376 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 10:07:23,545 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 10:09:21,650 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 10:09:21,666 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 10:09:28,248 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 10:09:28,248 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 10:09:28,299 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 10:09:28,343 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 10:09:40,719 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 10:57:14,844 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 10:57:14,860 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 10:57:22,504 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 10:57:22,504 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 10:57:22,558 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 10:57:22,604 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 10:57:55,357 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 11:01:31,805 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 11:01:36,093 [1] INFO  cl_Negocio.classProcesarPlanilla - ini validacion
+2025-05-22 11:01:36,093 [1] INFO  cl_Negocio.classProcesarPlanilla - for1
+2025-05-22 11:01:36,093 [1] INFO  cl_Negocio.classProcesarPlanilla - trueMultiCobranza
+2025-05-22 11:01:36,093 [1] INFO  cl_Negocio.classProcesarPlanilla - ********************************* Crear PR  *********************************
+2025-05-22 11:01:36,093 [1] INFO  cl_Negocio.classProcesarPlanilla - int_procesarUnoAUno_sin_AS
+2025-05-22 11:01:37,352 [1] INFO  cl_Negocio.classProcesarPlanilla - _resultado = lo_payment.Add
+2025-05-22 11:01:38,700 [1] INFO  cl_Negocio.classProcesarPlanilla - exec gmi_sp_cuentaGananciaDiferenciaTC
+2025-05-22 11:01:38,716 [1] INFO  cl_Negocio.classProcesarPlanilla -  li_resultado = lo_payment.Add 
+2025-05-22 11:01:38,717 [1] INFO  cl_Negocio.classProcesarPlanilla -  li_resultado = 0 , sin errores 
+2025-05-22 11:01:39,275 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear_AsientoAjuste **********
+2025-05-22 11:01:40,408 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear Reconciliacion Interna **********
+2025-05-22 11:01:46,074 [1] INFO  cl_Negocio.classProcesarPlanilla - lo_planilla.Estado
+2025-05-22 11:10:15,960 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 11:10:15,976 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 11:10:34,139 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 11:10:34,139 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 11:10:34,186 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 11:10:34,236 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-22 11:10:50,620 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-22 11:10:53,131 [1] INFO  cl_Negocio.classProcesarPlanilla - ini validacion
+2025-05-22 11:10:53,131 [1] INFO  cl_Negocio.classProcesarPlanilla - for1
+2025-05-22 11:10:53,131 [1] INFO  cl_Negocio.classProcesarPlanilla - trueMultiCobranza
+2025-05-22 11:10:53,131 [1] INFO  cl_Negocio.classProcesarPlanilla - ********************************* Crear PR  *********************************
+2025-05-22 11:10:53,131 [1] INFO  cl_Negocio.classProcesarPlanilla - int_procesarUnoAUno_sin_AS
+2025-05-22 11:10:53,351 [1] INFO  cl_Negocio.classProcesarPlanilla - _resultado = lo_payment.Add
+2025-05-22 11:10:53,960 [1] INFO  cl_Negocio.classProcesarPlanilla - exec gmi_sp_cuentaGananciaDiferenciaTC
+2025-05-22 11:10:53,973 [1] INFO  cl_Negocio.classProcesarPlanilla -  li_resultado = lo_payment.Add 
+2025-05-22 11:10:53,973 [1] INFO  cl_Negocio.classProcesarPlanilla -  li_resultado = 0 , sin errores 
+2025-05-22 11:10:54,405 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear_AsientoAjuste **********
+2025-05-22 11:10:55,376 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear Reconciliacion Interna **********
+2025-05-22 11:10:58,323 [1] INFO  cl_Negocio.classProcesarPlanilla - lo_planilla.Estado
