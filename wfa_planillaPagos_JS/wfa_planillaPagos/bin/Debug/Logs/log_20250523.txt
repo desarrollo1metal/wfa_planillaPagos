@@ -1,0 +1,14 @@
+2025-05-23 16:04:15,250 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-23 16:04:15,271 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-23 16:06:48,570 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-23 16:06:48,613 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-23 16:13:01,257 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-23 16:13:01,259 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-23 16:13:01,305 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-23 16:13:01,359 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-23 16:24:50,271 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-23 16:24:50,290 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-23 16:25:46,514 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-23 16:25:46,514 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-23 16:25:46,574 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-23 16:25:46,624 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin

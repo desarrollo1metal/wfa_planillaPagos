@@ -3504,6 +3504,7 @@ C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\De
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_actPasswordUsr.sql
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_actualizarNrosSAPPlaDet.sql
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_obtMontoacuentaReconciliacion.sql
+C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_verEstadoTipoCambioFinanciero.sql
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_verEstadoPeriodoValidacion.sql
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_obtenerLineaPR.sql
 C:\TI_MIMSA\DEV2\wfa_planillaPagos\wfa_planillaPagos_JS\wfa_planillaPagos\bin\Debug\SQLProc\gmi_sp_verExitDocEnPllAbierta2.sql

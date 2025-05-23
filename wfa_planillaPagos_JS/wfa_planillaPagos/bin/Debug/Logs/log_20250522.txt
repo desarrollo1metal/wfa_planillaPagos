@@ -141,3 +141,9 @@
 2025-05-22 11:10:54,405 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear_AsientoAjuste **********
 2025-05-22 11:10:55,376 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear Reconciliacion Interna **********
 2025-05-22 11:10:58,323 [1] INFO  cl_Negocio.classProcesarPlanilla - lo_planilla.Estado
+2025-05-22 14:24:22,445 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-22 14:24:22,462 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-22 14:51:36,767 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-22 14:51:36,772 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-22 14:51:36,810 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-22 14:51:36,852 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
