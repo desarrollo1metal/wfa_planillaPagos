@@ -120,3 +120,29 @@
 2025-05-28 15:18:46,323 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear Reconciliacion Interna **********
 2025-05-28 15:18:47,237 [1] INFO  cl_Negocio.classProcesarPlanilla - Creacion existosa de reconciliacion , reconNum = 831436
 2025-05-28 15:18:50,837 [1] INFO  cl_Negocio.classProcesarPlanilla - lo_planilla.Estado
+2025-05-28 17:31:45,035 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-28 17:31:45,075 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-28 17:31:52,946 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-28 17:31:52,946 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-28 17:31:53,013 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-28 17:31:53,066 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-28 17:39:39,033 [1] INFO  wfa_planillaPagos.frmInicio - Iniciando Planilla Cobranza ...
+2025-05-28 17:39:39,061 [1] INFO  cl_Negocio.classInicio - ShowDialog
+2025-05-28 17:39:47,686 [1] INFO  cl_Negocio.classInicio -  APLICA 
+2025-05-28 17:39:47,686 [1] INFO  cl_Negocio.classInicio - bol_verUsuarioSistema
+2025-05-28 17:39:47,722 [1] INFO  cl_Negocio.classInicio - Ingreso a la aplicacion
+2025-05-28 17:39:47,781 [1] INFO  cl_Negocio.classInicio - sub_verExistAdmin
+2025-05-28 17:41:44,714 [1] INFO  cl_Negocio.classProcesarPlanilla - 05052025
+2025-05-28 17:41:45,573 [1] INFO  cl_Negocio.classProcesarPlanilla - ini validacion
+2025-05-28 17:41:45,573 [1] INFO  cl_Negocio.classProcesarPlanilla - for1
+2025-05-28 17:41:45,573 [1] INFO  cl_Negocio.classProcesarPlanilla - trueMultiCobranza
+2025-05-28 17:41:45,573 [1] INFO  cl_Negocio.classProcesarPlanilla - ********************************* Crear PR  *********************************
+2025-05-28 17:41:45,573 [1] INFO  cl_Negocio.classProcesarPlanilla - int_procesarUnoAUno_sin_AS
+2025-05-28 17:41:45,645 [1] INFO  cl_Negocio.classProcesarPlanilla - _resultado = lo_payment.Add
+2025-05-28 17:41:46,066 [1] INFO  cl_Negocio.classProcesarPlanilla - exec gmi_sp_cuentaGananciaDiferenciaTC
+2025-05-28 17:41:46,085 [1] INFO  cl_Negocio.classProcesarPlanilla -  li_resultado = lo_payment.Add 
+2025-05-28 17:41:46,086 [1] INFO  cl_Negocio.classProcesarPlanilla -  li_resultado = 0 , sin errores 
+2025-05-28 17:41:46,677 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear_AsientoAjuste **********
+2025-05-28 17:41:57,326 [1] INFO  cl_Negocio.classProcesarPlanilla - ********** Crear Reconciliacion Interna **********
+2025-05-28 17:41:58,332 [1] INFO  cl_Negocio.classProcesarPlanilla - Creacion existosa de reconciliacion , reconNum = 831442
+2025-05-28 17:42:07,027 [1] INFO  cl_Negocio.classProcesarPlanilla - lo_planilla.Estado
