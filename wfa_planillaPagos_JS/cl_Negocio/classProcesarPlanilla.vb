@@ -4591,23 +4591,24 @@ Public Class classProcesarPlanilla
                         'perdida
                         If tcFechaPago > tcFinanciero Then
 
+                            lo_jrnlEntry.Lines.ShortName = po_planillaDet.Codigo '; // Código de cuenta
+                            'lo_jrnlEntry.Lines.AccountCode = "_SYS00000000089" '; // Código de cuenta
+                            lo_jrnlEntry.Lines.Debit = 0.0 '(tcFinanciero - tcFechaPago) * po_planillaDet.Saldo '46.01 '; // Monto del débito
+                            lo_jrnlEntry.Lines.Credit = Math.Abs(montoReconciliacionPr)
+                            montoreconciliaciont = montoReconciliacionPr
+                            lo_jrnlEntry.Lines.Add()
 
                             lo_jrnlEntry.Lines.AccountCode = cuentaPerdida
-                            lo_jrnlEntry.Lines.Debit = montoReconciliacionPr '// Monto del crédito '0.0 '// Monto del débito
+                            lo_jrnlEntry.Lines.Debit = Math.Abs(montoReconciliacionPr) '// Monto del crédito '0.0 '// Monto del débito
                             lo_jrnlEntry.Lines.Credit = 0.0
                             lo_jrnlEntry.Lines.Add()
 
 
-                            lo_jrnlEntry.Lines.ShortName = po_planillaDet.Codigo '; // Código de cuenta
-                            'lo_jrnlEntry.Lines.AccountCode = "_SYS00000000089" '; // Código de cuenta
-                            lo_jrnlEntry.Lines.Debit = 0.0 '(tcFinanciero - tcFechaPago) * po_planillaDet.Saldo '46.01 '; // Monto del débito
-                            lo_jrnlEntry.Lines.Credit = montoReconciliacionPr
-                            montoreconciliaciont = montoReconciliacionPr
 
                             ''JSOLIS RETIRAR
                             'lo_jrnlEntry.Lines.Debit = 777 '(tcFinanciero - tcFechaPago) * po_planillaDet.Saldo '46.01 '; // Monto del débito
 
-                            lo_jrnlEntry.Lines.Add()
+
 
                             li_resultado = lo_jrnlEntry.Add()
 

@@ -367,9 +367,7 @@
     <Content Include="SQLProc\gmi_sp_obtMontoacuentaReconciliacion.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="SQLProc\gmi_sp_verEstadoTipoCambioFinanciero.sql">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Content Include="SQLProc\gmi_sp_verEstadoTipoCambioFinanciero.sql" />
     <Content Include="SQLProc\gmi_sp_verEstadoPeriodoValidacion.sql">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

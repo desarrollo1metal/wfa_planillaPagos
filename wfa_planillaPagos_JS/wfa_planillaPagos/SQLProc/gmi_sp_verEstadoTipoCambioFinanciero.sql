@@ -1,4 +1,4 @@
-/*<accion>*/CREATE/*</accion>*/
+/*<accion>*/create/*</accion>*/
 /*<tipoSQL>*/procedure/*</tipoSQL>*/ 
 /*<nombre>*/[dbo].[gmi_sp_verEstadoTipoCambioFinanciero]/*</nombre>*/
 @fecha as varchar(8)
