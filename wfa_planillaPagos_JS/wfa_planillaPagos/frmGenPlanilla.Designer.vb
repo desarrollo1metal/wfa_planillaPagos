@@ -98,6 +98,8 @@ Partial Class frmGenPlanilla
             Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.ugcECBanco.AutoScroll = True
+        Me.ugcECBanco.AutoScrollMargin = New System.Drawing.Size(20, 20)
+        Me.ugcECBanco.AutoScrollMinSize = New System.Drawing.Size(800, 600)
         Me.ugcECBanco.BackColor = System.Drawing.Color.White
         Me.ugcECBanco.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ugcECBanco.buscarPor = "Fecha"
@@ -147,6 +149,9 @@ Partial Class frmGenPlanilla
         '
         Me.ugcECClientes.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
             Or System.Windows.Forms.AnchorStyles.Left), System.Windows.Forms.AnchorStyles)
+        Me.ugcECClientes.AutoScroll = True
+        Me.ugcECClientes.AutoScrollMargin = New System.Drawing.Size(20, 20)
+        Me.ugcECClientes.AutoScrollMinSize = New System.Drawing.Size(800, 600)
         Me.ugcECClientes.BackColor = System.Drawing.Color.White
         Me.ugcECClientes.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle
         Me.ugcECClientes.buscarPor = ""
